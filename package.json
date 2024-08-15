@@ -1,0 +1,9 @@
+{
+  "name": "turnito",
+  "version": "1.0.0",
+  "description": "Una página web para emprendedores para organizar sus turnos y su administración",
+  "main": "src/app.js",
+  
+  "author": "Laura, Tobias, Milena, Sofia, Jonatan",
+  "license": "MIT"
+}

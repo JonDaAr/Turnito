@@ -1,0 +1,28 @@
+##### para usar las letras de fonts #####
+
+    @font-face {
+       font-family: 'FORMULARIOS';
+      src: url('/assets/formulario/fonts/Inter-Italic-VariableFont_opsz\,wght.ttf') format('truetype'),
+           url('/assets/formulario/fonts/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
+      font-weight: normal;     /* controla el grosor de las letras */
+      font-style: normal;     /* controla el grosor de las letras */
+    }
+
+##### EJEMPLO #####
+
+    asi se usaria la letra
+    body {
+       font-family: 'FORMULARIOS', sans-serif;
+    }
+
+#### Colores ####
+    lo copian en el css y tiene los colores
+    :root{
+        --main-fondo: #F5F7FA;
+        --btn-color: #E9AA0A;
+        --primary-color: #1C53C9;
+        --login-registro: #7DACF3;
+        --menu-sin-seleccionar: #DFDFDF;
+        --barra-navegacion-filtro: #D9D9D9;
+    }
+
