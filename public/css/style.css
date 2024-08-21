@@ -24,12 +24,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
+    justify-content: space-evenly;
 }
 
 .nav-links a {
@@ -253,4 +255,11 @@ body {
 .footer-links a {
     text-decoration: none;
     color: #fdd835;
+}
+
+#Empieza-ya{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
 }
