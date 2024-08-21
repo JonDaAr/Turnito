@@ -6,52 +6,77 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
+    background-color: #fff;
 }
 
 .container {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1440px;
 }
 
 .main-header {
-    background-color: #fff;
-    padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0; /* Fija el navbar en la parte superior de la ventana */
+    left: 0;
+    width: 100%; /* Asegura que el navbar ocupe todo el ancho de la pantalla */
+    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
 }
 
 .navbar {
+    padding: 0rem 3rem;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    box-shadow: 0 6px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+.navbar-links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .nav-links {
+    width: max-content;
+    display: flex;
     list-style: none;
+    justify-content: center;
+    background-color: #1D57C9; /* Color de fondo azul */
+    border-radius: 0 0 25px 25px; /* Bordes redondeados en la parte inferior */
+    gap: 2em;
+    padding: .4em 3rem;
+    margin: 0%;
+    /* list-style: none;
     display: flex;
     gap: 20px;
-    justify-content: space-evenly;
+    justify-content: space-evenly; */
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #ffffffd3;
     font-weight: bold;
 }
 
 .header-buttons {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 .btn {
     padding: 10px 20px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 25px;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
+}
+.primary-heder{
+    background-color: none;
+    color: #1C53C9;
 }
 
 .primary-btn {
@@ -61,38 +86,60 @@ body {
 }
 
 .secondary-btn {
-    background-color: #fff;
-    color: #333;
-    border: 2px solid #fdd835;
+    background-color: #1C53C9;
+    color: #ffffff;;
 }
 
 .hero-section {
     background-color: #e3f2fd;
-    padding: 60px 0;
+    padding: 100px 0;
     display: flex;
     align-items: center;
 }
 
 .hero-content {
     display: flex;
-    align-items: center;
+    align-items: normal;
     justify-content: space-between;
 }
 
 .hero-text h1 {
-    font-size: 48px;
+    font-size: 4rem;
     color: #1a237e;
+    ;
 }
 
 .hero-text p {
-    font-size: 18px;
-    margin: 20px 0;
+    font-size: 2rem;
+    margin: 4rem 0;
 }
 
 .hero-image img {
     max-width: 100%;
     height: auto;
 }
+
+.image-stack {
+    position: relative;
+    width: max-content; /* Ajusta según tus necesidades */
+    
+}
+
+.image-bottom {
+    position: relative;
+    z-index: 1;
+    left: 1em;
+    margin-top: 13rem; /* Ajusta para darle espacio entre las imágenes */
+}
+
+.image-top {
+    position: absolute;
+    top: 1rem;/* Ajusta para la superposición vertical */
+    left: -3rem;/* Ajusta para la superposición horizontal */
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/* Sombra opcional para la imagen superior */ 
+}
+
 
 .benefits-section {
     padding: 60px 0;
