@@ -90,26 +90,42 @@ body {
     color: #ffffff;;
 }
 
+.background-image {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 90%;
+        height: 100%;
+        margin: -6rem;
+        background-image: url(/assets/images/Rectangle-fondo-1.png);
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+        background-repeat: no-repeat;
+}
+
+
 .hero-section {
-    background-color: #e3f2fd;
-    padding: 100px 0;
     display: flex;
     align-items: center;
 }
+
 
 .hero-content {
     display: flex;
     align-items: normal;
     justify-content: space-between;
+    margin-top: 3.8rem;
 }
 
 .hero-text h1 {
     font-size: 4rem;
-    color: #1a237e;
-    ;
+    color: #ffffffd5;
+    padding-top: 4rem; ;
 }
 
 .hero-text p {
+    color: #f5f5f5;
     font-size: 2rem;
     margin: 4rem 0;
 }
@@ -122,13 +138,13 @@ body {
 .image-stack {
     position: relative;
     width: max-content; /* Ajusta según tus necesidades */
-    
+    margin-top: 4rem;
 }
 
 .image-bottom {
     position: relative;
     z-index: 1;
-    left: 1em;
+    left: 8rem;
     margin-top: 13rem; /* Ajusta para darle espacio entre las imágenes */
 }
 
