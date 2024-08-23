@@ -14,6 +14,10 @@ body {
     margin: 0 auto;
     max-width: 1440px;
 }
+.container h2{
+    text-align: center;
+    font-size: 3rem;
+    }
 
 .main-header {
     position: fixed;
@@ -44,7 +48,7 @@ body {
     display: flex;
     list-style: none;
     justify-content: center;
-    background-color: #1D57C9; /* Color de fondo azul */
+    background-color: #1C53C9; /* Color de fondo azul */
     border-radius: 0 0 25px 25px; /* Bordes redondeados en la parte inferior */
     gap: 2em;
     padding: .4em 3rem;
@@ -88,7 +92,21 @@ body {
 .secondary-btn {
     background-color: #1C53C9;
     color: #ffffff;;
+    border:none
 }
+
+#buttonup{
+    position: fixed;
+    bottom: 2rem; /* Distancia desde la parte inferior */
+    right: 2rem;   /* Distancia desde la parte izquierda */
+    padding: .5rem 1.5rem;
+    background-color: #1C53C9;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    }
 
 .background-image {
         position: absolute;
@@ -173,9 +191,9 @@ body {
 .card {
     background-color: #f5f5f5;
     border-radius: 10px;
-    padding: 20px;
-    width: 250px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 2rem;
+    width: 40rem;
+    box-shadow: -6px 6px 4px rgba(0,0,0,0.1);
     text-align: center;
 }
 
