@@ -122,12 +122,10 @@ body {
         background-repeat: no-repeat;
 }
 
-
 .hero-section {
     display: flex;
     align-items: center;
 }
-
 
 .hero-content {
     display: flex;
@@ -207,9 +205,20 @@ body {
 }
 
 .how-it-works-section {
-    background-color: #e3f2fd;
+    background-color: #ffffff;
     padding: 60px 0;
 }
+
+.background-image2 {
+    position: absolute; /* Cambiado de fixed a absolute */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Escala la imagen para cubrir el área */
+    z-index: -1; /* Envía la imagen al fondo */
+}
+
 
 .steps {
     display: flex;
