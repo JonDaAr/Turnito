@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/pages/emprendimiento.css">
+    <title>Turnito</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logoNav">
+                <img src="/assets/images/final-turnito-sin fondo.png" alt="Logo">
+            </div>
+            <div class="tituloNav">
+                <h1>Quing Burger</h1>
+            </div>
+            <div class="eventNav">
+                <div class="buscadorNav">
+                    <button type="submit">
+                        <span>
+                            <img class="lupaNav" src="/assets/icons/lupa-vector.png" alt="Lupa">
+                        </span>
+                    </button>
+                    <input class="lupaBuscador" type="text" placeholder="Buscar..." aria-label="Buscar">
+                </div>
+                <div class="notificacionesNav">
+                    <button aria-label="notificaciones">
+                    <img class="campNoti" src="/assets/icons/camp-noti.png" alt="Notificacion">
+                    </button>
+                </div>
+                <div class="menuNav">
+                    <button aria-label="perfil">
+                        <img src="/assets/images/Foto-Perfil.png" alt="PerfilFoto">
+                    </button>
+                    <div class="containerListNav" id="menuPerfil">
+                        <ul class="listNav">
+                            <li><a href="#"><img src="/assets/icons/agenda.png" alt="incioMenu">Agenda</a></li>
+                            <li><a href="#"><img src="/assets/icons/history.png" alt="historialMenu">Historial</a></li>
+                            <li><a href="#"><img src="/assets/icons/modo_noc.png" alt="modoNocMenu"><label class="switch">
+                                <input type="checkbox" id="toggle-dark-mode">
+                                <span class="slider"></span>
+                                </label></a></li>
+                            <li><a href="#"><img src="/assets/icons/config.png" alt="configMenu">Configuracion</a></li>
+                                
+                            <li><a href="#"><img src="/assets/icons/salir.png" alt="salirMenu">Salir</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <aside class="menuIzquierda">
+        <div class="userPerfil">
+            <img src="/assets/images/Foto-Perfil.png" alt="imgPerfil">
+            <div class="userText">
+                <h3>Toby Burger</h3>
+                <p>empresa</p>
+            </div>
+        </div>
+        <ul>
+            <li><a href="#"><img class="iconMenu" src="/assets/icons/agenda.png" alt="incioMenu">Agenda</a></li>
+            <li><a href="#"><img class="iconMenu" src="/assets/icons/history.png" alt="historialMenu">Historial</a></li>
+            <li><a href="#"><img class="iconMenu" src="/assets/icons/modo_noc.png" alt="modoNocMenu">Modo Nocturno
+                <label class="switch">
+                    <input type="checkbox" id="toggle-dark-mode">
+                    <span class="slider"></span>
+                </label></a</li>
+            <li><a href="#"><img class="iconMenu" src="/assets/icons/comment.png" alt="comentariosMenu">Comentarios</a></li>
+            <li><a href="#"><img class="iconMenu" src="/assets/icons/config.png" alt="configMenu">Configuracion</a></li>
+            <li><a href="#"><img class="iconMenu" src="/assets/icons/salir.png" alt="salirMenu">Salir</a></li>
+        </ul>
+    </aside>
+    <main></main>
+    <script src="/src/controllers/emprendimiento.js"></script>
+</body>
+</html>
