@@ -13,7 +13,6 @@
     --separadores-pagina: #E6EFF5;
 }
 nav{
-    height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -118,7 +117,6 @@ nav{
 /* ASIDE Menu Izquierdo */
 .menuIzquierda{
     position: fixed;
-    top: 12vh;
     left: 0;
     width: 20%;
     height: 88vh;
@@ -186,13 +184,11 @@ nav{
     width: 34px;
     height: 20px;
 }
-
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
-
 .slider {
     position: absolute;
     cursor: pointer;
@@ -204,7 +200,6 @@ nav{
     transition: 0.4s;
     border-radius: 20px;
 }
-
 .slider:before {
     position: absolute;
     content: "";
@@ -216,11 +211,9 @@ nav{
     transition: 0.4s;
     border-radius: 50%;
 }
-
 input:checked + .slider {
     background-color: #2196F3;
 }
-
 input:checked + .slider:before {
     transform: translateX(14px);
 }
@@ -230,7 +223,40 @@ input:checked + .slider:before {
 
 
 main{
-    margin-left: 15%;
+    margin-left: 20%;
     padding: 20px;
     background-color: var(--main-fondo);
+
+}
+/* sectio 1 Graficoas */
+.sectionGraficos{
+    width: 100%;
+    height: 367px;
+    display: flex;
+    gap: 15px;
+}
+.graficoBalance{
+    width: 30%;
+}
+.graficoSemanal{
+    width: 70%;
+}
+.graficoSemanal>img{
+    width: 80%;
+}
+
+.graficoBalance>img{
+    width: 100%;
+}
+
+/* SECTION 2 Ultimos Clientes y Balance Mensual*/
+.comentarioBalanceMensual{
+    width: 100%;
+    display: flex;
+}
+
+
+.dark-mode{
+    background-color: #000000;
+    color: black;
 }

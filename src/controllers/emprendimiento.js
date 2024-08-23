@@ -15,15 +15,13 @@ document.addEventListener('click', (event) => {
 })
 
 
-// modo noCturno ///
+// modo Oscuro ///
 /// Agrega y quita la clase dark-mode al body revisdar ///
-document.getElementById('dark-mode').addEventListener('click', function() {
+const btn = document.querySelector('#dark-mode');
+
+const modoOscuro = () => {
     document.body.classList.toggle('dark-mode');
-    
-    // Cambia el texto del botón según el modo actual
-    if (document.body.classList.contains('dark-mode')) {
-        this.textContent = 'Modo Claro';
-    } else {
-        this.textContent = 'Modo Nocturno';
-    }
-});
+    console.log("codigo")
+};
+
+btn.addEventListener('click', modoOscuro);
