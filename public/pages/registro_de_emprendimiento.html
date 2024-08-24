@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Emprendimiento</title>
+    <link rel="stylesheet" href="../css/pages/registro_de_emprendimiento.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Bienvenido a Turnito</h2>
+        </header>
+        <div class="form-container">
+            <form method="post">
+                <h3>REGÍSTRATE</h3>
+                <div class="input-group">
+                    <label for="nombre">Nombre y apellido</label>
+                    <input type="text" id="nombre" placeholder="Ingrese nombre y apellido">
+                </div>
+                <div class="input-group">
+                    <label for="emprendimiento">*Nombre del emprendimiento</label>
+                    <input type="text" id="emprendimiento" placeholder="Ej. TobiBurguer">
+                </div>
+                <div class="input-half-group">
+                    <div class="input-group">
+                        <label for="cuit">CUIL / CUIT</label>
+                        <input type="text" id="cuit" placeholder="25-45412351-20">
+                    </div>
+                    <div class="input-group">
+                        <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+                        <input type="date" id="fecha-nacimiento">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" id="telefono" placeholder="(011) 4512-5678">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Burger@T0Burger.com">
+                </div>
+                <div class="input-group">
+                    <label for="direccion">Dirección Negocio</label>
+                    <input type="text" id="direccion" placeholder="Tokio, Hong Kong, China">
+                </div>
+                <div class="input-half-group">
+                    <div class="input-group">
+                        <label for="codigo-postal">Código Postal</label>
+                        <input type="text" id="codigo-postal" placeholder="45962">
+                    </div>
+                    <div class="input-group">
+                        <label for="ciudad">Ciudad</label>
+                        <input type="text" id="ciudad" placeholder="San Jose">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="sitio-web">Sitio web</label>
+                    <input type="text" id="sitio-web" placeholder="Burgerlandia">
+                </div>
+            
+            </form>
+            
+            <!-- Barra vertical -->
+            <div class="vertical-bar"></div>
+
+            <div>
+                <div class="container">
+                    <div class="profile-pic">
+                        <img src="../../assets/images/icon.1.svg" alt="Avatar">
+                        <div class="edit-icon">
+                            <img src="assets/icons/pencil.png" alt="Editar">
+                        </div>
+                    </div>
+                    <div><form>
+                        <label>
+                            <input type="checkbox" id="terms" name="terms">
+                            Acepto los términos y política de privacidad
+                        </label>
+                    </form>
+                    <button type="submit" class="btn-registrar">REGISTRAR</button>
+                    </div>
+                    <div class="help-link">
+                        <a href="#">¿Necesitas ayuda? Haz click aquí</a>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>    
+</body>
+</html>

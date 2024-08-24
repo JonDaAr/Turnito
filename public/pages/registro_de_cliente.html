@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Cliente</title>
+    <link rel="stylesheet" href="../css/pages/registro_de_cliente.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Bienvenido a Turnito</h2>
+        </header>
+        <div class="form-container">
+            <form method="post">
+                <h3>REGÍSTRATE</h3>
+                <!--Nombre-->
+                <div class="input-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Ingrese nombre">
+                </div>
+                <!--Apellido-->
+                <div class="input-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="emprendimiento" placeholder="Ingrese apellido">
+                </div>
+                <!--Telefono-->
+                <div class="input-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" id="telefono" placeholder="(011) 4512-5678">
+                </div>
+                <!--email-->
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Burger@T0Burger.com">
+                </div>
+                <!--Fecha de nacimiento-->
+                <div class="input-group">
+                    <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+                    <input type="date" id="fecha-nacimiento">
+                </div>
+            </form>
+            
+            <!-- Barra vertical -->
+            <div class="vertical-bar"></div>
+
+            <div>
+                <div class="container">
+                    <div class="profile-pic">
+                        <img src="../../assets/images/icon.1.svg" alt="Avatar">
+                    </div>
+                    <div><form>
+                        <label>
+                            <input type="checkbox" id="terms" name="terms">
+                            Acepto los términos y política de privacidad
+                        </label>
+                    </form>
+                    <button type="submit" class="btn-registrar">REGISTRAR</button>
+                    </div>
+                    <div class="help-link">
+                        <a href="#">¿Necesitas ayuda? Haz click aquí</a>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>    
+</body>
+</html>

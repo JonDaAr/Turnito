@@ -1,0 +1,138 @@
+body {
+    font-family: 'inter', sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+header h2 {
+    text-align: left;
+    color: #666;
+}
+
+.form-container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+form {
+    flex: 2;
+}
+
+form h3 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #4285F4;
+    border-radius: 15px;
+    font-size: 1rem;
+}
+
+.input-half-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-half-group .input-group {
+    width: 48%;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+.btn-registrar {
+    background-color: #f9a825;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+.help-link {
+    margin-top: 5%;
+    text-align: center;
+}
+/* Barra vertical */
+.vertical-bar {
+    width: 1px;
+    background-color: #ccc;
+    margin: 0 40px;
+}
+
+.profile-picture {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+.profile-icon {
+    position: relative;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.edit-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #2979ff;
+    border-radius: 50%;
+    padding: 10px;
+    color: #fff;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #2979ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
