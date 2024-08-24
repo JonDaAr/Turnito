@@ -12,7 +12,23 @@
     --barra-navegacion-filtro: #D9D9D9;
     --separadores-pagina: #E6EFF5;
 }
+
+/* Ocultar Paginas */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+
 nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -117,6 +133,7 @@ nav{
 /* ASIDE Menu Izquierdo */
 .menuIzquierda{
     position: fixed;
+    top: 77px;
     left: 0;
     width: 20%;
     height: 88vh;
@@ -223,11 +240,13 @@ input:checked + .slider:before {
 
 
 main{
+    margin-top: 77px;
     margin-left: 20%;
     padding: 20px;
     background-color: var(--main-fondo);
 
 }
+/* Pagina Inicio */
 /* sectio 1 Graficoas */
 .sectionGraficos{
     width: 100%;
@@ -256,7 +275,52 @@ main{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .dark-mode{
     background-color: #000000;
     color: black;
 }
+

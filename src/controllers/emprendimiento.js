@@ -25,3 +25,23 @@ const modoOscuro = () => {
 };
 
 btn.addEventListener('click', modoOscuro);
+
+
+/* OCULTAR PAGINAS */
+function MostrarPagina(pageId) {
+    console.log('Función MostrarPagina llamada con el ID:', pageId);
+    var pages = document.querySelectorAll('.page');
+    pages.forEach(function(page) {
+        page.classList.remove('active');
+    })
+
+    var seleccionarPagina = document.getElementById(pageId);
+    seleccionarPagina.classList.add('active')
+}
+
+
+
+document.addEventListener("DOMContentLoaded", function(){
+    console.log('Documento cargado y listo');
+    MostrarPagina('page1');
+})

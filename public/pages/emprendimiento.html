@@ -59,56 +59,72 @@
             </div>
         </div>
         <ul>
-            <li><a href="#"><img class="iconMenu" src="/assets/icons/agenda.png" alt="incioMenu">Agenda</a></li>
-            <li><a href="#"><img class="iconMenu" src="/assets/icons/history.png" alt="historialMenu">Historial</a></li>
+            <li><a href="#" onclick="MostrarPagina('page1')"><img class="iconMenu" src="/assets/icons/agenda.png" alt="incioMenu">Agenda</a></li>
+            <li><a href="#" onclick="MostrarPagina('page2')"><img class="iconMenu" src="/assets/icons/history.png" alt="historialMenu">Historial</a></li>
             <li><a href="#"><img class="iconMenu" src="/assets/icons/modo_noc.png" alt="modoNocMenu">Modo Oscuro
                 <label class="switch">
                     <input type="checkbox" id="dark-mode">
                     <span class="slider"></span>
                 </label></a</li>
-            <li><a href="#"><img class="iconMenu" src="/assets/icons/comment.png" alt="comentariosMenu">Comentarios</a></li>
-            <li><a href="#"><img class="iconMenu" src="/assets/icons/config.png" alt="configMenu">Configuracion</a></li>
+            <li><a href="#" onclick="MostrarPagina('page3')"><img class="iconMenu" src="/assets/icons/comment.png" alt="comentariosMenu">Comentarios</a></li>
+            <li><a href="#" onclick="MostrarPagina('page4')"><img class="iconMenu" src="/assets/icons/config.png" alt="configMenu">Configuracion</a></li>
             <li><a href="/public/index.html"><img class="iconMenu" src="/assets/icons/salir.png" alt="salirMenu">Salir</a></li>
         </ul>
     </aside>
     <main>
-        <section class="sectionGraficos">
-            <div class="graficoSemanal">
-                <h2>Actividad de la Semana</h2>
-                <img src="/assets/images/grafico/grafico1.png" alt="grafico_1">
-            </div>
-            <div class="graficoBalance">
-                <h2>Balance</h2>
-                <img src="/assets/images/grafico/grafico2.png" alt="grafico_2">
-            </div>
-        </section>
-        <section class="comentarioBalanceMensual">
-            <div >
-                <h2>Ultimos Clientes</h2>
-                <div class="ultiimosPerfil">
+        <div id="page1" class="page active">
+            <section class="sectionGraficos">
+                <div class="graficoSemanal">
+                    <h2>Actividad de la Semana</h2>
+                    <img src="/assets/images/grafico/grafico1.png" alt="grafico_1">
+                </div>
+                <div class="graficoBalance">
+                    <h2>Balance</h2>
+                    <img src="/assets/images/grafico/grafico2.png" alt="grafico_2">
+                </div>
+            </section>
+            <section class="comentarioBalanceMensual">
+                <div >
+                    <h2>Ultimos Clientes</h2>
+                    <div class="ultiimosPerfil">
+                        <div>
+                            <div>
+                                <img src="" alt="">
+                                <p>Ana Conda</p>
+                            </div>
+                            <div>
+                                <img src="" alt="">
+                                <p>Ana Conda</p>
+                            </div>
+                            <div>
+                                <img src="" alt="">
+                                <p>Ana Conda</p>
+                            </div>
+                        </div>
+                    </div>
                     <div>
-                        <div>
-                            <img src="" alt="">
-                            <p>Ana Conda</p>
-                        </div>
-                        <div>
-                            <img src="" alt="">
-                            <p>Ana Conda</p>
-                        </div>
-                        <div>
-                            <img src="" alt="">
-                            <p>Ana Conda</p>
-                        </div>
+                        <h4>Total Recaudado</h4>
                     </div>
                 </div>
                 <div>
-                    <h4>Total Recaudado</h4>
+                    <h2>Balance Mensual</h2>
                 </div>
-            </div>
-            <div>
-                <h2>Balance Mensual</h2>
-            </div>
-        </section>
+            </section>
+        </div>
+        <div id="page2" class="page">
+            <h2>Historial</h2>
+            <!-- Contenido de la página 2 -->
+        </div>
+    
+        <div id="page3" class="page">
+            <h2>Comentarios</h2>
+            <!-- Contenido de la página 3 -->
+        </div>
+    
+        <div id="page4" class="page">
+            <h2>Configuración</h2>
+            <!-- Contenido de la página 4 -->
+        </div>
     </main>
     <script src="/src/controllers/emprendimiento.js"></script>
 </body>
