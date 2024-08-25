@@ -109,29 +109,31 @@ body {
     }
 
 .background-image {
+        margin-right: 20%;
         position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 90%;
-        height: 100%;
-        margin: -6rem;
+        width: 100%;
+        height: 80%;
         background-image: url(/assets/images/Rectangle-fondo-1.png);
         background-size: cover;
-        background-position: center;
+        background-position: bottom;
         z-index: -1;
         background-repeat: no-repeat;
 }
 
 .hero-section {
+    height: 45rem;
+    margin-top: 3.5rem;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20rem; 
 }
 
 .hero-content {
     display: flex;
     align-items: normal;
-    justify-content: space-between;
-    margin-top: 3.8rem;
+    justify-content: space-around;
+    margin: 3.8rem 3.8rem 10rem 3.8rem;
 }
 
 .hero-text h1 {
@@ -153,11 +155,11 @@ body {
 
 .image-stack {
     position: relative;
-    width: max-content; /* Ajusta según tus necesidades */
+    width: 40%;
     margin-top: 4rem;
 }
 
-.image-bottom {
+.image--it {
     position: relative;
     z-index: 1;
     left: 8rem;
@@ -166,15 +168,20 @@ body {
 
 .image-top {
     position: absolute;
-    top: 1rem;/* Ajusta para la superposición vertical */
-    left: -3rem;/* Ajusta para la superposición horizontal */
+    left: 7rem;
     z-index: 2;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/* Sombra opcional para la imagen superior */ 
 }
 
+.image-bottom {
+    position: absolute;
+    top: 12rem;/* Ajusta para la superposición vertical */
+    left: 19rem;/* Ajusta para la superposición horizontal */
+    z-index: 1;
+}
 
 .benefits-section {
-    padding: 60px 0;
+    margin-top: 10rem;
     background-color: #fff;
     text-align: center;
 }
@@ -209,6 +216,19 @@ body {
     padding: 60px 0;
 }
 
+.how-container{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+    display: flex;
+}
+
+.how-it-works-section h2{
+    text-align: start;
+    display: inline-block;
+}
+
+
 .background-image2 {
     position: absolute; /* Cambiado de fixed a absolute */
     top: 0;
@@ -221,20 +241,22 @@ body {
 
 
 .steps {
+    width: 60%;
     display: flex;
-    gap: 30px;
     justify-content: center;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .step {
-    width: 250px;
+    width: 55%;
     text-align: center;
 }
 
 .step h3 {
-    margin: 15px 0;
-    font-size: 22px;
+    text-align: start;
+    margin: 1.5rem 0;
+    font-size: 2rem;
 }
 
 .step p {
