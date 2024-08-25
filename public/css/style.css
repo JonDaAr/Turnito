@@ -349,10 +349,7 @@ body {
     margin: 10px 0;
 }
 
-.faq-section {
-    background-color: #e3f2fd;
-    padding: 60px 0;
-}
+
 
 .register-card{
     text-align: center;
@@ -369,21 +366,47 @@ body {
     margin-bottom: 4rem;
 }
 
+.faq-section {
+    display: flex;
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+.faq-title{
+    text-align: center;
+    width: 40%;
+}
+
 .faq-list {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 70%;
+    margin: 1rem auto;
 }
 
 .faq-item {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
+    display: flex;
+    text-align: left;
+    padding: 1rem;
     margin-bottom: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    justify-content: space-between;
+    align-items: center;
+}
+
+hr{
+    height: 1px;
+    background: #d4caca ;
 }
 
 .faq-item h3 {
     margin-bottom: 10px;
+    text-align: left;
+}
+
+.faq-item p{
+    padding-left: 3rem;
+    text-align: left;
+}
+.faq-item img{
+    padding-left: 5rem;
 }
 
 .contact-section {
