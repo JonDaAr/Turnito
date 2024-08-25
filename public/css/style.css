@@ -10,6 +10,7 @@ body {
 }
 
 .container {
+    padding: 0rem 2rem;
     width: 100%;
     margin: 0 auto;
     max-width: 1440px;
@@ -153,6 +154,7 @@ body {
 }
 
 .image-stack {
+    background-size: contain;
     position: relative;
     width: 40%;
     margin-top: 4rem;
@@ -227,6 +229,21 @@ body {
     display: inline-block;
 }
 
+.img-top-left{
+    border-radius: 2rem;
+    position: absolute;
+    right: 0rem;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/* Sombra opcional para la imagen superior */
+}
+
+.img-bottom-right{
+    border-radius: 2rem;
+    position: absolute;
+    bottom: 4rem;/* Ajusta para la superposición vertical */
+    left: 15rem;/* Ajusta para la superposición horizontal */
+    z-index: 1;
+}
 
 .background-image2 {
     position: absolute; /* Cambiado de fixed a absolute */
@@ -248,8 +265,7 @@ body {
 }
 
 .step {
-    width: 55%;
-    text-align: center;
+    text-align: initial;
 }
 
 .step h3 {
@@ -259,6 +275,7 @@ body {
 }
 
 .step p {
+    padding: 0rem 2rem ;
     font-size: 16px;
 }
 
