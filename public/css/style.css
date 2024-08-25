@@ -354,6 +354,21 @@ body {
     padding: 60px 0;
 }
 
+.register-card{
+    text-align: center;
+    width: 50%;
+    height: auto;
+    padding: 0rem 3rem 3rem 3rem;
+    margin: 3rem;
+    border:solid 2px #1C53C9;
+    border-radius: 2rem;
+    background-color: #fff;
+}
+
+.register-card p {
+    margin-bottom: 4rem;
+}
+
 .faq-list {
     max-width: 800px;
     margin: 0 auto;
