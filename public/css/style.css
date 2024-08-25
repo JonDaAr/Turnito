@@ -241,7 +241,7 @@ body {
     border-radius: 2rem;
     position: absolute;
     bottom: 4rem;/* Ajusta para la superposición vertical */
-    left: 15rem;/* Ajusta para la superposición horizontal */
+    right: 10rem;/* Ajusta para la superposición horizontal */
     z-index: 1;
 }
 
@@ -277,6 +277,23 @@ body {
 .step p {
     padding: 0rem 2rem ;
     font-size: 16px;
+}
+
+.coments{
+    display: flex;
+    justify-content: space-between;
+    gap: 2%;
+    margin: 6rem 0rem;
+}
+
+.card-comments{
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem 0rem;
+    width: auto;
+    box-shadow: -6px 6px 4px rgba(0,0,0,0.1);
+    text-align: initial;
 }
 
 .plans-section {
