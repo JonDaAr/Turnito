@@ -9,7 +9,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-
 }
 
 header h2 {
@@ -21,7 +20,7 @@ header h2 {
     display: flex;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-top: 20px;
 }
@@ -49,7 +48,8 @@ form h3 {
 
 .input-group input[type="text"],
 .input-group input[type="email"],
-.input-group input[type="date"] {
+.input-group input[type="date"],
+.input-group input[type="number"] {
     width: 100%;
     padding: 10px;
     border: 2px solid #4285F4;
@@ -63,7 +63,7 @@ form h3 {
 }
 
 .input-half-group .input-group {
-    width: 48%;
+    width: 47%;
 }
 
 .checkbox-group {
@@ -75,6 +75,9 @@ form h3 {
 .checkbox-group input {
     margin-right: 10px;
 }
+.contenedor-btn {
+    text-align: center;
+}
 
 .btn-registrar {
     background-color: #f9a825;
@@ -84,43 +87,36 @@ form h3 {
     border-radius: 20px;
     font-size: 1rem;
     cursor: pointer;
-    width: 100%;
     margin-top: 20px;
+    box-shadow: #222;
 }
 .help-link {
-    margin-top: 5%;
+    margin-top: 65%;
     text-align: center;
 }
 /* Barra vertical */
 .vertical-bar {
     width: 1px;
     background-color: #ccc;
-    margin: 0 40px;
+    margin: 0 60px;
 }
-
-.profile-picture {
+/*2do bloque de contenido */
+.top{
+    padding-right: 20px;
+}
+.profile-pic {
     flex: 1;
     display: flex;
-    justify-content: center;
+    
     align-items: center;
     flex-direction: column;
-    margin-left: 40px;
+    margin-left: 4px;
 }
 
 .profile-icon {
     position: relative;
     font-size: 1rem;
     color: #ccc;
-}
-
-.edit-icon {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: #2979ff;
-    border-radius: 50%;
-    padding: 10px;
-    color: #fff;
 }
 
 footer p {
