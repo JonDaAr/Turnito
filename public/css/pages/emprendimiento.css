@@ -3,6 +3,10 @@
     box-sizing: border-box;
     padding: 0;
 }
+
+body {
+    background-color: var(--main-fondo);
+}
 :root{
     --main-fondo: #F5F7FA;
     --btn-color: #E9AA0A;
@@ -23,7 +27,7 @@
 }
 
 
-nav{
+nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -33,13 +37,30 @@ nav{
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--separadores-pagina);
+    background-color: white;
+}
+.logoName{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    box-sizing: content-box;
+}
+.logoNav {
+    width: 100%; /* Ajusta el ancho según el tamaño de tu imagen */
+    height: 100%; /* Ajusta la altura según el tamaño de tu imagen */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del contenedor */
+    border-right: 1px solid var(black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.logoNav>img{
-    width: 188px;
-    height: 52px;
+.logoNav img {
+    max-width: 100%;
+    max-height: 100%;
 }
 .tituloNav>h1{
+    margin-left: 20px;
     font-size: 28px;
 }
 
@@ -107,7 +128,7 @@ nav{
     top: 100%;
     right: 0;
     background-color: var(--menu-sin-seleccionar);
-    border: 1px solid --menu-sin-seleccionar;
+    border: 1px solid Ver(--menu-sin-seleccionar);
     display: none;
 }
 .listNav{
@@ -136,8 +157,8 @@ nav{
     top: 77px;
     left: 0;
     width: 20%;
-    height: 88vh;
-    background-color: var(--main-fondo);
+    height: 100%;
+    background-color: white;
     color: #ffffff;
     padding: 20px;
     border-right: 1px solid var(--separadores-pagina);
@@ -192,47 +213,9 @@ nav{
     height: 40px;
     margin: auto 10px;
 }
-
-
-/* Modo Nocturno */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 34px;
-    height: 20px;
-}
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: 0.4s;
-    border-radius: 20px;
-}
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 14px;
-    width: 14px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    transition: 0.4s;
-    border-radius: 50%;
-}
-input:checked + .slider {
-    background-color: #2196F3;
-}
-input:checked + .slider:before {
-    transform: translateX(14px);
+.menuIzquierda ul li a.active {
+    background-color: var(--primary-color);
+    color: white;
 }
 
 
@@ -250,28 +233,269 @@ main{
 /* sectio 1 Graficoas */
 .sectionGraficos{
     width: 100%;
-    height: 367px;
+    height: 40%;
     display: flex;
     gap: 15px;
 }
 .graficoBalance{
-    width: 30%;
+    width: 35%;
 }
 .graficoSemanal{
-    width: 70%;
+    width: 65%;
 }
 .graficoSemanal>img{
-    width: 80%;
+    width: 100%;
+    margin:10px 0;
 }
 
+
 .graficoBalance>img{
-    width: 100%;
+    width: 94%;
+    margin: 10px 0;
 }
 
 /* SECTION 2 Ultimos Clientes y Balance Mensual*/
 .comentarioBalanceMensual{
     width: 100%;
+    height: 30%;
     display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.carruselComentarios{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+}
+
+.ContenedorCarrusel{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.col-md-4{
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.col-md-4 h5{
+    color: #000000;
+    font-size: 12px;
+}
+.col-md-4 p{
+    font-size: 12px;
+    color: #00000065;
+}
+
+.balanceMensual{
+    width: 50%;
+    margin: 0 30px;
+}
+
+.balanceMensual>img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+.recaudadoContainer {
+    margin-top: 20px;
+}
+
+.recaudadoContainer button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.recaudadoContainer button:hover {
+    background-color: #0056b3;
+}
+
+.slide {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.slide.show {
+    max-height: 100px; /* Ajusta según el contenido */
+    opacity: 1;
+    transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Historial  */
+
+.historial {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.tituloHistorial>.visita-asistio{
+    color: #16c098;
+}
+
+.tituloHistorial>.visita-no-asistio{
+    color: #ff9800 ;
+}
+
+.tituloHistorial>.visita-cancelo{
+    color:#DF0404; ;
+}
+
+.resumen-clientes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 8.3%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resumen-item {
+    color: #0000006b;
+    background-color: white;
+    padding: 20px;
+    flex: 1;
+    border-radius: 8.3%;
+    text-align: center;
+}
+
+.resumen-item>p{
+    color: #000;
+    font-size: 2rem;
+}
+
+.resumen-item:last-child {
+    margin-right: 0;
+}
+
+.historial-clientes {
+    background-color: #fff;
+    padding: 4rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.historial-clientes table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.historial-clientes th,
+.historial-clientes td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.historial-clientes th {
+    background-color: #f3f3f3;
+}
+
+.historial-clientes table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.historial-clientes th,
+.historial-clientes td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.historial-clientes th {
+    background-color: #f3f3f3;
+}
+
+/* Colores para el estado de la visita */
+.visita-asistio {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.visita-asistio>p {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem;
+    color: #16c098;
+    background-color: #16c0983a;
+    border: 1px solid #00B087;
+    border-radius: 4%;
+    font-weight: bold;
+}
+
+.visita-no-asistio>p {
+    margin: 0;
+    color: #A56E05; 
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #FFBF75;
+    border: 1px solid #ff9800;
+    border-radius: 4%;
+    font-weight: bold;
+}
+
+.visita-cancelo>p {
+    margin: 0;
+    color: #DF0404; 
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #FFC5C5;
+    border: 1px solid #DF0404;
+    border-radius: 4%;
+    font-weight: bold;
+}
+
+.tituloHistorial{
+    display: flex;
+    gap: 1rem;
 }
 
 
@@ -302,25 +526,193 @@ main{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.dark-mode{
-    background-color: #000000;
-    color: black;
+/* Configuracion*/
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 50px;
 }
 
+.tab-button {
+    background-color: white;
+    border: none;
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button.active {
+    border-bottom: 1px solid #0056b3;
+    color: var(--primary-color);
+}
+
+.tab-content {
+    display: none;
+}
+.containConfi1{
+    background-color: white;
+    border-radius: 50px;
+    padding: 20px;
+}
+.containConfi1>form{
+    padding: 50px;
+}
+
+.tab-content{
+
+    margin: 10px;
+
+}
+input{
+    margin: 10px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+.save-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--btn-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+/* estilos Configuracion }Perfil*/
+.columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    margin-right: 20px;
+}
+.column1 {
+    margin-right: 2rem;
+}
+
+.column:last-child {
+    margin-right: 0;
+}
+
+.formPerfil input {
+    width: 80%;
+    margin: 10px;
+    border: 0.5px solid var(--separadores-pagina);
+    border-radius: 8.33px;
+    padding: 10px;
+}
+
+.formImg img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Estilo para el input de archivo */
+.datosForm input[type="file"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid var(--primary-color); 
+    border-radius: 8px; 
+    background-color: var(--btn-color);
+    color: #fff; 
+    font-size: 14px;
+}
+
+.datosForm input:focus{
+    border: 0.5px solid red;
+    
+}
+#profilePicture {
+    display: none;
+}
+
+.datosForm label[for="profilePicture"] {
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    background-color: var(--btn-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.datosForm label[for="profilePicture"]:hover {
+    background-color: var(--primary-color);
+}
+
+
+#preferenciasConfig input{
+    width: 10%;
+}
+#preferenciasConfig .inputRecordatorio{
+    width: 80%;
+}
+#preferenciasConfig label{
+    margin:10px 0;
+}
+
+#seguridadConfig input{
+    width: 30%;
+}
+#seguridadConfig label{
+    margin: 0.2rem;
+}
