@@ -411,28 +411,49 @@ hr{
 
 .contact-section {
     background-color: #fff;
-    padding: 60px 0;
+    padding-bottom: 10rem;
 }
 
 .contact-form {
-    max-width: 600px;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: #660d0d00;
+    max-width: 45%;
     margin: 0 auto;
+    display: block;
+    font-weight: bold;
+    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
+    display: flex;
     margin-bottom: 20px;
+    gap: 1rem;
+}
+.form-group-message{
+    display: flex;
+    flex-direction: column;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+.form-group-message textarea{
+    width:auto;
+    height: 5rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
+
+.contact-form button{
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+}
+
 
 .form-group input,
 .form-group textarea {
-    width: 100%;
-    padding: 10px;
+    width: 16rem;
+    padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
