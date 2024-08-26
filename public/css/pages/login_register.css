@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 50px;
+    background-color: #1C53C9;
+}
+
+.container {
+    display: flex;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+}
+.left-panel {
+    width:50%;
+    padding: 90px 90px ;
+    font-size:29px;
+    background-color: #83B4FF;
+    color: white;
+    border-radius: 25px 0 0 25px;
+    text-align: center;
+}
+
+.right-panel {
+    width: 50%;
+    padding: 30px;
+    background-color: white;
+    border-radius: 0 25px 25px 0;
+    border-bottom: 1px solid;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-container input[type="radio"] {
+    display: none;
+}
+
+.form-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-content label {
+    font-weight: bold;
+    margin-top: 10px;   
+}
+
+.form-content input {
+    padding: 10px;
+    margin: 5px 0;
+    border:none;
+    border-bottom: 1px solid;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-client, .btn-business {
+    background-color: #F3A325;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 90px;
+    cursor: pointer;
+    width: 45%;
+}
+
+.or-text {
+    text-align: center;
+    margin: 20px 0;
+    color: #999;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+   
+}
+
+.tab {
+    display: inline;
+    padding: 15px 20px;
+    cursor: pointer;
+    background-color: #9FCBFA;
+    border-radius: 15px 15px 15px 15px;
+    margin: 10px -10px;
+    
+}
+
+.tab-container input[type="radio"]:checked + label {
+ background-color: #1A73E8;
+ padding: 10px 40px;
+ color: white;
+}
+
+
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 50px;
+    background-color: #1C53C9;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-panel {
+    width:50%;
+    padding: 90px 90px ;
+    font-size:29px;
+    background-color: #83B4FF;
+    color: white;
+    border-radius: 25px 0 0 25px;
+    text-align: center;
+}
+
+.right-panel {
+    width: 50%;
+    padding: 30px;
+    background-color: white;
+    border-radius: 0 25px 25px 0;
+    
+}
+
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-container input[type="radio"] {
+    display: none;
+}
+
+.form-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-content label {
+    font-weight: bold;
+    margin-top: 10px;   
+}
+
+.form-content input {
+    padding: 10px;
+    margin: 5px 0;
+    border:none;
+    border-bottom: 1px solid;
+}
+
+.or-text {
+    text-align: center;
+    margin: 20px 0;
+    color: #999;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+   
+}
+
+.tab {
+    display: inline;
+    padding: 15px 20px;
+    cursor: pointer;
+    background-color: #9FCBFA;
+    border-radius: 15px 15px 15px 15px;
+    margin: 10px -10px; 
+}
+
+.tab-container input[type="radio"]:checked + label {
+ background-color: #1A73E8;
+ padding: 10px 40px;
+ color: white;
+}
+  
+ .login {
+    background-color: #F3A325;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 90px;
+    cursor: pointer;
+    width: 45%;
+   
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+   
+  
+}
