@@ -82,6 +82,7 @@ main{
     text-decoration: none;
     cursor: pointer;
 }
+
 .primary-heder{
     background-color: none;
     color: #1C53C9;
@@ -470,25 +471,29 @@ hr{
 
 .main-footer h2{
     text-align: left;
+    margin: 0rem
 }
 
 .container-footer{
+    width: 1440px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: 1rem;
 }
 
-.footer-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
+.footer-registro {
+    font-size: x-large;
+    padding-bottom: 6rem;
 }
 
 .footer-links a {
     text-decoration: none;
     color: #fdd835;
+}
+
+.main-footer p{
+    margin: 0rem;
 }
 
 #Empieza-ya{
