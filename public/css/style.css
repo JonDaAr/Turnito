@@ -115,13 +115,11 @@ main{
 
 .background-image {
         position: absolute;
-        width: 100%;
-        height: 80%;
-        background-image: url(/assets/images/Rectangle-fondo-1.png);
+        width: 90%;
+        height: 90%;
+        left: 0%;
         background-size: cover;
-        background-position: bottom;
         z-index: -1;
-        background-repeat: no-repeat;
 }
 
 .hero-section {
@@ -251,14 +249,12 @@ main{
 
 .background-image2 {
     position: absolute; /* Cambiado de fixed a absolute */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Escala la imagen para cubrir el área */
-    z-index: -1; /* Envía la imagen al fondo */
-}
+    }
 
+.background-image3{
+    position: absolute;
+    left: -10%;
+}
 
 .steps {
     width: 60%;
@@ -266,6 +262,15 @@ main{
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
+}
+
+.steps-2{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 5rem;
 }
 
 .step {
