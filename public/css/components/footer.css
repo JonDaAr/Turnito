@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contenedor-footer{
+    width: 100%;
+    margin: auto;
+}
+
+.footerSuperior{
+    text-align: center;
+}
+
+.footerInferior{
+    display: flex ;
+    justify-content: space-around;
+    align-items: end;
+    margin: 10px auto;
+    border-top: 1px solid #918b8b;
+    width: 80%;
+}
+
+.logoTurnito{
+    width: 100px;
+    height: 50px;
+}
+
+.redesSocialesFooter{
+    display: block;
+}

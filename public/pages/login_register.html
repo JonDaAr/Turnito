@@ -1,100 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Registro</title>
+    <link rel="stylesheet" href="../css/pages/login_register.css">
+</head>
 <body>
     <div class="container">
-        <div class="left-panel">
-            <p>La productividad nunca es un accidente.</p>
-            <p>Siempre es el resultado de un compromiso con la excelencia, la planificación inteligente y el esfuerzo enfocado.</p>
-            <div class="logo">TURNIT0</div>
-        </div>
-      
-        <div class="right-panel">
-            <div class="tab-container">
-                <input type="radio" id="login" name="tab" checked>
-                <label for="login" class="tab">Iniciar Sesión</label>
-
-                <input type="radio" id="register" name="tab">
-                <label for="register" class="tab">Registrarse</label>
+        <div class="right">
+            <div class="tab">
+                <a href="../pages/login_inicio_de_sesion.html">
+                    <button class="tablinks active">Iniciar Sesión</button>
+                </a>
+                <button class="tablinks">Registrarse</button>
             </div>
-
-            <div id="register-content" class="form-content active">
-                <form>
-                    <label for="Usuario">Usuario</label>
-                    <input type="text" id="Usuario" placeholder="Ingrese nombre de usuario">
-
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Ingresa tu correo">
-
-                    <label for="Contraseña">Contraseña</label>
-                    <input type="Contraseña" id="Contraseña" placeholder="Ingresa tu contraseña">
-
-                    <label for="confirm-password">Confirma Contraseña</label>
-                    <input type="password" id="confirm-password" placeholder="Ingrese tu contraseña">
-
-                    <div class="button-group">
-                        <button type="submit" class="btn-client">CLIENTE</button>
-                        <button type="submit" class="btn-business">EMPRENDIMIENTO</button>
-                    </div>
-
-                    <p class="or-text">o inicie sesión con</p>
-                    <div class="social-icons">
-                        <a href="#"><img src="f" alt="Facebook"></a>
-                        <a href="#"><img src="g" alt="Google"></a>
-                        <a href="#"><img src="a" alt="Apple"></a>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</body>
-
-
-
-
-
-<body>
-    <div class="container">
-        <div class="left-panel">
-            <p>La productividad nunca es un accidente.</p>
-            <p>Siempre es el resultado de un compromiso con la excelencia, la planificación inteligente y el esfuerzo enfocado.</p>
-            <div class="logo">TURNIT0</div>
-        </div>
-        
-      
-      
-        <div class="right-panel">
-            <div class="tab-container">
-                <input type="radio" id="login" name="tab" checked>
-                <label for="login" class="tab">Iniciar Sesión</label>
-
-                <input type="radio" id="register" name="tab">
-                <label for="register" class="tab">Registrarse</label>
-            </div>
-
-            <div id="register-content" class="form-content active">
-                <form>
-                   
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" placeholder="Ingresa tu correo">
-
-                    <label for="Contraseña">Contraseña:</label>
-                    <input type="Contraseña" id="Contraseña" placeholder="Ingresa tu contraseña">
-
-                    <div class="Recuerdame">
-                    <input type="checkbox" id="Recuerdame">
-                    <label for="Recuerdame">Recuerdame</label>
+            <form class="form">
+                <input type="text" placeholder="Ingrese nombre de usuario" required>
+                <input type="email" placeholder="Ingrese tu correo" required>
+                <input type="password" placeholder="Ingrese tu contraseña" required>
+                <input type="password" placeholder="Confirma tu contraseña" required>
+                <div class="buttons">
+                    <button class="client">Cliente</button>
+                    <button class="entrepreneurship">Emprendimiento</button>
                 </div>
-                <button type="" class="login">INGRESAR</button>
-                <p><a href="#">Has olvidado tu contraseña?</a></p>
-                        
-                    </div>
+                <div class="inicio">
+                    <p>o inicia sesión con</p>
+                </div>
+                <div class="social-icons">
+                    <img src="../../assets/images/logo_google.svg" alt="">
+                </div>
+            </form>
+        </div>
+        <div class="left">
+            <div class="quote">
+                <p>La productividad nunca es un accidente.</p>
+                <p>Siempre es el <span class="highlight">resultado de un compromiso</span> con la excelencia, la planificación inteligente y el esfuerzo enfocado.</p>
+            </div>
+            <div class="logo">
+                <img src="../../assets/images/logotipo_sin_fondo.png" alt="Turnito Logo">
 
-                    <p class="or-text">o inicie sesión con</p>
-                    <div class="social-icons">
-                        <a href="#"><img src="f" alt="Facebook"></a>
-                        <a href="#"><img src="g" alt="Google"></a>
-                        <a href="#"><img src="a" alt="Apple"></a>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
 </body>
+</html>
