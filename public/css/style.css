@@ -1,7 +1,14 @@
 /* styles.css */
+@font-face {
+    font-family: 'FORMULARIOS';
+    src: url('/assets/formulario/fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype'),
+        url('/assets/formulario/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: normal;     /* controla el grosor de las letras /
+   font-style: normal;     / controla el grosor de las letras */
+}
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'FORMULARIOS', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -292,7 +299,7 @@ main{
     display: flex;
     justify-content: space-between;
     gap: 2%;
-    margin: 6rem 0rem;
+    margin: 0rem 0rem 6rem 0rem;
 }
 
 .card-comments{
