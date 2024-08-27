@@ -1,30 +1,8 @@
-const perfilButton = document.querySelector('button[aria-label="perfil"]');
-const menuPerfil = document.getElementById('menuPerfil');
 
-//Oculta el Menu del Perfil//
-perfilButton.addEventListener('click', () => {
-    const elMenuVisible = menuPerfil.style.display === 'block';
-    menuPerfil.style.display = elMenuVisible ? 'none' : 'block' ;
-});
-
-// Oculta el menu pulsando en cualquier lado de la pagina//
-document.addEventListener('click', (event) => {
-    if(!perfilButton.contains(event.target) && !menuPerfil.contains(event.target)) {
-        menuPerfil.style.display ='none';
-    }
-})
 
 
 // modo Oscuro ///
 /// Agrega y quita la clase dark-mode al body revisdar ///
-const btn = document.querySelector('#dark-mode');
-
-const modoOscuro = () => {
-    document.body.classList.toggle('dark-mode');
-    console.log("codigo")
-};
-
-btn.addEventListener('click', modoOscuro);
 
 
 /* OCULTAR PAGINAS */
@@ -105,7 +83,14 @@ agregarCliente('Miguel Torres', 'Frecuente', '+5566778899', 'miguel@example.com'
 agregarCliente('Valentina Silva', 'Nuevo', '+7788990011', 'valentina@example.com', '2024-09-04 14:00', 'No asistió');
 
 
-
+/// comentarios
+function mostrarMas(elemento) {
+    const textoCompleto = elemento.parentNode.querySelector('.texto-completo');
+    if (textoCompleto.style.display === 'none') {
+        textoCompleto.style.display = 'inline';
+        elemento.style.display = 'none';
+    }
+}
 
 
 
@@ -144,4 +129,85 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = '/public/index.html'; 
         }
     });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const btnCambiarNombre = document.querySelector('.btn-cambiar-nombre');
+    const editContainer = document.querySelector('#edit-container');
+    const nuevoNombreInput = document.querySelector('#nuevo-nombre');
+    const nombreLugar = document.querySelector('#nombre-lugar');
+    const guardarCambioBtn = document.querySelector('#guardar-cambio');
+
+    // Mostrar el campo de entrada cuando se hace clic en el botón
+    btnCambiarNombre.addEventListener('click', function() {
+        editContainer.style.display = 'block';
+        nuevoNombreInput.focus();
+    });
+
+    // Guardar el nuevo nombre cuando se hace clic en el botón
+    guardarCambioBtn.addEventListener('click', function() {
+        const nuevoNombre = nuevoNombreInput.value.trim();
+        if (nuevoNombre) {
+            nombreLugar.textContent = nuevoNombre;
+            editContainer.style.display = 'none';
+        }
+    });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const btnCambiarDescripcion = document.querySelector('.btn-cambiar-descripcion');
+    const editContainerDescripcion = document.querySelector('#edit-container-descripcion');
+    const nuevaDescripcionInput = document.querySelector('#nueva-descripcion');
+    const descripcionLugar = document.querySelector('#descripcion-lugar');
+    const guardarCambioDescripcionBtn = document.querySelector('#guardar-cambio-descripcion');
+
+    
+    // Mostrar el campo de entrada para la descripción cuando se hace clic en el botón
+    btnCambiarDescripcion.addEventListener('click', function() {
+        editContainerDescripcion.style.display = 'block';
+        nuevaDescripcionInput.focus();
+    });
+
+    // Guardar la nueva descripción cuando se hace clic en el botón
+    guardarCambioDescripcionBtn.addEventListener('click', function() {
+        const nuevaDescripcion = nuevaDescripcionInput.value.trim();
+        if (nuevaDescripcion) {
+            descripcionLugar.textContent = nuevaDescripcion;
+            editContainerDescripcion.style.display = 'none';
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.querySelector('.add-btn').addEventListener('click', function() {
+    const newEvent = document.createElement('div');
+    newEvent.className = 'event';
+    newEvent.style.gridColumn = '3 / span 1';
+    newEvent.style.gridRow = '6 / span 2';
+    newEvent.textContent = 'Nuevo Turno';
+    document.querySelector('.calendar').appendChild(newEvent);
+});
+
+document.querySelector('.cancel-btn').addEventListener('click', function() {
+    const eventToCancel = document.querySelector('.event');
+    if (eventToCancel) {
+        eventToCancel.classList.add('cancelled');
+        eventToCancel.textContent = 'Turno Cancelado';
+    }
 });

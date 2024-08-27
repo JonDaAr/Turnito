@@ -53,7 +53,8 @@
             </div>
         </div>
         <ul>
-            <li><a href="#" onclick="MostrarPagina('page1')"><img class="iconMenu" src="/assets/icons/agenda.png" alt="incioMenu">Agenda</a></li>
+            <li><a href="#" onclick="MostrarPagina('page1')"><img class="iconMenu" src="/assets/icons/inicio.png" alt="incioMenu">inicio</a></li>
+            <li><a href="#" onclick="MostrarPagina('page5')"><img class="iconMenu" src="/assets/icons/agenda_menu.png" alt="AgendaMenu">Agenda</a></li>
             <li><a href="#" onclick="MostrarPagina('page2')"><img class="iconMenu" src="/assets/icons/history.png" alt="historialMenu">Historial</a></li>
             <li style="display: none;"><a href="#"><img class="iconMenu" src="/assets/icons/modo_noc.png" alt="modoNocMenu">Modo Oscuro
                 <label class="switch">
@@ -159,7 +160,39 @@
                     </div>
                 </div>
             </section>
-        </div>     
+        </div>
+        <div id="page5" class="page">
+            <div class="calendar-container">
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <h3>Acciones</h3>
+                    <button class="add-btn">Agregar Turno</button>
+                    <button class="cancel-btn">Cancelar Turno</button>
+                </div>
+        
+                <!-- Main Calendar -->
+                <div class="calendar">
+                    <!-- Example of time slots -->
+                    <div class="time-slot" style="grid-column: 2 / span 1; grid-row: 3 / span 2;">9:00 AM</div>
+                    <div class="time-slot" style="grid-column: 3 / span 1; grid-row: 5 / span 2;">10:00 AM</div>
+                    <div class="time-slot" style="grid-column: 4 / span 1; grid-row: 8 / span 3;">11:00 AM</div>
+        
+                    <!-- Example of events -->
+                    <div class="event" style="grid-column: 2 / span 1; grid-row: 3 / span 2;">Stephen Harris</div>
+                    <div class="event" style="grid-column: 4 / span 1; grid-row: 8 / span 3;">Derek Larson</div>
+                </div>
+        
+                <!-- Appointments -->
+                <div class="appointments">
+                    <h3>Turnos</h3>
+                    <ul>
+                        <li>Stephen Harris <span>9:00 AM</span></li>
+                        <li>Derek Larson <span>11:00 AM</span></li>
+                    </ul>
+                </div>
+            </div>
+        
+        </div>
         <div id="page2" class="page">
             <div class="historial">
                 <!-- Contenedor 1: Resumen de Clientes -->
@@ -212,8 +245,166 @@
         </div>
     
         <div id="page3" class="page">
-            <h2>Comentarios</h2>
-            <!-- Contenido de la página 3 -->
+            <div class="contenedorComentario">
+           
+            <div class="comentarios">
+                <h2>Reseñas y valoraciones</h2>
+                <div class="filtro">
+                    <h7>Su Calificación y lo que piensan de ti</h7>
+                
+                  <button>ORDENAR <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.4502 1.70874L7.17936 6.91707L12.9085 1.70874" stroke="#7D8DA6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></button>
+                </div>
+                <div class="comentario">
+                  <div class="comentario-header">
+                    <div>
+                        <span>
+                            <img src="/assets/images/foto1.png" alt="perfilComentario">
+                        </span>
+                        <span class="usuario">Kalb </span>
+                    </div>
+                    <div>
+                        <span class="fecha"> - 22 Jul</span>
+                    </div>
+                  </div>
+                  <p>Toby Burger was amazing with our cats! 😍🙌</p>
+                  <p class="comentario-corto">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                    <span class="ver-mas">Ver Más</span>
+                  </p>
+                  <div class="comentario-footer">
+                    <span>👍 1</span>
+                    <span class="responder">Comentar</span>
+                  </div>
+                </div>
+                <div class="comentario">
+                    <div class="comentario-header">
+                        <div>
+                            <span>
+                                <img src="/assets/images/foto2.png" alt="perfilComentario">
+                            </span>
+                            <span class="usuario">Kalb </span>
+                        </div>
+                        <div>
+                            <span class="fecha"> - 22 Jul</span>
+                        </div>
+                      </div>
+                    <p>Toby Burger was amazing with our cats! 😍🙌</p>
+                    <p class="comentario-corto">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                      <span class="ver-mas">Ver Más</span>
+                    </p>
+                    <div class="comentario-footer">
+                      <span>👍 1</span>
+                      <span class="responder">Comentar</span>
+                    </div>
+                  </div>
+                  <div class="conteiner-respuesta">
+                    <div class="comentario respuesta">
+                        <div class="comentario-header">
+                        <div>
+                            <span>
+                                <img src="/assets/images/perfil-coment.png" alt="perfilComentario">
+                            </span>
+                            <span class="usuario">Kalb </span>
+                        </div>
+                        <div>
+                            <span class="fecha"> - 22 Jul</span>
+                        </div>
+                    </div>
+                        <p class="comentario-corto">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit...
+                          <span class="ver-mas">Ver Más</span>
+                        </p>
+                        <div class="comentario-footer">
+                          <span>👍 1</span>
+                          <span class="responder">1 Comentario</span>
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <div class="comentario">
+                    <div class="comentario-header">
+                        <div>
+                            <span>
+                                <img src="/assets/images/foto3.png" alt="perfilComentario">
+                            </span>
+                            <span class="usuario">Kalb </span>
+                        </div>
+                        <div>
+                            <span class="fecha"> - 22 Jul</span>
+                        </div>
+                    </div>
+                    <p>Toby Burger was amazing with our cats! 😍🙌</p>
+                    <p class="comentario-corto">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                      <span class="ver-mas">Ver Más</span>
+                    </p>
+                    <div class="comentario-footer">
+                        <span>👍 1</span>
+                      <span class="responder">1 Comentario</span>
+                    </div>
+                  </div>
+                  <div class="comentario">
+                    <div class="comentario-header">
+                        <div>
+                            <span>
+                                <img src="/assets/images/foto1.png" alt="perfilComentario">
+                            </span>
+                            <span class="usuario">Kalb </span>
+                        </div>
+                        <div>
+                            <span class="fecha"> - 22 Jul</span>
+                        </div>
+                    </div>
+                    <p>Toby Burger was amazing with our cats! 😍🙌</p>
+                    <p class="comentario-corto">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                      <span class="ver-mas">Ver Más</span>
+                    </p>
+                    <div class="comentario-footer">
+                      <span>👍 1</span>
+                      <span class="responder">1 Comentario</span>
+                    </div>
+                  </div>
+                    
+                <!-- Agrega más comentarios aquí -->
+              </div>
+            
+              <div class="informacion-lugar">
+                <div class="tituloCambiar">
+                    <h2 id="nombre-lugar">Nombre del Lugar</h2>
+                      <button class="btn-cambiar-nombre">
+                           <img src="/assets/icons/lapiz.svg" alt="Cambiar Nombre">
+                     </button>
+                </div>
+                
+    <!-- Campo de entrada para el nuevo nombre -->
+    <div id="edit-container" style="display: none;">
+        <input class="inputTitulo" type="text" id="nuevo-nombre" value="">
+        <button id="guardar-cambio">Guardar</button>
+    </div>
+                <img src="/assets/images/tienda_uñas.jpg" alt="Restaurant" class="imagen-lugar">
+                <div class="calificacion">
+                  <h3>Calificación</h3>
+                  <p class="rating">4.8</p>
+                  <p>Course Rating</p>
+                </div>
+                <div class="conteinerDescripcion">                    
+                    <p id="descripcion-lugar">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis mollis augue, et ornare nunc. Duis diam velit, gravida ut laoreet et, lacinia nec tortor. Duis tincidunt feugiat dui et interdum. Cras et accumsan tortor, sed imperdiet elit. Vestibulum quis massa id leo tempus convallis. Proin nibh tortor, cursus in dictum sed, fringilla in eros. Cras efficitur volutpat erat, eu iaculis nisl feugiat vitae. eu iaculis nisl feugiat vita aculis nisl feugiat vitaee </p>
+                    <button class="btn-cambiar-descripcion">
+                        <img src="/assets/icons/lapiz.svg" alt="Cambiar Descripción">
+                    </button>
+                    
+                    <!-- Campo de entrada para la nueva descripción -->
+                    <div id="edit-container-descripcion" style="display: none;">
+                        <textarea id="nueva-descripcion" rows="4" placeholder="Descripción del Lugar"></textarea>
+                        <button id="guardar-cambio-descripcion">Guardar</button>
+                    </div>
+                </div>
+              </div>     
+            </div>
         </div>
     
         <div id="page4" class="page">
