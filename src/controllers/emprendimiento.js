@@ -20,27 +20,6 @@ function MostrarPagina(pageId) {
 
 
 
-
-
-/* Boton para ocultar lo recaudado */
-document.getElementById('mostrarRecaudado').addEventListener('click', function() {
-    var cantidadRecaudada = document.getElementById('cantidadRecaudada');
-    cantidadRecaudada.classList.add('show');
-    document.getElementById('mostrarRecaudado').style.display = 'none';
-    document.getElementById('ocultarRecaudado').style.display = 'inline-block';
-});
-
-document.getElementById('ocultarRecaudado').addEventListener('click', function() {
-    var cantidadRecaudada = document.getElementById('cantidadRecaudada');
-    cantidadRecaudada.classList.remove('show');
-    setTimeout(function() {
-        document.getElementById('mostrarRecaudado').style.display = 'inline-block';
-        document.getElementById('ocultarRecaudado').style.display = 'none';
-    }, 500); // Duración de la transición
-});
-
-
-
 /* Historial    */
 
 // Ejemplo de cómo se podrían actualizar los contadores
@@ -195,19 +174,48 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-document.querySelector('.add-btn').addEventListener('click', function() {
-    const newEvent = document.createElement('div');
-    newEvent.className = 'event';
-    newEvent.style.gridColumn = '3 / span 1';
-    newEvent.style.gridRow = '6 / span 2';
-    newEvent.textContent = 'Nuevo Turno';
-    document.querySelector('.calendar').appendChild(newEvent);
+function addEvent() {
+    const day = parseInt(document.getElementById('day').value);
+    const time = parseInt(document.getElementById('time').value);
+    const calendar = document.getElementById('calendar');
+
+    const eventDiv = document.createElement('div');
+    eventDiv.classList.add('event');
+    eventDiv.draggable = true;
+    eventDiv.textContent = 'Turno';
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.classList.add('delete-btn');
+    deleteBtn.textContent = 'x';
+    deleteBtn.onclick = function() {
+        calendar.remove(eventDiv);
+    };
+    eventDiv.appendChild(deleteBtn);
+
+    eventDiv.ondragstart = function(e) {
+        e.dataTransfer.setData('text', '');
+        e.dataTransfer.setDragImage(eventDiv, 20, 20);
+    };
+
+    const cellIndex = day + (time * 8);
+
+    if (cellIndex < calendar.children.length) {
+        const cell = calendar.children[cellIndex];
+        cell.appendChild(eventDiv);
+    } else {
+        console.error("Índice de celda fuera de rango:", cellIndex);
+    }
+}
+
+document.addEventListener('dragover', function(e) {
+    e.preventDefault();
 });
 
-document.querySelector('.cancel-btn').addEventListener('click', function() {
-    const eventToCancel = document.querySelector('.event');
-    if (eventToCancel) {
-        eventToCancel.classList.add('cancelled');
-        eventToCancel.textContent = 'Turno Cancelado';
+document.addEventListener('drop', function(e) {
+    const calendar = document.getElementById('calendar');
+    const eventDiv = document.querySelector('.event[draggable="true"]');
+    const closestCell = document.elementFromPoint(e.clientX, e.clientY);
+    if (closestCell && closestCell.parentElement === calendar) {
+        closestCell.appendChild(eventDiv);
     }
 });

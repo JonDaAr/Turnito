@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <title>Turnito</title>
+    <link rel="shortcut icon" href="/assets/Logo.png" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -52,18 +53,24 @@
                 <p>empresa</p>
             </div>
         </div>
-        <ul>
-            <li><a href="#" onclick="MostrarPagina('page1')"><img class="iconMenu" src="/assets/icons/inicio.png" alt="incioMenu">inicio</a></li>
-            <li><a href="#" onclick="MostrarPagina('page5')"><img class="iconMenu" src="/assets/icons/agenda_menu.png" alt="AgendaMenu">Agenda</a></li>
-            <li><a href="#" onclick="MostrarPagina('page2')"><img class="iconMenu" src="/assets/icons/history.png" alt="historialMenu">Historial</a></li>
-            <li style="display: none;"><a href="#"><img class="iconMenu" src="/assets/icons/modo_noc.png" alt="modoNocMenu">Modo Oscuro
-                <label class="switch">
-                    <input type="checkbox" id="dark-mode">
-                    <span class="slider"></span>
-                </label></a></li>
-            <li><a href="#" onclick="MostrarPagina('page3')"><img class="iconMenu" src="/assets/icons/comment.png" alt="comentariosMenu">Comentarios</a></li>
-            <li><a href="#" onclick="MostrarPagina('page4')"><img class="iconMenu" src="/assets/icons/config.png" alt="configMenu">Configuracion</a></li>
+        <ul class="container-menu">
+            <div>
+                <li><a href="#" onclick="MostrarPagina('page1')"><img class="iconMenu" src="/assets/icons/inicio.png" alt="incioMenu">inicio</a></li>
+                <li><a href="#" onclick="MostrarPagina('page5')"><img class="iconMenu" src="/assets/icons/agenda_menu.png" alt="AgendaMenu">Agenda</a></li>
+                <li><a href="#" onclick="MostrarPagina('page2')"><img class="iconMenu" src="/assets/icons/history.png" alt="historialMenu">Historial</a></li>
+                <li style="display: none;"><a href="#"><img class="iconMenu" src="/assets/icons/modo_noc.png" alt="modoNocMenu">Modo Oscuro
+                    <label class="switch">
+                        <input type="checkbox" id="dark-mode">
+                        <span class="slider"></span>
+                    </label></a></li>
+                <li><a href="#" onclick="MostrarPagina('page3')"><img class="iconMenu" src="/assets/icons/comment.png" alt="comentariosMenu">Comentarios</a></li>
+            </div>
+            <div class="fin-menu">
+                <li><a href="#" onclick="MostrarPagina('page4')"><img class="iconMenu" src="/assets/icons/config.png" alt="configMenu">Configuracion</a></li>
             <li><a href="#" id="logoutButton"><img class="iconMenu" src="/assets/icons/salir.png" alt="salirMenu">Salir</a></li>
+            </div>
+            
+            
         </ul>
     </aside>
     <main>
@@ -71,7 +78,7 @@
             <section class="sectionGraficos">
                 <div class="graficoSemanal">
                     <h2>Actividad de la Semana</h2>
-                    <img src="/assets/images/grafico/grafico1.png" alt="grafico_1">
+                    <img src="/assets/images/grafico/grafico_semanal.svg" alt="grafico_1">
                 </div>
                 <div class="graficoBalance">
                     <h2>Balance</h2>
@@ -80,27 +87,27 @@
             </section>
             <section class="comentarioBalanceMensual">
                 <div class="ContenedorCarrusel">
-                    <h2>Ultimos Comentarios</h2>
+                    <h2>Ultimos Clientes</h2>
                     <div id="multiItemCarousel" class="carruselComentarios carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <img src="/assets/images/Foto-Perfil.png" class="d-block w-100" alt="Imagen 1">
+                                        <img src="/assets/images/perfil1.svg" class="d-block w-50" alt="Imagen 1">
                                         <div class=" d-none d-md-block">
                                             <h5>Juan Pablo</h5>
                                             <p>nuevo</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="/assets/images/Foto-Perfil.png" class="d-block w-100" alt="Imagen 2">
+                                        <img src="/assets/images/perfil2.svg" class="d-block w-50" alt="Imagen 2">
                                         <div class=" d-none d-md-block">
                                             <h5>Ana Conda</h5>
                                             <p>Frecuente</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="/assets/images/Foto-Perfil.png" class="d-block w-100" alt="Imagen 3">
+                                        <img src="/assets/images/perfil3.svg" class="d-block w-50" alt="Imagen 3">
                                         <div class=" d-none d-md-block">
                                             <h5>Esteban Dido</h5>
                                             <p>Nuevo</p>
@@ -111,21 +118,21 @@
                             <div class="carousel-item">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <img src="/assets/images/Foto-Perfil.png" class="d-block w-100" alt="Imagen 4">
+                                        <img src="/assets/images/perfil4.svg" class="d-block w-50" alt="Imagen 4">
                                         <div class=" d-none d-md-block">
                                             <h5>Pablo Juan</h5>
                                             <p>Ocasional</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="/assets/images/Foto-Perfil.png" class="d-block w-100" alt="Imagen 5">
+                                        <img src="/assets/images/perfil5.svg" class="d-block w-50" alt="Imagen 5">
                                         <div class=" d-none d-md-block">
                                             <h5>Esteban Quito</h5>
                                             <p>Frecuente</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="/assets/images/Foto-Perfil.png" class="d-block w-100" alt="Imagen 6">
+                                        <img src="/assets/images/perfil6.svg" class="d-block w-50" alt="Imagen 6">
                                         <div class="d-none d-md-block">
                                             <h5>Carlos Guzman</h5>
                                             <p>Ocasional</p>
@@ -143,14 +150,6 @@
                             <span class="visually-hidden">Siguiente</span>
                         </button>
                     </div>
-                    <div class="recaudadoContainer">
-                        <h3>Total Recaudado</h3>
-                        <button id="mostrarRecaudado">Mostrar</button>
-                        <button id="ocultarRecaudado" style="display:none;">Ocultar</button>
-                        <div id="cantidadRecaudada" class="slide" style="display:none;">
-                            <p>$50,000</p>
-                        </div>
-                    </div>
                 </div>
                 <div class="balanceMensual">
                     <h2>Blance Mensual</h2>
@@ -162,35 +161,90 @@
             </section>
         </div>
         <div id="page5" class="page">
-            <div class="calendar-container">
-                <!-- Sidebar -->
-                <div class="sidebar">
-                    <h3>Acciones</h3>
-                    <button class="add-btn">Agregar Turno</button>
-                    <button class="cancel-btn">Cancelar Turno</button>
-                </div>
+            <h2>Agenda</h2>
+            <form id="addEventForm">
+                <label for="day">Día:</label>
+                <select id="day">
+                    <option value="1">Lunes</option>
+                    <option value="2">Martes</option>
+                    <option value="3">Miércoles</option>
+                    <option value="4">Jueves</option>
+                    <option value="5">Viernes</option>
+                    <option value="6">Sábado</option>
+                    <option value="7">Domingo</option>
+                </select>
+                <label for="time">Hora:</label>
+                <select id="time">
+                    <option value="1">8:00 AM</option>
+                    <option value="2">9:00 AM</option>
+                    <option value="3">10:00 AM</option>
+                    <option value="4">11:00 AM</option>
+                    <option value="5">12:00 PM</option>
+                    <option value="6">1:00 PM</option>
+                    <option value="7">2:00 PM</option>
+                    <option value="8">3:00 PM</option>
+                    <option value="9">4:00 PM</option>
+                    <option value="10">5:00 PM</option>
+                    <option value="11">6:00 PM</option>
+                    <option value="12">7:00 PM</option>
+                    <option value="13">8:00 PM</option>
+                </select>
+                <button class="buttonCalendar" type="button" onclick="addEvent()">Agregar Turno</button>
+            </form>
+            <div class="calendar" id="calendar">
+                <!-- Headers -->
+                
+                <div></div> <!-- Empty top-left corner -->
+                <div class="header">Lunes</div>
+                <div class="header">Martes</div>
+                <div class="header">Miércoles</div>
+                <div class="header">Jueves</div>
+                <div class="header">Viernes</div>
+                <div class="header">Sábado</div>
+                <div class="header">Domingo</div>
         
-                <!-- Main Calendar -->
-                <div class="calendar">
-                    <!-- Example of time slots -->
-                    <div class="time-slot" style="grid-column: 2 / span 1; grid-row: 3 / span 2;">9:00 AM</div>
-                    <div class="time-slot" style="grid-column: 3 / span 1; grid-row: 5 / span 2;">10:00 AM</div>
-                    <div class="time-slot" style="grid-column: 4 / span 1; grid-row: 8 / span 3;">11:00 AM</div>
+                <!-- Time Labels -->
+                <div class="time">8:00 AM</div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
         
-                    <!-- Example of events -->
-                    <div class="event" style="grid-column: 2 / span 1; grid-row: 3 / span 2;">Stephen Harris</div>
-                    <div class="event" style="grid-column: 4 / span 1; grid-row: 8 / span 3;">Derek Larson</div>
-                </div>
+                <div class="time">9:00 AM</div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
         
-                <!-- Appointments -->
-                <div class="appointments">
-                    <h3>Turnos</h3>
-                    <ul>
-                        <li>Stephen Harris <span>9:00 AM</span></li>
-                        <li>Derek Larson <span>11:00 AM</span></li>
-                    </ul>
-                </div>
+                <div class="time">10:00 AM</div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        
+                <div class="time">11:00 AM</div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        
+                <div class="time">12:00 PM</div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        
+                <div class="time">1:00 PM</div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        
+                <div class="time">2:00 PM</div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        
+                <div class="time">3:00 PM</div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        
+                <div class="time">4:00 PM</div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        
+                <div class="time">5:00 PM</div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        
+                <div class="time">6:00 PM</div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        
+                <div class="time">7:00 PM</div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        
+                <div class="time">8:00 PM</div>
+                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
             </div>
+        
+            
         
         </div>
         <div id="page2" class="page">
@@ -248,7 +302,7 @@
             <div class="contenedorComentario">
            
             <div class="comentarios">
-                <h2>Reseñas y valoraciones</h2>
+                <h2>Comentarios y valoraciones</h2>
                 <div class="filtro">
                     <h7>Su Calificación y lo que piensan de ti</h7>
                 
@@ -297,7 +351,7 @@
                     </p>
                     <div class="comentario-footer">
                       <span>👍 1</span>
-                      <span class="responder">Comentar</span>
+                      <span class="responder"> 1 Comentar</span>
                     </div>
                   </div>
                   <div class="conteiner-respuesta">
@@ -319,7 +373,7 @@
                         </p>
                         <div class="comentario-footer">
                           <span>👍 1</span>
-                          <span class="responder">1 Comentario</span>
+                          <span class="responder">Comentar</span>
                         </div>
                     </div>
                   </div>
@@ -343,7 +397,7 @@
                     </p>
                     <div class="comentario-footer">
                         <span>👍 1</span>
-                      <span class="responder">1 Comentario</span>
+                      <span class="responder">Comentar</span>
                     </div>
                   </div>
                   <div class="comentario">
@@ -365,7 +419,7 @@
                     </p>
                     <div class="comentario-footer">
                       <span>👍 1</span>
-                      <span class="responder">1 Comentario</span>
+                      <span class="responder">Comentar</span>
                     </div>
                   </div>
                     
@@ -388,8 +442,8 @@
                 <img src="/assets/images/tienda_uñas.jpg" alt="Restaurant" class="imagen-lugar">
                 <div class="calificacion">
                   <h3>Calificación</h3>
-                  <p class="rating">4.8</p>
-                  <p>Course Rating</p>
+                  <p class="rating">5<img src="/assets/images/estrellas.png" alt="estrellas"></p>
+                  
                 </div>
                 <div class="conteinerDescripcion">                    
                     <p id="descripcion-lugar">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis mollis augue, et ornare nunc. Duis diam velit, gravida ut laoreet et, lacinia nec tortor. Duis tincidunt feugiat dui et interdum. Cras et accumsan tortor, sed imperdiet elit. Vestibulum quis massa id leo tempus convallis. Proin nibh tortor, cursus in dictum sed, fringilla in eros. Cras efficitur volutpat erat, eu iaculis nisl feugiat vitae. eu iaculis nisl feugiat vita aculis nisl feugiat vitaee </p>
