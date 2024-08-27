@@ -1,0 +1,145 @@
+body {
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0A48A7;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 400px 20px 400px;
+}
+
+.left { 
+    flex: 1;
+    background-color: #7DACF3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 20px 65px 20px ;
+    border-radius: 30px 0 0 30px;
+    
+}
+
+.right {
+    flex: 1;
+    background-color: #fff;
+    color: #000;
+    position: relative;
+    z-index: 1;
+    border-radius:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.2);
+    margin-left: -30px;
+}
+
+.quote {
+    font-size: 20px;
+    margin-bottom:20px;
+    text-align:left;
+    max-width: 70%;
+}
+
+.highlight {
+    color: #4A90E2;
+    font-weight: bold;
+}
+
+.login-box {
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.buttons {
+    background-color: #83B4FF;
+    border-radius: 40px ;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    flex: 1;
+    margin: 6px 5px;
+}
+
+.btn.active {
+    background-color: #1C6EE7;
+    color: white;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    margin-bottom: 5px;
+}
+
+.login-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+.login-form input:focus {
+border: none;
+outline: none;
+border-bottom: 1px solid #83B4FF;
+}
+
+.extras {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.login-btn {
+    background-color: #F4C622;
+    color: white;
+    border: none;
+    padding: 10px 60px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.alt-login {
+    text-align: center;
+    margin-bottom: 2px;
+    color: #7A7A7A;
+}
+
+.social-login {
+    text-align: center;
+}
+
+.social-login i {
+    font-size: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,134 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0A48A7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    flex-direction: row-reverse; /* Invertir el orden de los contenedores */
+}
+
+.left {
+    flex: 1;
+    background-color: #7DACF3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    color: white;
+}
+
+.right {
+    flex: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    position: relative;
+}
+
+.tab {
+    background-color: #83B4FF;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: fit-content;
+    align-self: center;
+}
+
+.tablinks {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: #1C6EE7;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tablinks.active {
+    background-color: transparent;
+    color: white;
+}
+
+.form input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    align-self:center;
+}
+
+.form input:focus{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #83B4FF;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.client, .entrepreneurship {
+    flex: 1;
+    padding: 15px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.client {
+    background-color: #E9AA0A;
+}
+
+.entrepreneurship {
+    background-color: #E9AA0A;
+}
+.inicio{
+    display: ruby-text;
+    color: #7A7A7A;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.quote {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.highlight {
+    color: #4A90E2;
+}
+
+.logo {
+    align-self:center;
+}
+
+.logo img {
+    max-width: 200px;
+}
