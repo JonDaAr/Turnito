@@ -523,6 +523,17 @@ hr{
     margin: 0rem;
 }
 
+.redes{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.redes img{
+    max-width: 2rem;
+    max-height: 2rem;
+    display: flex;
+}
+
 #Empieza-ya{
     list-style: none;
     display: flex;
