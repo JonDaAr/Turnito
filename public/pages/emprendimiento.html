@@ -3,565 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/pages/emprendimiento.css">
-    <!-- Link Boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <title>Turnito</title>
-    <link rel="shortcut icon" href="/assets/Logo.png" type="image/x-icon">
+    <title>UI Layout</title>
+    <link rel="stylesheet" href="/Turnito/public/css/pages/emprendimiento.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logoName">
-                <div class="logoNav">
-                    <img src="/assets/images/final-turnito-sin fondo.png" alt="Logo">
+        <div class="logo">
+            <img src="/Turnito/assets/images/Logo.svg" alt="Logo"> <!-- Replace with your image source -->
+        </div>
+        <div class="header-right">
+            <input type="text" class="search-bar" placeholder="Buscar...">
+            <div class="icons">
+                <div class="icon notification-icon">
+                    <img src="/Turnito/assets/icons/Notification.svg" alt="Notification">
+                </div>
+                <div class="icon profile-icon">
+                    <img src="/Turnito/assets/icons/Profile.svg" alt="Profile">
                 </div>
             </div>
-            <div class="tituloNav">
-                <h1>Quing Burger</h1>
-            </div>
-            <div class="eventNav">
-                <div class="buscadorNav">
-                    <button type="submit">
-                        <span>
-                            <img class="lupaNav" src="/assets/icons/lupa-vector.png" alt="Lupa">
-                        </span>
-                    </button>
-                    <input class="lupaBuscador" type="text" placeholder="Buscar..." aria-label="Buscar">
-                </div>
-                <div class="notificacionesNav">
-                    <button aria-label="notificaciones">
-                    <img class="campNoti" src="/assets/icons/camp-noti.png" alt="Notificacion">
-                    </button>
-                </div>
-                <div class="menuNav">
-                    <button aria-label="perfil">
-                        <img src="/assets/images/Foto-Perfil.png" alt="PerfilFoto">
-                    </button>
-
-                </div>
-            </div>
-        </nav>
+        </div>
     </header>
-    <aside class="menuIzquierda">
-        <div class="userPerfil">
-            <img src="/assets/images/Foto-Perfil.png" alt="imgPerfil">
-            <div class="userText">
-                <h3>Toby Burger</h3>
-                <p>empresa</p>
-            </div>
-        </div>
-        <ul class="container-menu">
-            <div>
-                <li><a href="#" onclick="MostrarPagina('page1')"><img class="iconMenu" src="/assets/icons/inicio.png" alt="incioMenu">inicio</a></li>
-                <li><a href="#" onclick="MostrarPagina('page5')"><img class="iconMenu" src="/assets/icons/agenda_menu.png" alt="AgendaMenu">Agenda</a></li>
-                <li><a href="#" onclick="MostrarPagina('page2')"><img class="iconMenu" src="/assets/icons/history.png" alt="historialMenu">Historial</a></li>
-                <li style="display: none;"><a href="#"><img class="iconMenu" src="/assets/icons/modo_noc.png" alt="modoNocMenu">Modo Oscuro
-                    <label class="switch">
-                        <input type="checkbox" id="dark-mode">
-                        <span class="slider"></span>
-                    </label></a></li>
-                <li><a href="#" onclick="MostrarPagina('page3')"><img class="iconMenu" src="/assets/icons/comment.png" alt="comentariosMenu">Comentarios</a></li>
-            </div>
-            <div class="fin-menu">
-                <li><a href="#" onclick="MostrarPagina('page4')"><img class="iconMenu" src="/assets/icons/config.png" alt="configMenu">Configuracion</a></li>
-            <li><a href="#" id="logoutButton"><img class="iconMenu" src="/assets/icons/salir.png" alt="salirMenu">Salir</a></li>
-            </div>
-            
-            
-        </ul>
-    </aside>
-    <main>
-        <div id="page1" class="page active">
-            <section class="sectionGraficos">
-                <div class="graficoSemanal">
-                    <h2>Actividad de la Semana</h2>
-                    <img src="/assets/images/grafico/grafico_semanal.svg" alt="grafico_1">
-                </div>
-                <div class="graficoBalance">
-                    <h2>Balance</h2>
-                    <img src="/assets/images/grafico/grafico2.png" alt="grafico_2">
-                </div>
-            </section>
-            <section class="comentarioBalanceMensual">
-                <div class="ContenedorCarrusel">
-                    <h2>Ultimos Clientes</h2>
-                    <div id="multiItemCarousel" class="carruselComentarios carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <img src="/assets/images/perfil1.svg" class="d-block w-50" alt="Imagen 1">
-                                        <div class=" d-none d-md-block">
-                                            <h5>Juan Pablo</h5>
-                                            <p>nuevo</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="/assets/images/perfil2.svg" class="d-block w-50" alt="Imagen 2">
-                                        <div class=" d-none d-md-block">
-                                            <h5>Ana Conda</h5>
-                                            <p>Frecuente</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="/assets/images/perfil3.svg" class="d-block w-50" alt="Imagen 3">
-                                        <div class=" d-none d-md-block">
-                                            <h5>Esteban Dido</h5>
-                                            <p>Nuevo</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <img src="/assets/images/perfil4.svg" class="d-block w-50" alt="Imagen 4">
-                                        <div class=" d-none d-md-block">
-                                            <h5>Pablo Juan</h5>
-                                            <p>Ocasional</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="/assets/images/perfil5.svg" class="d-block w-50" alt="Imagen 5">
-                                        <div class=" d-none d-md-block">
-                                            <h5>Esteban Quito</h5>
-                                            <p>Frecuente</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <img src="/assets/images/perfil6.svg" class="d-block w-50" alt="Imagen 6">
-                                        <div class="d-none d-md-block">
-                                            <h5>Carlos Guzman</h5>
-                                            <p>Ocasional</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#multiItemCarousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Anterior</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#multiItemCarousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Siguiente</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="balanceMensual">
-                    <h2>Blance Mensual</h2>
-                    <img src="/assets/images/grafico/grafico.png" alt="graficOMensual">
-                    <div>
-                        <h3></h3>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <div id="page5" class="page">
-            <h2>Agenda</h2>
-            <form id="addEventForm">
-                <label for="day">Día:</label>
-                <select id="day">
-                    <option value="1">Lunes</option>
-                    <option value="2">Martes</option>
-                    <option value="3">Miércoles</option>
-                    <option value="4">Jueves</option>
-                    <option value="5">Viernes</option>
-                    <option value="6">Sábado</option>
-                    <option value="7">Domingo</option>
-                </select>
-                <label for="time">Hora:</label>
-                <select id="time">
-                    <option value="1">8:00 AM</option>
-                    <option value="2">9:00 AM</option>
-                    <option value="3">10:00 AM</option>
-                    <option value="4">11:00 AM</option>
-                    <option value="5">12:00 PM</option>
-                    <option value="6">1:00 PM</option>
-                    <option value="7">2:00 PM</option>
-                    <option value="8">3:00 PM</option>
-                    <option value="9">4:00 PM</option>
-                    <option value="10">5:00 PM</option>
-                    <option value="11">6:00 PM</option>
-                    <option value="12">7:00 PM</option>
-                    <option value="13">8:00 PM</option>
-                </select>
-                <button class="buttonCalendar" type="button" onclick="addEvent()">Agregar Turno</button>
-            </form>
-            <div class="calendar" id="calendar">
-                <!-- Headers -->
-                
-                <div></div> <!-- Empty top-left corner -->
-                <div class="header">Lunes</div>
-                <div class="header">Martes</div>
-                <div class="header">Miércoles</div>
-                <div class="header">Jueves</div>
-                <div class="header">Viernes</div>
-                <div class="header">Sábado</div>
-                <div class="header">Domingo</div>
-        
-                <!-- Time Labels -->
-                <div class="time">8:00 AM</div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        
-                <div class="time">9:00 AM</div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        
-                <div class="time">10:00 AM</div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        
-                <div class="time">11:00 AM</div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        
-                <div class="time">12:00 PM</div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        
-                <div class="time">1:00 PM</div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        
-                <div class="time">2:00 PM</div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        
-                <div class="time">3:00 PM</div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        
-                <div class="time">4:00 PM</div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        
-                <div class="time">5:00 PM</div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        
-                <div class="time">6:00 PM</div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        
-                <div class="time">7:00 PM</div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-        
-                <div class="time">8:00 PM</div>
-                <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
-            </div>
-        
-            
-        
-        </div>
-        <div id="page2" class="page">
-            <div class="historial">
-                <!-- Contenedor 1: Resumen de Clientes -->
-                <section class="resumen-clientes">
-                    <div class="resumen-item">
-                        <img src="/assets/images/totales.svg" alt="imgTotal">
-                        <h4>Clientes Totales</h4>
-                        <p id="totalClientes">0</p>
-                    </div>
-                    <div class="resumen-item">
-                        <img src="/assets/images/asistieron.svg" alt="imgAsistieron">
-                        <h4>Clientes Asistieron</h4>
-                        <p id="clientesAsistieron">0</p>
-                    </div>
-                    <div class="resumen-item">
-                        <img src="/assets/images/No_asistieron.svg" alt="imgNoAsistieron">
-                        <h4>Clientes No Asistieron</h4>
-                        <p id="clientesNoAsistieron">0</p>
-                    </div>
-                </section>
-            
-                <!-- Contenedor 2: Historial de Clientes -->
-                <section class="historial-clientes">
-
-                        <div>
-                            <h3>Historial</h3>
-                        </div>
-                        <div class="tituloHistorial">
-                            <p class="visita-asistio">Asistio</p>
-                            <p class="visita-no-asistio">No Asistio</p>
-                            <p class="visita-cancelo">Cancelo</p>
-                        </div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Frecuencia</th>
-                                <th>Teléfono</th>
-                                <th>Email</th>
-                                <th>Día y Hora</th>
-                                <th>Visita</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tablaHistorialClientes">
-                            <!-- Aquí se agregarán dinámicamente las filas de clientes -->
-                        </tbody>
-                    </table>
-                </section>
-            </div>
-        </div>
     
-        <div id="page3" class="page">
-            <div class="contenedorComentario">
-           
-            <div class="comentarios">
-                <h2>Comentarios y valoraciones</h2>
-                <div class="filtro">
-                    <h7>Su Calificación y lo que piensan de ti</h7>
-                
-                  <button>ORDENAR <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.4502 1.70874L7.17936 6.91707L12.9085 1.70874" stroke="#7D8DA6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg></button>
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="profile">
+                <img src="/Turnito/assets/icons/Profile.svg" alt="Profile Picture">
+                <div class="text">
+                    <span>Cliente</span>
+                    <span>Perfil</span>
                 </div>
-                <div class="comentario">
-                  <div class="comentario-header">
-                    <div>
-                        <span>
-                            <img src="/assets/images/foto1.png" alt="perfilComentario">
-                        </span>
-                        <span class="usuario">Kalb </span>
-                    </div>
-                    <div>
-                        <span class="fecha"> - 22 Jul</span>
-                    </div>
-                  </div>
-                  <p>Toby Burger was amazing with our cats! 😍🙌</p>
-                  <p class="comentario-corto">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                    <span class="ver-mas">Ver Más</span>
-                  </p>
-                  <div class="comentario-footer">
-                    <span>👍 1</span>
-                    <span class="responder">Comentar</span>
-                  </div>
+            </div>
+            <ul>
+                <li>
+                    <i class="icon-home">
+                        <img src="/Turnito/assets/icons/Home.svg" alt="Home">
+                    </i>
+                    Inicio
+                </li>
+                <li>
+                    <i class="icon-plus">
+                        <img src="/Turnito/assets/icons/Plus.svg" alt="Plus">
+                    </i> 
+                    Ver emprendimientos
+                </li>
+                <li>
+                    <i class="icon-comments">
+                        <img src="/Turnito/assets/icons/Comments.svg" alt="Comments">
+                    </i>
+                    Comentarios
+                </li>
+            </ul>
+            <div class="bottom-section"> <!-- New section for bottom links -->
+                <ul>
+                    <li>
+                        <i class="icon-config">
+                            <img src="/Turnito/assets/icons/Configuration.svg" alt="Configuration">
+                        </i>Configuración
+                    </li>
+                    <li>
+                        <i class="icon-logout">
+                            <img src="/Turnito/assets/icons/Logout.svg" alt="Logout">
+                        </i>Salir
+                    </li>
+                </ul>
+            </div>
+        </nav>        
+        <div class="content">
+            <div class="left-side">
+                <div class="carousel">
+                    <img src="/Turnito/assets/images/Nails.jpg" alt="Nails Image">
                 </div>
-                <div class="comentario">
-                    <div class="comentario-header">
-                        <div>
-                            <span>
-                                <img src="/assets/images/foto2.png" alt="perfilComentario">
-                            </span>
-                            <span class="usuario">Kalb </span>
-                        </div>
-                        <div>
-                            <span class="fecha"> - 22 Jul</span>
-                        </div>
-                      </div>
-                    <p>Toby Burger was amazing with our cats! 😍🙌</p>
-                    <p class="comentario-corto">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                      <span class="ver-mas">Ver Más</span>
-                    </p>
-                    <div class="comentario-footer">
-                      <span>👍 1</span>
-                      <span class="responder"> 1 Comentar</span>
-                    </div>
-                  </div>
-                  <div class="conteiner-respuesta">
-                    <div class="comentario respuesta">
-                        <div class="comentario-header">
-                        <div>
-                            <span>
-                                <img src="/assets/images/perfil-coment.png" alt="perfilComentario">
-                            </span>
-                            <span class="usuario">Kalb </span>
-                        </div>
-                        <div>
-                            <span class="fecha"> - 22 Jul</span>
-                        </div>
-                    </div>
-                        <p class="comentario-corto">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit...
-                          <span class="ver-mas">Ver Más</span>
-                        </p>
-                        <div class="comentario-footer">
-                          <span>👍 1</span>
-                          <span class="responder">Comentar</span>
-                        </div>
-                    </div>
-                  </div>
-                  
-                  <div class="comentario">
-                    <div class="comentario-header">
-                        <div>
-                            <span>
-                                <img src="/assets/images/foto3.png" alt="perfilComentario">
-                            </span>
-                            <span class="usuario">Kalb </span>
-                        </div>
-                        <div>
-                            <span class="fecha"> - 22 Jul</span>
-                        </div>
-                    </div>
-                    <p>Toby Burger was amazing with our cats! 😍🙌</p>
-                    <p class="comentario-corto">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                      <span class="ver-mas">Ver Más</span>
-                    </p>
-                    <div class="comentario-footer">
-                        <span>👍 1</span>
-                      <span class="responder">Comentar</span>
-                    </div>
-                  </div>
-                  <div class="comentario">
-                    <div class="comentario-header">
-                        <div>
-                            <span>
-                                <img src="/assets/images/foto1.png" alt="perfilComentario">
-                            </span>
-                            <span class="usuario">Kalb </span>
-                        </div>
-                        <div>
-                            <span class="fecha"> - 22 Jul</span>
-                        </div>
-                    </div>
-                    <p>Toby Burger was amazing with our cats! 😍🙌</p>
-                    <p class="comentario-corto">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                      <span class="ver-mas">Ver Más</span>
-                    </p>
-                    <div class="comentario-footer">
-                      <span>👍 1</span>
-                      <span class="responder">Comentar</span>
-                    </div>
-                  </div>
-                    
-                <!-- Agrega más comentarios aquí -->
-              </div>
-            
-              <div class="informacion-lugar">
-                <div class="tituloCambiar">
-                    <h2 id="nombre-lugar">Nombre del Lugar</h2>
-                      <button class="btn-cambiar-nombre">
-                           <img src="/assets/icons/lapiz.svg" alt="Cambiar Nombre">
-                     </button>
+                <div class="comment-section">
+                    <h3>Dejanos tu comentario</h3>
+                    <textarea placeholder="Agregue un comentario"></textarea>
+                    <button>Agregar Comentario</button>
                 </div>
-                
-    <!-- Campo de entrada para el nuevo nombre -->
-    <div id="edit-container" style="display: none;">
-        <input class="inputTitulo" type="text" id="nuevo-nombre" value="">
-        <button id="guardar-cambio">Guardar</button>
+                <div class="comments">
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span>Kaib</span>
+                            <span>22 Jul</span>
+                            <span>★★★★★</span>
+                        </div>
+                        <div class="comment-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum imperdiet commodo.
+                                Phasellus rhoncus quam vitae tortor lobortis blandit. Integer commodo diam eget augue egestas,
+                                ut vehicula tortor tempor. Suspendisse ultrices molestie urna a finibus. Donec eget metus quis
+                                nunc ultricies porttitor eu vitae elit. Aliquam quis euismod orci, aliquam euismod felis. Phasellus
+                                vitae blandit lacus.Donec ut turpis a ligula laoreet rhoncus nec in massa. Cras ut laoreet purus,
+                                quis accumsan urna. Aenean facilisis ex non dolor fermentum, id placerat eros aliquet. Sed imperdiet
+                                sem eget tempus varius. Nulla ligula lorem, tempor ac maximus nec, lacinia rhoncus sem.
+                                Donec placerat velit sollicitudin dolor euismod ultricies.</p>
+                        </div>
+                    </div>
+                    <!-- Repeat similar comment cards -->
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="rating-section">
+                    <h2>4.8 ★</h2>
+                    <h3>NAILS COMPANY</h3>
+                </div>
+                <div class="presentation">
+                    <h3>Presentación</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum imperdiet commodo.
+                        Phasellus rhoncus quam vitae tortor lobortis blandit. Integer commodo diam eget augue egestas,
+                        ut vehicula tortor tempor. Suspendisse ultrices molestie urna a finibus. Donec eget metus quis
+                        nunc ultricies porttitor eu vitae elit. Aliquam quis euismod orci, aliquam euismod felis. Phasellus
+                        vitae blandit lacus.Donec ut turpis a ligula laoreet rhoncus nec in massa. Cras ut laoreet purus,
+                        quis accumsan urna. Aenean facilisis ex non dolor fermentum, id placerat eros aliquet. Sed imperdiet
+                        sem eget tempus varius. Nulla ligula lorem, tempor ac maximus nec, lacinia rhoncus sem.
+                        Donec placerat velit sollicitudin dolor euismod ultricies.  </p>
+                </div>
+                <div class="appointment-section">
+                    <h3>Selecciona tu TURNO</h3>
+                    <button>SELECCIONAR TURNO</button>
+                </div>
+            </div>
+        </div>
     </div>
-                <img src="/assets/images/tienda_uñas.jpg" alt="Restaurant" class="imagen-lugar">
-                <div class="calificacion">
-                  <h3>Calificación</h3>
-                  <p class="rating">5<img src="/assets/images/estrellas.png" alt="estrellas"></p>
-                  
-                </div>
-                <div class="conteinerDescripcion">                    
-                    <p id="descripcion-lugar">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis mollis augue, et ornare nunc. Duis diam velit, gravida ut laoreet et, lacinia nec tortor. Duis tincidunt feugiat dui et interdum. Cras et accumsan tortor, sed imperdiet elit. Vestibulum quis massa id leo tempus convallis. Proin nibh tortor, cursus in dictum sed, fringilla in eros. Cras efficitur volutpat erat, eu iaculis nisl feugiat vitae. eu iaculis nisl feugiat vita aculis nisl feugiat vitaee </p>
-                    <button class="btn-cambiar-descripcion">
-                        <img src="/assets/icons/lapiz.svg" alt="Cambiar Descripción">
-                    </button>
-                    
-                    <!-- Campo de entrada para la nueva descripción -->
-                    <div id="edit-container-descripcion" style="display: none;">
-                        <textarea id="nueva-descripcion" rows="4" placeholder="Descripción del Lugar"></textarea>
-                        <button id="guardar-cambio-descripcion">Guardar</button>
-                    </div>
-                </div>
-              </div>     
-            </div>
-        </div>
-    
-        <div id="page4" class="page">
-            <div class="containConfi1">
-                <div class="tabs">
-                    <button class="tab-button active" data-tab="perfilConfig">Perfil</button>
-                    <button class="tab-button" data-tab="preferenciasConfig">Preferencias</button>
-                    <button class="tab-button" data-tab="seguridadConfig">Seguridad</button>
-                </div>
-                
-                <form id="configForm" class="formPerfil">
-                    <!-- Perfil -->
-                    <div class="tab-content active" id="perfilConfig">
-                        <div class="columns">
-                            <div class="column1">
-                                <label class="formImg" for="profilePicture"><img src="/assets/images/Foto-Perfil.png" alt="perfilEditConfig"></label>
-                                <input class="formInput" type="file" id="profilePicture" name="profilePicture">
-                            </div>    
-                            <div class="column">
-                                <label for="name">Nombre:</label><br>
-                                <input type="text" id="name" name="name"><br>
-                                
-                                <label for="email">Email:</label><br>
-                                <input type="email" id="email" name="email">
-                                
-                                <label for="address">Fecha de Nacimiento</label>
-                                <input type="date" id="address" name="address">
-                                
-                                <label for="other">Dirección del Negocio:</label>
-                                <input type="text" id="other" name="other">
-                                
-                                <label for="other">Codigo Postal</label>
-                                <input type="text" id="other" name="other">
-                            </div>
-                            <div class="column">
-                                <label for="other">Nombre Del Negocio:</label><br>
-                                <input type="text" id="other" name="other"><br>
-
-                                <label for="other">Contraseña:</label><br>
-                                <input type="text" id="other" name="other"><br>
-
-                                <label for="other">Direccion:</label><br>
-                                <input type="text" id="other" name="other"><br>
-                                
-                                <label for="other">Ciudad:</label><br>
-                                <input type="text" id="other" name="other"><br>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Preferencias -->
-                    <div class="tab-content" id="preferenciasConfig">
-                        <label for="horaInicio"><h5>Rango Horario:</h5></label><br>
-                        <input type="time" id="horaInicio" name="horaInicio">
-                        <span>a</span>
-                        <input type="time" id="horaFin" name="horaFin">
-                        <button type="button" id="agregarHorario">Agregar otro horario</button><br>
-
-                        <h5>Notificaciones</h5>
-                        <label for="autoAccept">Aceptar automáticamente los turnos</label>
-                        <label class="switch">
-                            <input type="checkbox" id="autoAccept" name="autoAccept">
-                            <span class="slider round"></span>
-                        </label><br>
-                        <label for="notifyClients">Notificar a los clientes</label>
-                        <label class="switch">
-                            <input type="checkbox" id="notifyClients" name="notifyClients">
-                            <span class="slider round"></span>
-                        </label><br>
-                
-                        <label for="remindClients">Recordatorio para los clientes</label>
-                        <label class="switch">
-                            <input type="checkbox" id="remindClients" name="remindClients">
-                            <span class="slider round"></span>
-                        </label><br>
-                
-                        <div id="reminderInput" class="slide">
-                            <label for="reminderText">Texto del recordatorio:</label><br>
-                            <input class="inputRecordatorio" type="text" id="reminderText" name="reminderText">
-                        </div>
-                    </div>
-                
-                    <!-- Seguridad -->
-                    <div class="tab-content" id="seguridadConfig">
-                        <label for="twoFactor">Autenticación en dos pasos</label>
-                        <label class="switch">
-                            <input type="checkbox" id="twoFactor" name="twoFactor">
-                            <span class="slider round"></span>
-                        </label><br>
-                        
-                        <label for="password">Cambiar Contraseña:</label><br>
-                        <input type="password" id="password" name="password"><br>
-                
-                        <label for="confirmPassword">Confirmar Contraseña:</label><br>
-                        <input type="password" id="confirmPassword" name="confirmPassword">
-                    </div>
-                
-                    <button type="submit" class="save-button">Guardar</button>
-                </form>
-
-            </div>
-        </div>
-    </main>
-    <script src="/src/controllers/emprendimiento.js"></script>
 </body>
 </html>
