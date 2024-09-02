@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio de Sesión</title>
+    <link rel="stylesheet" href="../css/pages/login_inicio_sesion.css">
+</head>
+<body>
+    <!--contenedor celeste-->
+    <div class="container">
+        <div class="left">
+            <p class="quote">
+                La productividad nunca es un accidente. <br> Siempre es el 
+                <span class="highlight">resultado de un compromiso</span> con la excelencia,<br>
+                la planificación inteligente y el esfuerzo enfocado.
+            </p>
+            <div class="logo">
+                <img src="../../assets/images/logotipo_sin_fondo.png" alt="">
+            </div>
+        </div>
+        <!--contenedor blanco-->
+        <div class="right">
+            <div class="login-box">
+                <div class="buttons">
+                    <button class="btn active">Iniciar Sesión</button>
+                    <a href="../pages/login_register.html">
+                        <button class="btn">Registrarse</button>
+                    </a>
+                    
+                </div>
+                <form class="login-form">
+                    <h2>Iniciar sesión</h2>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Ingresa tu correo">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Ingresa tu contraseña">
+                    <div class="extras">
+                        <label><input type="checkbox"> Recuérdame</label>
+                        <a href="#">¿Has olvidado tu contraseña?</a>
+                    </div>
+                    <button class="login-btn">INGRESAR</button>
+                    <p class="alt-login">o inicia sesión con</p>
+                    <div class="social-login">
+                        <img src="../../assets/images/logo_google.svg" alt="">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
