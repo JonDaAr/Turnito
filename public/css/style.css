@@ -14,39 +14,32 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #fff;
-    overflow-x: hidden;
 }
 main{
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    overflow-x: hidden;
-}
-
-section{
-    padding: 0 2rem;
 }
 
 .container {
+    padding: 0rem 2rem;
     width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
 }
-section h2{
+.container h2{
     text-align: center;
     font-size: 3rem;
     }
 
 .main-header {
     position: fixed;
-    top: 0; 
+    top: 0; /* Fija el navbar en la parte superior de la ventana */
     left: 0;
-    width: 100%; 
-    z-index: 1000; 
+    width: 100%; /* Asegura que el navbar ocupe todo el ancho de la pantalla */
+    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
 }
 
 .navbar {
-    padding: .5rem 3rem;
+    padding: 0rem 3rem;
     background-color: #fff;
     display: flex;
     justify-content: space-between;
@@ -129,7 +122,7 @@ section h2{
 
 .background-image {
         position: absolute;
-        width: 92%;
+        width: 90%;
         height: 90%;
         left: 0%;
         background-size: cover;
@@ -148,9 +141,8 @@ section h2{
 .hero-content {
     display: flex;
     align-items: normal;
-    justify-content: space-between;
-    height: 100%;
-    margin-top: 2rem;
+    justify-content: space-around;
+    margin: 3.8rem 3.8rem 10rem 3.8rem;
 }
 
 .hero-text h1 {
@@ -168,12 +160,6 @@ section h2{
 .hero-image img {
     max-width: 100%;
     height: auto;
-}
-
-.image-combinada{
-    margin: auto;
-    display: block;
-    max-height: 100%;
 }
 
 .image-stack {
@@ -221,7 +207,7 @@ section h2{
     background-color: #f5f5f5;
     border-radius: 10px;
     padding: 2rem;
-    width: 30%;
+    width: 40rem;
     box-shadow: -6px 6px 4px rgba(0,0,0,0.1);
     text-align: center;
 }
@@ -237,6 +223,7 @@ section h2{
 
 .how-it-works-section {
     background-color: #ffffff;
+    padding: 60px 0;
 }
 
 .how-container{
@@ -254,7 +241,7 @@ section h2{
 .img-top-left{
     border-radius: 2rem;
     position: absolute;
-    left: 45%;
+    right: 0rem;
     z-index: 2;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/* Sombra opcional para la imagen superior */
 }
@@ -262,14 +249,9 @@ section h2{
 .img-bottom-right{
     border-radius: 2rem;
     position: absolute;
-    top: 20rem;/* Ajusta para la superposición vertical */
-    left: 27%;/* Ajusta para la superposición horizontal */
+    bottom: 4rem;/* Ajusta para la superposición vertical */
+    right: 10rem;/* Ajusta para la superposición horizontal */
     z-index: 1;
-}
-
-.image-computadora{
-    position: absolute;
-    right: 0%;
 }
 
 .background-image2 {
@@ -278,7 +260,7 @@ section h2{
 
 .background-image3{
     position: absolute;
-    right: -10%;
+    left: -10%;
 }
 
 .steps {
@@ -309,7 +291,7 @@ section h2{
 }
 
 .step p {
-    padding-left:2rem ;
+    padding: 0rem 2rem ;
     font-size: 16px;
 }
 
@@ -333,6 +315,7 @@ section h2{
 .plans-section {
     text-align: center;
     position: relative;
+    padding: 60px 0;
     background-color: #1C53C9;
     color: #ccc;
     z-index: -1;
@@ -365,7 +348,7 @@ section h2{
     justify-content: space-between;
     border-radius: 10px;
     padding: 1rem;
-    width: 25%;
+    width: 18rem;
     box-shadow: -6px 6px 6px 8px rgba(0,0,0,0.1);
     text-align: center;
 }
@@ -389,7 +372,7 @@ section h2{
     width: 50%;
     height: auto;
     padding: 0rem 3rem 3rem 3rem;
-    margin: 12%;
+    margin: 3rem;
     border:solid 2px #1C53C9;
     border-radius: 2rem;
     background-color: #fff;
@@ -403,8 +386,6 @@ section h2{
     display: flex;
     background-color: #ffffff;
     padding: 60px 0;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .faq-title{
@@ -432,7 +413,7 @@ hr{
 }
 
 .faq-item h3 {
-    margin: 0 2rem;
+    margin-bottom: 10px;
     text-align: left;
 }
 
@@ -508,23 +489,24 @@ hr{
     border-radius: 5px;
 }
 
-footer {
+.main-footer {
     background-color: #1a237e;
     color: #fff;
-    padding:0 5rem;
+    padding: 20px 0;
     text-align: center;
 }
 
-footer h2{
-    font-size: 3rem;
+.main-footer h2{
     text-align: left;
     margin: 0rem
 }
 
 .container-footer{
+    width: 1440px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: 1rem;
 }
 
 .footer-registro {
@@ -537,7 +519,7 @@ footer h2{
     color: #fdd835;
 }
 
-footer p{
+.main-footer p{
     margin: 0rem;
 }
 
