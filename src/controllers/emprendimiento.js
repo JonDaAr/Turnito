@@ -1,10 +1,3 @@
-
-
-
-// modo Oscuro ///
-/// Agrega y quita la clase dark-mode al body revisdar ///
-
-
 /* OCULTAR PAGINAS */
 function MostrarPagina(pageId) {
     console.log('Función MostrarPagina llamada con el ID:', pageId);
@@ -70,16 +63,6 @@ function mostrarMas(elemento) {
         elemento.style.display = 'none';
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 /* Configuracion */
