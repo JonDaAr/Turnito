@@ -37,6 +37,8 @@ section h2{
     font-size: 3rem;
     }
 
+/* ------------------seccion de header------------------ */
+
 .main-header {
     position: fixed;
     top: 0; 
@@ -55,6 +57,9 @@ section h2{
     position: relative;
     z-index: 2;
 }
+
+/* ------------------seccion de nav------------------ */
+
 .navbar-links{
     width: 100%;
     display: flex;
@@ -66,15 +71,11 @@ section h2{
     display: flex;
     list-style: none;
     justify-content: center;
-    background-color: #1C53C9; /* Color de fondo azul */
-    border-radius: 0 0 25px 25px; /* Bordes redondeados en la parte inferior */
+    background-color: #1C53C9; 
+    border-radius: 0 0 25px 25px; 
     gap: 2em;
     padding: .4em 3rem;
     margin: 0%;
-    /* list-style: none;
-    display: flex;
-    gap: 20px;
-    justify-content: space-evenly; */
 }
 
 .nav-links a {
@@ -116,8 +117,8 @@ section h2{
 
 #buttonup{
     position: fixed;
-    bottom: 2rem; /* Distancia desde la parte inferior */
-    right: 2rem;   /* Distancia desde la parte izquierda */
+    bottom: 2rem; 
+    right: 2rem;   
     padding: .5rem 1.5rem;
     background-color: #1C53C9;
     color: white;
@@ -126,6 +127,8 @@ section h2{
     cursor: pointer;
     z-index: 1000;
     }
+
+/* ------------------seccion de hero---------------- */
 
 .background-image {
         position: absolute;
@@ -187,22 +190,24 @@ section h2{
     position: relative;
     z-index: 1;
     left: 8rem;
-    margin-top: 13rem; /* Ajusta para darle espacio entre las imágenes */
+    margin-top: 13rem;
 }
 
 .image-top {
     position: absolute;
     left: 7rem;
     z-index: 2;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/* Sombra opcional para la imagen superior */ 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .image-bottom {
     position: absolute;
-    top: 12rem;/* Ajusta para la superposición vertical */
-    left: 19rem;/* Ajusta para la superposición horizontal */
+    top: 12rem;
+    left: 19rem;
     z-index: 1;
 }
+
+/* ------------------seccion de beneficios------------------ */
 
 .benefits-section {
     margin-top: 10rem;
@@ -239,6 +244,8 @@ section h2{
     background-color: #ffffff;
 }
 
+/* ------------------seccion de como funciona------------------ */
+
 .how-container{
     width: 100%;
     margin: 0 auto;
@@ -256,14 +263,14 @@ section h2{
     position: absolute;
     left: 45%;
     z-index: 2;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/* Sombra opcional para la imagen superior */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .img-bottom-right{
     border-radius: 2rem;
     position: absolute;
-    top: 20rem;/* Ajusta para la superposición vertical */
-    left: 27%;/* Ajusta para la superposición horizontal */
+    top: 20rem;
+    left: 27%; 
     z-index: 1;
 }
 
@@ -273,7 +280,7 @@ section h2{
 }
 
 .background-image2 {
-    position: absolute; /* Cambiado de fixed a absolute */
+    position: absolute; 
     }
 
 .background-image3{
@@ -313,6 +320,8 @@ section h2{
     font-size: 16px;
 }
 
+/* ------------------seccion de comentarios------------------ */
+
 .coments{
     display: flex;
     justify-content: space-between;
@@ -329,6 +338,8 @@ section h2{
     box-shadow: -6px 6px 4px rgba(0,0,0,0.1);
     text-align: initial;
 }
+
+/* ------------------seccion de planes------------------ */
 
 .plans-section {
     text-align: center;
@@ -382,7 +393,7 @@ section h2{
     margin: 10px 0;
 }
 
-
+/* ------------------seccion de registro------------------ */
 
 .register-card{
     text-align: center;
@@ -398,6 +409,8 @@ section h2{
 .register-card p {
     margin-bottom: 4rem;
 }
+
+/* ------------------seccion de FAQ------------------ */
 
 .faq-section {
     display: flex;
@@ -444,6 +457,8 @@ hr{
     padding-left: 5rem;
 }
 
+/* ------------------seccion de contacto------------------ */
+
 .contact-section {
     background-color: #fff;
     padding-bottom: 10rem;
@@ -484,6 +499,8 @@ hr{
     margin-top: 1rem;
 }
 
+/*------------------seccion de maestros------------------ */
+
 .masters{
     display: flex;
     justify-content:space-evenly;
@@ -507,6 +524,8 @@ hr{
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+/*------------------seccion de footer------------------ */
 
 footer {
     background-color: #1a237e;
