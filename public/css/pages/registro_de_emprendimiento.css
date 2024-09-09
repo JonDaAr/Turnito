@@ -52,7 +52,7 @@ form h3 {
 .input-group input[type="date"],
 .input-group input[type="number"] {
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 0.5rem;
     border: 2px 
     solid #4285F4;
     border-radius: 2vw;
@@ -121,3 +121,9 @@ footer p {
     margin-top: 2cap;
 }
 
+@media (width: 800px ) {
+    .imagen-de-perfil {width: 100%;}
+    .form-container { width: 100%;}
+    .input-group { width: 100%;}
+    .input-half-group { width: 100%;}
+}
