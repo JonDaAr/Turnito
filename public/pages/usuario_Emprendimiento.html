@@ -4,19 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/pages/usuario_emprendimiento.css">
+    <link rel="stylesheet" href="/css/components/calendar.css">
+
     <!-- Link Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
     <title>Turnito</title>
     <link rel="shortcut icon" href="/public/css/pages/usuario_emprendimiento.css" type="image/x-icon">
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.15/index.global.min.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'resourceTimelineWeek'
+        });
+        calendar.render();
+      });
+
+    </script>
 </head>
 <body>
     <header>
         <nav>
             <div class="logoName">
                 <div class="logoNav">
-                    <img src="/assets/icons/agenda_menu.png" alt="Logo">
+                    <img src="/assets/images/final-turnito-sin fondo.png" alt="Logo">
                 </div>
             </div>
             <div class="tituloNav">
@@ -55,10 +69,10 @@
         </div>
         <ul class="container-menu">
             <div>
-                <li><a href="#" onclick="MostrarPagina('page1')"><img class="iconMenu" src="/assets/icons/inicio.png" alt="incioMenu">inicio</a></li>
-                <li><a href="#" onclick="MostrarPagina('page5')"><img class="iconMenu" src="/assets/icons/agenda_menu.png" alt="AgendaMenu">Agenda</a></li>
-                <li><a href="#" onclick="MostrarPagina('page2')"><img class="iconMenu" src="/assets/icons/history.png" alt="historialMenu">Historial</a></li>
-                <li><a href="#" onclick="MostrarPagina('page3')"><img class="iconMenu" src="/assets/icons/comment.png" alt="comentariosMenu">Comentarios</a></li>
+                <li><a href="#" onclick="MostrarPagina('page1'); return false"><img class="iconMenu" src="/assets/icons/inicio.png" alt="incioMenu">inicio</a></li>
+                <li><a href="/pages/agenda.html"><img class="iconMenu" src="/assets/icons/agenda_menu.png" alt="AgendaMenu">Agenda</a></li>
+                <li><a href="#" onclick="MostrarPagina('page2'); return false"><img class="iconMenu" src="/assets/icons/history.png" alt="historialMenu">Historial</a></li>
+                <li><a href="#" onclick="MostrarPagina('page3'); return false"><img class="iconMenu" src="/assets/icons/comment.png" alt="comentariosMenu">Comentarios</a></li>
             </div>
             <div class="fin-menu">
                 <li><a href="#" onclick="MostrarPagina('page4')"><img class="iconMenu" src="/assets/icons/config.png" alt="configMenu">Configuracion</a></li>
@@ -155,9 +169,8 @@
                 </div>
             </section>
         </div>
-        <div id="page5" class="page">
-            <div id="calendar"></div>
-            
+        <div id="page5" class="page"></div>
+
         </div>
         <div id="page2" class="page">
             <div class="historial">
@@ -474,7 +487,8 @@
             </div>
         </div>
     </main>
-    <script src="/src/controllers/emprendimiento.js"></script>
+    <script src="/js/calendar.js" ></script>
+    <script src="/js/emprendimiento.js"></script>
     <script type="module" src="/src/app.js"></script>
 </body>
 </html>
