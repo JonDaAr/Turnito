@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/components/calendar.css">
+   
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.15/index.global.min.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'resourceTimelineWeek'
+        });
+        calendar.render();
+      });
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logoName">
+                <div class="logoNav">
+                    <img src="/assets/images/final-turnito-sin fondo.png" alt="Logo">
+                </div>
+            </div>
+            <div class="tituloNav">
+                <h1>Quing Burger</h1>
+            </div>
+            <div class="eventNav">
+                <div class="buscadorNav">
+                    <button type="submit">
+                        <span>
+                            <img class="lupaNav" src="/assets/icons/lupa-vector.png" alt="Lupa">
+                        </span>
+                    </button>
+                    <input class="lupaBuscador" type="text" placeholder="Buscar..." aria-label="Buscar">
+                </div>
+                <div class="notificacionesNav">
+                    <button aria-label="notificaciones">
+                    <img class="campNoti" src="/assets/icons/camp-noti.png" alt="Notificacion">
+                    </button>
+                </div>
+                <div class="menuNav">
+                    <button aria-label="perfil">
+                        <img src="/assets/images/Foto-Perfil.png" alt="PerfilFoto">
+                    </button>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <aside class="menuIzquierda">
+        <div class="userPerfil">
+            <img src="/assets/images/Foto-Perfil.png" alt="imgPerfil">
+            <div class="userText">
+                <h3>Toby Burger</h3>
+                <p>empresa</p>
+            </div>
+        </div>
+        <ul class="container-menu">
+            <div>
+                <li><a href="#" onclick="MostrarPagina('page1'); return false"><img class="iconMenu" src="/assets/icons/inicio.png" alt="incioMenu">inicio</a></li>
+                <li><a href="#" onclick="MostrarPagina('page5'); return false"><img class="iconMenu" src="/assets/icons/agenda_menu.png" alt="AgendaMenu">Agenda</a></li>
+                <li><a href="#" onclick="MostrarPagina('page2'); return false"><img class="iconMenu" src="/assets/icons/history.png" alt="historialMenu">Historial</a></li>
+                <li><a href="#" onclick="MostrarPagina('page3'); return false"><img class="iconMenu" src="/assets/icons/comment.png" alt="comentariosMenu">Comentarios</a></li>
+            </div>
+            <div class="fin-menu">
+                <li><a href="#" onclick="MostrarPagina('page4')"><img class="iconMenu" src="/assets/icons/config.png" alt="configMenu">Configuracion</a></li>
+            <li><a href="#" id="logoutButton"><img class="iconMenu" src="/assets/icons/salir.png" alt="salirMenu">Salir</a></li>
+            </div>
+            
+            
+        </ul>
+    </aside>
+    <main>
+        <div id='calendar'></div>
+    </main>
+    <!-- Modal HTML -->
+<!-- Modal para agregar evento -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Agregar Turno</h2>
+      <div class="labelModalCompartido">
+        <div>
+          <label for="eventName">Cliente:</label>
+          <input type="text" class="inputMedio" id="eventName" placeholder="Nombre del turno">
+        </div>
+        <div>
+          <label for="eventPhone">Teléfono:</label>
+          <input type="tel" id="eventPhone" class="inputMedio" placeholder="Número de teléfono">
+        </div>
+      </div>
+      
+
+      <label for="eventEmail">Email:</label>
+      <input type="email" id="eventEmail" placeholder="Email">
+
+      <label for="eventProfile">Perfil de Turnito:</label>
+      <input type="text" id="eventProfile" placeholder="Perfil (si tiene)">
+      <div class="labelModalCompartidoHour">
+        <div class="modalHour">
+          <label for="eventStart">Inicio:</label>
+        <input type="datetime-local" id="eventStart">
+        </div>
+        <div class="modalHour">
+          <label for="eventEnd">Fin:</label>
+          <input type="datetime-local" id="eventEnd">
+        </div>
+      </div>
+      <div class="contentButton">
+        <button id="saveEvent">Guardar</button>
+      </div>
+  </div>
+</div>
+<!-- Modal para agregar AlertaEvento -->
+<div id="alertModal" class="Modal">
+  <div class="containerAlert">
+    <div class="modal-content2 alert-modal-content">
+      <span class="close-alert">&times;</span>
+      <h2 id="alertTitle">Título de Alerta</h2>
+      <p id="alertMessage">Mensaje de alerta</p>
+      <button id="okAlert">Aceptar</button>
+  </div>
+  </div>
+
+</div>
+<script src="/js/calendar.js"></script>
+</body>
+</html>

@@ -1,84 +1,146 @@
-window.addEventListener('resize', function() {
-    calendar.updateSize();
-});
-
-
 document.addEventListener('DOMContentLoaded', function() {
-
-    let request_calendar = "/events.json";
-
     var calendarEl = document.getElementById('calendar');
-    var calendar = new calendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
+    var modal = document.getElementById('modal');
+    var alertModal = document.getElementById('alertModal');
+    var closeModal = document.querySelector('.close');
+    var closeAlert = document.querySelector('.close-alert');
+    var saveEventButton = document.getElementById('saveEvent');
+    var okAlertButton = document.getElementById('okAlert');
+    var eventNameInput = document.getElementById('eventName');
+    var eventEmailInput = document.getElementById('eventEmail');
+    var eventProfileInput = document.getElementById('eventProfile');
+    var eventPhoneInput = document.getElementById('eventPhone');
+    var eventStartInput = document.getElementById('eventStart');
+    var eventEndInput = document.getElementById('eventEnd');
+    var alertTitle = document.getElementById('alertTitle');
+    var alertMessage = document.getElementById('alertMessage');
+    var currentEvent;
 
-        events:function(info, successCallback, failureCallback){
-            fetch(request_calendar)
-                .then(function(response){
-                    return response.json()
-                })
-                .then(function(data){
-                    let events = data.events.map(function(event){
-                        return {
-                            title: event.eventTitle,
-                            start: new Date(event.eventStartDate),
-                            end: new Date(event.eventEndDate),
-                            url: event.eventUrl,
-                            location: event.eventLocation,
-                            timeStart: event.eventStartTime,
-                            timeEnd: event.eventEndTime,
-                        }
-                    })
-                    successCallback(events)
-                })
-                .catch(function(error){
-                    failureCallback(error)
-                })
+    // Inicializar modales ocultos
+    modal.style.display = "none";
+    alertModal.style.display = "none";
+
+    function getRandomColor() {
+        var r = Math.floor(Math.random() * 256);
+        var g = Math.floor(Math.random() * 256);
+        var b = Math.floor(Math.random() * 256);
+        var a = 0.7;
+        return `rgba(${r}, ${g}, ${b}, ${a})`;
+    }
+
+    function showAlert(title, message, onConfirm) {
+        alertTitle.textContent = title;
+        alertMessage.textContent = message;
+        alertModal.style.display = "block";
+        okAlertButton.onclick = function() {
+            alertModal.style.display = "none";
+            if (onConfirm) onConfirm();
+        };
+    }
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        timeZone: 'UTC',
+        initialView: 'timeGridWeek',
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'timeGridWeek,timeGridDay'
+        },
+        selectable: true,
+        editable: true,
+
+        events: function(fetchInfo, successCallback, failureCallback) {
+            let events = [];
+            successCallback(events);
         },
 
-        eventContent: function(info){
-            return {
-                html: `
-                <div style="font-size: 12px; cursor: pointer; font-family: 'Inter', sans-serif;">
-                    <div><strong>${info.event.title}</strong></div>
-                    <div>Location: ${info.event.extendedProps.location}</div>
-                    <div>Date: ${info.event.start.toLocaleDateString(
-                        "es-US",
-                        {
-                            month: "long",
-                            day: "numeric",
-                            year: "numeric",
-                        }
-                    )}</div>
-                    <div>Time: ${info.event.extendedProps.timeStart} - ${info.event.extendedProps.timeEnd}</div>
+        eventContent: function(info) {
+            let eventEl = document.createElement('div');
+            eventEl.innerHTML = `
+                <div class="event-content">
+                    <div class="event-info">
+                        <div class="event-title">${info.event.title}</div>
+                        <div class="event-status">${info.event.extendedProps.status}</div>
+                    </div>
                 </div>
-                `
-            }
+            `;
+            return { domNodes: [eventEl] };
         },
 
-        eventMouseEnter: function(mouseEnterInfo){
-            console.log(mouseEnterInfo)
-            let el = mouseEnterInfo.el
-            el.classList.add("relative")
+        select: function(info) {
+            eventStartInput.value = info.startStr;
+            eventEndInput.value = info.endStr;
+            modal.style.display = "block";
 
-            let newEl = document.createElement("div")
-            let newElTitle = mouseEnterInfo.event.title
-            let newElLocation = mouseEnterInfo.event.extendedProps.location
-            newEl.innerHTML = `
-                <div
-                    class="fc-hoverable-event"
-                    style="position: absolute; bottom: 100%; left: 0; width: 300px; height: auto; background-color: white; z-index: 50; border: 1px solid #e2e8f0; border-radius: 0.375rem; padding: 0.75rem; font-size: 14px; font-family: 'Inter', sans-serif; cursor: pointer;"
-                >
-                    <strong>${newElTitle}</strong>
-                    <div>Location: ${newElLocation}</div>
+            saveEventButton.onclick = function() {
+                var title = eventNameInput.value;
+                var email = eventEmailInput.value;
+                var profile = eventProfileInput.value;
+                var phone = eventPhoneInput.value;
+                var start = eventStartInput.value;
+                var end = eventEndInput.value;
 
-                </div>
-            `
-            el.after(newEl)
+                if (title && start && end) {
+                    calendar.addEvent({
+                        title: title,
+                        start: start,
+                        end: end,
+                        allDay: info.allDay,
+                        backgroundColor: getRandomColor(),
+                        borderColor: getRandomColor(),
+                        extendedProps: {
+                            email: email,
+                            profile: profile,
+                            phone: phone
+                        }
+                    });
+                }
+                // Ocultar modal después de guardar el evento
+                modal.style.display = "none";
+                eventNameInput.value = '';
+                eventEmailInput.value = '';
+                eventProfileInput.value = '';
+                eventPhoneInput.value = '';
+                eventStartInput.value = '';
+                eventEndInput.value = '';
+            };
         },
 
-        eventMouseLeave: function(){
-            document.querySelector(".fc-hoverable-event").remove()
+        eventClick: function(info) {
+            currentEvent = info.event;
+            showAlert('Eliminar Turno', '¿Desea eliminar este turno?', function() {
+                currentEvent.remove();
+            });
+        },
+
+        eventDrop: function(info) {
+            showAlert('Turno Movido', 'Turno movido a ' + info.event.start.toISOString());
+        },
+
+        eventResize: function(info) {
+            showAlert('Turno Modificado', 'Turno modificado: ' + info.event.start.toISOString() + ' hasta ' + info.event.end.toISOString());
         }
     });
+
     calendar.render();
+
+    // Cerrar modal cuando se presiona la X
+    closeModal.onclick = function() {
+        modal.style.display = "none";
+    };
+
+    // Cerrar alerta cuando se presiona la X
+    closeAlert.onclick = function() {
+        alertModal.style.display = "none";
+    };
+
+    // Cerrar modal si el usuario hace clic fuera del contenido del modal
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+        if (event.target === alertModal) {
+            alertModal.style.display = "none";
+        }
+    };
 });
