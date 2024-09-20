@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var eventEndInput = document.getElementById('eventEnd');
     var alertTitle = document.getElementById('alertTitle');
     var alertMessage = document.getElementById('alertMessage');
+    var turnoList = document.getElementById('turnoItems');
     var currentEvent;
 
     // Inicializar modales ocultos
@@ -36,6 +37,15 @@ document.addEventListener('DOMContentLoaded', function() {
             alertModal.style.display = "none";
             if (onConfirm) onConfirm();
         };
+    }
+
+    function agregarTurnoALista(event) {
+        var li = document.createElement('li');
+        li.innerHTML = `<strong>${event.title}</strong> (${event.extendedProps.email || 'Sin email'}) 
+            <br>Tel: ${event.extendedProps.phone || 'Sin teléfono'} 
+            <br>Inicio: ${new Date(event.start).toLocaleString()} 
+            <br>Fin: ${new Date(event.end).toLocaleString()}`;
+        turnoList.appendChild(li);
     }
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -81,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 var end = eventEndInput.value;
 
                 if (title && start && end) {
-                    calendar.addEvent({
+                    var eventData = {
                         title: title,
                         start: start,
                         end: end,
@@ -93,8 +103,13 @@ document.addEventListener('DOMContentLoaded', function() {
                             profile: profile,
                             phone: phone
                         }
-                    });
+                    };
+                    calendar.addEvent(eventData);
+
+                    // Agregar el evento a la lista de turnos
+                    agregarTurnoALista(eventData);
                 }
+
                 // Ocultar modal después de guardar el evento
                 modal.style.display = "none";
                 eventNameInput.value = '';

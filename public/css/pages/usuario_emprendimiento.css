@@ -237,11 +237,10 @@ nav {
 
 main{
     min-height: 100vh;
-    margin-top: 77px;
     margin-left: 20%;
     padding: 20px;
+    padding-top: 77px;
     background-color: var(--main-fondo);
-
 }
 /* Pagina Inicio */
 /* sectio 1 Graficoas */

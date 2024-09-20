@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/pages/usuario_cliente.css">
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+        <nav>
+            <div class="logoName">
+                <div class="logoNav">
+                    <img src="/public/assets/images/final-turnito-sin fondo.png" alt="Logo">
+                </div>
+            </div>
+            <div class="tituloNav">
+                <h1>Quing Burger</h1>
+            </div>
+            <div class="eventNav">
+                <div class="buscadorNav">
+                    <button type="submit">
+                        <span>
+                            <img class="lupaNav" src="/public/assets/icons/lupa-vector.png" alt="Lupa">
+                        </span>
+                    </button>
+                    <input class="lupaBuscador" type="text" placeholder="Buscar..." aria-label="Buscar">
+                </div>
+                <div class="notificacionesNav">
+                    <button aria-label="notificaciones">
+                    <img class="campNoti" src="/public/assets/icons/camp-noti.png" alt="Notificacion">
+                    </button>
+                </div>
+                <div class="menuNav">
+                    <button aria-label="perfil">
+                        <img src="/public/assets/Mask Group.svg" alt="PerfilFoto">
+                    </button>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <aside class="menuIzquierda">
+        <div class="userPerfil">
+            <img src="/public/assets/Mask Group.svg" alt="imgPerfil">
+            <div class="userText">
+                <h3>Toby Burger</h3>
+                <p>empresa</p>
+            </div>
+        </div>
+        <ul class="container-menu">
+            <div>
+                <li><a href="#" onclick="MostrarPagina('page1'); return false"><img class="iconMenu" src="/public/assets/icons/inicio.png" alt="incioMenu">inicio</a></li>
+                <li><a href="/pages/agenda.html"><img class="iconMenu" src="/public/assets/icons/Plus.svg" alt="AgendaMenu">Ver Emprendimientos</a></li>
+                <li><a href="#" onclick="MostrarPagina('page2'); return false"><img class="iconMenu" src="/public/assets/icons/history.png" alt="historialMenu">Historial</a></li>
+                <li><a href="#" onclick="MostrarPagina('page3'); return false"><img class="iconMenu" src="/public/assets/icons/comment.png" alt="comentariosMenu">Comentarios</a></li>
+            </div>
+            <div class="fin-menu">
+                <li><a href="#" onclick="MostrarPagina('page4')"><img class="iconMenu" src="/public/assets/icons/config.png" alt="configMenu">Configuracion</a></li>
+            <li><a href="#" id="logoutButton"><img class="iconMenu" src="/public/assets/icons/salir.png" alt="salirMenu">Salir</a></li>
+            </div>
+        </ul>
+    </aside>
+    <main>
+
+    </main>
+</body>
+</html>
