@@ -19,14 +19,22 @@ body {
     background-color: var(--main-fondo);
     font-family: 'FORMULARIOS', sans-serif;
 }
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
 main{
     min-height: 100vh;
     margin-left: 20%;
     padding: 20px;
-    padding-top: 77px;
+    padding-top: 6rem;
     background-color: var(--main-fondo);
 
 }
+
 
 nav {
     position: fixed;
@@ -235,4 +243,47 @@ nav {
 .menuIzquierda ul li a.active {
     background-color: var(--primary-color);
     color: white;
+}
+
+/* Pagina 1 INICIO */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+#page1 h2 {
+    text-align: center;
+    color: #333;
+}
+
+#page1 table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#page1 th,#page1 td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#page1 th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+#page1 tr:hover {
+    background-color: #f1f1f1;
+}
+
+.confirmado {
+    color: green;
+    font-weight: bold;
+}
+
+.no-confirmado {
+    color: red;
+    font-weight: bold;
 }

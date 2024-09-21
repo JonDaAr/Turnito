@@ -45,24 +45,53 @@
             <img src="/public/assets/Mask Group.svg" alt="imgPerfil">
             <div class="userText">
                 <h3>Toby Burger</h3>
-                <p>empresa</p>
+                <p>Usuario</p>
             </div>
         </div>
         <ul class="container-menu">
             <div>
                 <li><a href="#" onclick="MostrarPagina('page1'); return false"><img class="iconMenu" src="/public/assets/icons/inicio.png" alt="incioMenu">inicio</a></li>
-                <li><a href="/pages/agenda.html"><img class="iconMenu" src="/public/assets/icons/Plus.svg" alt="AgendaMenu">Ver Emprendimientos</a></li>
-                <li><a href="#" onclick="MostrarPagina('page2'); return false"><img class="iconMenu" src="/public/assets/icons/history.png" alt="historialMenu">Historial</a></li>
-                <li><a href="#" onclick="MostrarPagina('page3'); return false"><img class="iconMenu" src="/public/assets/icons/comment.png" alt="comentariosMenu">Comentarios</a></li>
+                <li><a href="#" onclick="MostrarPagina('page2'); return false"><img class="iconMenu" src="/public/assets/icons/Plus.svg" alt="verEmprendimientos">Ver Emprendimientos</a></li>
+                <li><a href="#" onclick="MostrarPagina('page3'); return false"><img class="iconMenu" src="/public/assets/icons/history.png" alt="historialMenu">Historial</a></li>
+                <li><a href="#" onclick="MostrarPagina('page4'); return false"><img class="iconMenu" src="/public/assets/icons/comment.png" alt="comentariosMenu">Comentarios</a></li>
             </div>
             <div class="fin-menu">
-                <li><a href="#" onclick="MostrarPagina('page4')"><img class="iconMenu" src="/public/assets/icons/config.png" alt="configMenu">Configuracion</a></li>
+                <li><a href="#" onclick="MostrarPagina('page5')"><img class="iconMenu" src="/public/assets/icons/config.png" alt="configMenu">Configuracion</a></li>
             <li><a href="#" id="logoutButton"><img class="iconMenu" src="/public/assets/icons/salir.png" alt="salirMenu">Salir</a></li>
             </div>
         </ul>
     </aside>
     <main>
-
+        <div id="page1" class="page active">
+            <div class="container">
+                <h2>Lista de Turnos</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre del Lugar</th>
+                            <th>Dirección</th>
+                            <th>Teléfono</th>
+                            <th>Confirmado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="turnos-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="page2" class="page">
+            <p>hola2</p>
+        </div>
+        <div id="page3" class="page">
+            hola3
+        </div>
+        <div id="page4" class="page">
+            <p>hola4</p>
+        </div>
+        <div id="page5" class="page">
+            hola5
+        </div>
     </main>
+    <script src="/public/js/usuario_cliente.js"></script>
 </body>
 </html>
