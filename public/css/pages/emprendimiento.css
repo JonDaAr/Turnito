@@ -1,30 +1,9 @@
-@font-face {
-    font-family: 'Inter-italic'; /* Choose a name for the font */
-    src: url('/Turnito/assets/fonts/formulario/Inter-Italic-VariableFont_opsz\,wght.ttf') format('ttf');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Heebo'; /* Choose a name for the font */
-    src: url('/Turnito/assets/fonts/pagina/Heebo-VariableFont_wght.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Lato-bold'; /* Choose a name for the font */
-    src: url('/Turnito/assets/fonts/menu/Lato-Bold.ttf') format('ttf');
-    font-weight: bold;
-    font-style: normal;
-}
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Heebo';
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
-    font-size: 1.2rem; /* Increased base font size */
 }
 
 header {
@@ -45,10 +24,24 @@ header .header-right {
     gap: 1.5vw; /* Add gap between search bar and icons */
 }
 
+header .search-container {
+    position: relative;
+    width: 25vw; /* Adjust width as needed */
+}
+
+header .search-icon {
+    position: absolute;
+    left: 1vw; /* Adjust distance from the left */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevents the icon from blocking clicks */
+    width: 2vh; /* Adjust the icon size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
 header .search-bar {
-    width: 25vw; /* Increased search bar width */
-    height: 2.5vh;
-    padding: 1.5vh; /* Increased padding */
+    width: 80%;
+    padding: 1.5vh 1vw 1.5vh 4vw; /* Adjust left padding to leave space for the icon */
     border-radius: 2.5vh;
     border: none;
     background-color: #F5F7FA;
@@ -100,7 +93,8 @@ header .logo img {
 }
 
 .sidebar {
-    width: 25vw; /* Increased sidebar width */
+    width: 20vw; /* Increased sidebar width */
+    height: 100%;
     background-color: #F5F5F5;
     color: #000;
     padding: 1vh;
@@ -113,31 +107,31 @@ header .logo img {
 .sidebar .profile {
     display: flex;
     align-items: center;
-    margin-bottom: 3vh;
-    padding: 2vh 1vw; /* Adjust padding to your preference */
+    margin-bottom: 1vh;
+    padding: 1vh 1vw; /* Adjust padding to your preference */
     cursor: pointer;
     background-color: #FFFFFF;
     border-radius: 1.5vh;
-    font-size: 2.5rem; /* Adjust the font size as needed */
+    font-size: 2rem; /* Adjust the font size as needed */
 }
 
 .sidebar .profile img {
-    margin-right: 1vw; /* Space between the icon and the text */
-    height: 5vh; /* Adjust icon size if needed */
+    margin-left: 0.5vw; /* Space between the icon and the text */
+    height: 4vh; /* Adjust icon size if needed */
     width: auto;
 }
 
 .sidebar .profile .text {
     display: flex;
     flex-direction: column;
-    gap: 0.5vh; /* Space between 'Cliente' and 'perfil' */
+    margin-left: 1.5vw;
+    gap: 0; /* Space between 'Cliente' and 'perfil' */
 }
 
-.sidebar .profile .text span {
+.sidebar .profile .text p {
     font-size: 3rem; /* Adjust text size if needed */
     color: #000000; /* Change text color as needed */
 }
-
 
 .sidebar ul {
     list-style: none;
@@ -165,7 +159,7 @@ header .logo img {
     background-color: #1c53c9;
 }
 
-.sidebar ul li i {
+.sidebar ul li a {
     margin-right: 1.5vw;
 }
 
@@ -182,7 +176,7 @@ header .logo img {
     font-size: 2.5rem; /* Increase this value to make the text larger */
 }
 
-.sidebar .bottom-section ul li i {
+.sidebar .bottom-section ul li a {
     margin-right: 1.5vw;
 }
 
@@ -219,7 +213,7 @@ header .logo img {
     border: none;
     margin-top: 0.01vw;
     margin-bottom: 0.5vw; /* Increased margin */
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 .left-side .comment-section textarea {
@@ -267,7 +261,7 @@ header .logo img {
     background-color: #FFFFFF;
     border-radius: 1vh;
     overflow-y: scroll;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .rating-section h2 {
