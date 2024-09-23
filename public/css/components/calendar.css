@@ -439,7 +439,6 @@ nav {
     left: 0;
     width: 20%;
     height: 100%;
-    background-color: var(--main-fondo);
     color: #ffffff;
     padding: 20px;
     border-right: 1px solid var(--separadores-pagina);

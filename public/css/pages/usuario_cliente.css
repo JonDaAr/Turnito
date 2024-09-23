@@ -33,8 +33,7 @@ main{
     margin-left: 20%;
     padding: 20px;
     padding-top: 6rem;
-    background-color: var(--main-fondo);
-
+    background: var(--main-fondo);
 }
 
 
@@ -48,16 +47,17 @@ nav {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--separadores-pagina);
-    background-color: white;
+    background: rgb(255, 255, 255);
 }
 .logoName{
     width: 20%;
     display: flex;
     align-items: center;
+    justify-content: center;
     box-sizing: content-box;
 }
 .logoNav {
-    width: 100%; 
+    width: 70%; 
     height: 70%; 
     overflow: hidden;
     border-right: 1px solid var(black);
@@ -67,7 +67,7 @@ nav {
 }
 
 .logoNav img {
-    max-width: 70%;
+    min-width: 70%;
     max-height: 100%;
 }
 .tituloNav>h1{
@@ -127,15 +127,15 @@ nav {
     padding-bottom: 2px;
 }
 .menuNav{
-    margin-left: 20px;
+    margin-left: 1rem;
     position: relative;
 }
 
 .menuNav>button{
     background-color: var(--main-fondo);
     margin: 10px 0;
-    width: 60px;
-    height: 57px;
+    width: 0.5rem;
+    height: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,15 +146,15 @@ nav {
 
 /* MENU Despleglabe */
 .menuNav{
-    margin-left: 20px;
+    margin-left: 1rem;
     position: relative;
 }
 
 .menuNav>button{
     background-color: var(--main-fondo);
     margin: 10px 0;
-    width: 60px;
-    height: 57px;
+    width: 4rem;
+    height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,8 +187,7 @@ nav {
     display: flex;
     align-items: center;
     text-decoration: none;
-
-    padding: 10px;
+    padding: 0.5rem;
     border-radius: 6px;
     color: var(--primary-color);
 }
@@ -435,6 +434,51 @@ nav {
 
 
 
+/*  COMENTARIOS  */
+#contenido {
+    display: flex;
+}
+
+#detalles-lugar {
+    width: 30%;
+    margin-left: 1rem;
+    padding: 15px;
+    border-left: 1px solid #ccc;
+}
+
+#lista-comentarios {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tarjeta-comentario {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.tarjeta-comentario:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    #contenido {
+        flex-direction: column;
+    }
+
+    #detalles-lugar, #lista-comentarios {
+        width: 100%;
+    }
+}
+
 
 
 
@@ -561,7 +605,7 @@ nav {
     content: "";
     height: 20px;
     width: 20px;
-    left: 4px;
+    left: 2px;
     bottom: 2px;
     background-color: white;
     transition: 0.4s;

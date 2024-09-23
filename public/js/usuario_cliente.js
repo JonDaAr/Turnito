@@ -223,6 +223,8 @@ buscador.addEventListener('input', (e) => {
 
 // Mostrar todos los emprendimientos al cargar la página
 mostrarEmprendimientos(emprendimientos);
+
+
 //PAGINA SALIR 
 /* Salir */
 document.addEventListener('DOMContentLoaded', () => {
@@ -231,26 +233,79 @@ document.addEventListener('DOMContentLoaded', () => {
     const confirmLogout = document.getElementById('confirmLogout');
     const cancelLogout = document.getElementById('cancelLogout');
 
-    // Mostrar el modal cuando se hace clic en "Cerrar Sesión"
+
     logoutButton.addEventListener('click', (event) => {
-        event.preventDefault();  // Evita la acción por defecto del enlace
-        logoutModal.style.display = 'block';  // Muestra el modal
+        event.preventDefault(); 
+        logoutModal.style.display = 'block';
     });
 
-    // Confirmar el cierre de sesión
     confirmLogout.addEventListener('click', () => {
-        window.location.href = '/public/index.html';  // Redirige al usuario
+        window.location.href = '/public/index.html';
     });
 
-    // Cancelar y cerrar el modal
     cancelLogout.addEventListener('click', () => {
-        logoutModal.style.display = 'none';  // Oculta el modal
+        logoutModal.style.display = 'none';
     });
 
-    // Cerrar el modal si se hace clic fuera del contenido del modal
     window.addEventListener('click', (event) => {
         if (event.target === logoutModal) {
-            logoutModal.style.display = 'none';  // Oculta el modal
+            logoutModal.style.display = 'none'; 
         }
     });
 });
+
+const comentarios = [
+    { 
+        lugar: "Emprendimiento 1", 
+        descripcionLugar: "Este es un lugar muy acogedor con excelente servicio.",
+        comentario: "Me gustó mucho el servicio y la atención.", 
+        direccion: "Dirección 1",
+        telefono: "123456789",
+        fecha: "2024-09-20", 
+        valoracion: 4.5 
+    },
+    { 
+        lugar: "Emprendimiento 2", 
+        descripcionLugar: "El lugar tiene una bonita vista pero podría mejorar en algunos aspectos.",
+        comentario: "El lugar estaba bien, pero la atención podría mejorar.", 
+        direccion: "Dirección 2",
+        telefono: "987654321",
+        fecha: "2024-09-18", 
+        valoracion: 3.5 
+    },
+];
+
+const listaComentarios = document.getElementById('lista-comentarios');
+const detallesLugar = document.getElementById('detalles-lugar');
+
+function mostrarComentarios(comentarios) {
+    listaComentarios.innerHTML = '';
+    comentarios.forEach((comentario, index) => {
+        const div = document.createElement('div');
+        div.classList.add('comentario', 'tarjeta-comentario');
+        div.innerHTML = `
+            <h3>${comentario.lugar}</h3>
+            <p><strong>Fecha:</strong> ${comentario.fecha}</p>
+            <p><strong>Valoración:</strong> ${comentario.valoracion} ⭐</p>
+            <p>${comentario.comentario}</p>
+        `;
+
+        div.addEventListener('click', () => mostrarDetalles(comentario));
+
+        listaComentarios.appendChild(div);
+    });
+}
+
+function mostrarDetalles(comentario) {
+    detallesLugar.innerHTML = `
+        <h3>${comentario.lugar}</h3>
+        <p><strong>Dirección:</strong> ${comentario.direccion}</p>
+        <p><strong>Teléfono:</strong> ${comentario.telefono}</p>
+        <p><strong>Descripción:</strong> ${comentario.descripcionLugar}</p>
+        <p><strong>Valoración:</strong> ${comentario.valoracion} ⭐</p>
+    `;
+}
+
+// Mostrar todos los comentarios al cargar la página
+mostrarComentarios(comentarios);
+
