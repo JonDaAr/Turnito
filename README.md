@@ -1,2 +1,2 @@
 # Turnito
-Turnito, Proyecto para Fundacion Pescar | JP Morgan | Artech Pagina web para gestion de Turnos
+Turnito, Proyecto para Fundacion Pescar | JP Morgan | Artech Pagina web de gestion de Turnos

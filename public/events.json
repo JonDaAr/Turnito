@@ -1,0 +1,181 @@
+{
+    "events": [
+      {
+        "eventTitle": "Conferencia de Innovación Tecnológica",
+        "eventStartDate": "10/15/2024",
+        "eventEndDate": "10/15/2024",
+        "eventStartTime": "09:00 AM",
+        "eventEndTime": "06:00 PM",
+        "eventLocation": "Centro de Convenciones XYZ","eventUrl": "https://fullcalendar.io/"
+      },
+      {
+        "eventTitle": "Taller de Desarrollo de Aplicaciones Móviles",
+        "eventStartDate": "10/20/2024",
+        "eventEndDate": "10/20/2024",
+        "eventStartTime": "10:30 AM",
+        "eventEndTime": "04:30 PM",
+        "eventLocation": "Sala de Conferencias ABC","eventUrl": "https://fullcalendar.io/"
+      },
+      {
+        "eventTitle": "Feria de Emprendimiento Local",
+        "eventStartDate": "09/10/2024",
+        "eventEndDate": "09/10/2024",
+        "eventStartTime": "11:00 AM",
+        "eventEndTime": "07:00 PM",
+        "eventLocation": "Plaza del Pueblo",
+        "eventUrl": "https://fullcalendar.io/"    
+      },
+      {
+        "eventTitle": "Seminario de Marketing Digital",
+        "eventStartDate": "09/09/2024",
+        "eventEndDate": "09/09/2024",
+        "eventStartTime": "10:00 AM",
+        "eventEndTime": "04:00 PM",
+        "eventLocation": "Salón de Eventos Zeta",
+        "eventUrl": "https://fullcalendar.io/"
+      },
+      {
+        "eventTitle": "Expo de Tecnología e Innovación",
+        "eventStartDate": "09/28/2024",
+        "eventEndDate": "09/28/2024",
+        "eventStartTime": "08:30 AM",
+        "eventEndTime": "05:30 PM",
+        "eventLocation": "Pabellón de Exposiciones Gamma",
+        "eventUrl": "https://fullcalendar.io/"
+      },
+      {
+        "eventTitle": "Taller de Diseño Gráfico Avanzado",
+        "eventStartDate": "09/29/2024",
+        "eventEndDate": "09/29/2024",
+        "eventStartTime": "11:00 AM",
+        "eventEndTime": "04:00 PM",
+        "eventLocation": "Aula Creativa Epsilon",
+        "eventUrl": "https://fullcalendar.io/"    },
+      {
+        "eventTitle": "Foro de Emprendedores",
+        "eventStartDate": "09/25/2024",
+        "eventEndDate": "09/25/2024",
+        "eventStartTime": "09:30 AM",
+        "eventEndTime": "06:30 PM",
+        "eventLocation": "Centro de Emprendimiento Beta",
+        "eventUrl": "https://fullcalendar.io/"
+      },
+      {
+        "eventTitle": "Charla sobre Inteligencia Artificial",
+        "eventStartDate": "10/04/2024",
+        "eventEndDate": "10/04/2024",
+        "eventStartTime": "02:00 PM",
+        "eventEndTime": "07:00 PM",
+        "eventLocation": "Sala de Conferencias Delta",
+        "eventUrl": "https://fullcalendar.io/"
+      },
+      {
+        "eventTitle": "Curso de Desarrollo Web Frontend",
+        "eventStartDate": "10/09/2024",
+        "eventEndDate": "10/09/2024",
+        "eventStartTime": "10:00 AM",
+        "eventEndTime": "05:00 PM",
+        "eventLocation": "Aula de Desarrollo Web",
+        "eventUrl": "https://fullcalendar.io/"
+      },
+      {
+        "eventTitle": "Expo de Arte Contemporáneo",
+        "eventStartDate": "10/16/2024",
+        "eventEndDate": "10/16/2024",
+        "eventStartTime": "12:00 PM",
+        "eventEndTime": "08:00 PM",
+        "eventLocation": "Galería de Arte Omega",
+        "eventUrl": "https://fullcalendar.io/"
+      },
+      {
+        "eventTitle": "Conferencia de Energías Renovables",
+        "eventStartDate": "10/05/2024",
+        "eventEndDate": "10/05/2024",
+        "eventStartTime": "09:00 AM",
+        "eventEndTime": "06:00 PM",
+        "eventLocation": "Auditorio de Sostenibilidad Iota",
+        "eventUrl": "https://fullcalendar.io/"
+      },
+      {
+        "eventTitle": "Taller de Fotografía Profesional",
+        "eventStartDate": "10/13/2024",
+        "eventEndDate": "10/13/2024",
+        "eventStartTime": "11:30 AM",
+        "eventEndTime": "05:30 PM",
+        "eventLocation": "Estudio Fotográfico Kappa",
+        "eventUrl": "https://fullcalendar.io/"    
+      },
+      {
+        "eventTitle": "Feria de Gastronomía Local",
+        "eventStartDate": "09/22/2024",
+        "eventEndDate": "09/22/2024",
+        "eventStartTime": "11:00 AM",
+        "eventEndTime": "07:00 PM",
+        "eventLocation": "Plaza de la Ciudad",
+        "eventUrl": "https://fullcalendar.io/"
+      },
+      {
+        "eventTitle": "Seminario de Ciberseguridad",
+        "eventStartDate": "10/02/2024",
+        "eventEndDate": "10/02/2024",
+        "eventStartTime": "10:00 AM",
+        "eventEndTime": "04:00 PM",
+        "eventLocation": "Sala de Seguridad Digital",
+        "eventUrl": "https://fullcalendar.io/"
+      },
+      {
+        "eventTitle": "Taller de Escritura Creativa",
+        "eventStartDate": "10/10/2024",
+        "eventEndDate": "10/10/2024",
+        "eventStartTime": "12:00 PM",
+        "eventEndTime": "05:00 PM",
+        "eventLocation": "Biblioteca Municipal Mu",
+        "eventUrl": "https://fullcalendar.io/"   
+      },
+      {
+        "eventTitle": "Expo de Moda y Diseño",
+        "eventStartDate": "09/17/2024",
+        "eventEndDate": "09/17/2024",
+        "eventStartTime": "10:30 AM",
+        "eventEndTime": "06:30 PM",
+        "eventLocation": "Centro de Diseño Nu",
+        "eventUrl": "https://fullcalendar.io/"
+      },
+      {
+        "eventTitle": "Foro de Educación y Tecnología",
+        "eventStartDate": "09/30/2024",
+        "eventEndDate": "09/30/2024",
+        "eventStartTime": "09:30 AM",
+        "eventEndTime": "05:30 PM",
+        "eventLocation": "Auditorio Educativo Xi",
+        "eventUrl": "https://fullcalendar.io/"    
+      },
+      {
+        "eventTitle": "Feria de Artesanías Locales",
+        "eventStartDate": "10/12/2024",
+        "eventEndDate": "10/12/2024",
+        "eventStartTime": "11:00 AM",
+        "eventEndTime": "07:00 PM",
+        "eventLocation": "Plaza Artesanal Sigma",
+        "eventUrl": "https://fullcalendar.io/"    
+      },
+      {
+        "eventTitle": "Conferencia de Salud y Bienestar",
+        "eventStartDate": "09/28/2024",
+        "eventEndDate": "09/30/2024",
+        "eventStartTime": "09:00 AM",
+        "eventEndTime": "06:00 PM",
+        "eventLocation": "Centro de Salud Theta",
+        "eventUrl": "https://fullcalendar.io/"
+      },
+      {
+        "eventTitle": "Taller de Cocina Internacional",
+        "eventStartDate": "10/07/2024",
+        "eventEndDate": "10/07/2024",
+        "eventStartTime": "11:30 AM",
+        "eventEndTime": "05:30 PM",
+        "eventLocation": "Cocina Gourmet Mu",
+        "eventUrl": "https://fullcalendar.io/"    
+      }
+    ]
+  }

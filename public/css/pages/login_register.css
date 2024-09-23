@@ -43,9 +43,6 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 40px;
-    
-   
-   
 }
 
 .tab {
@@ -114,7 +111,6 @@ body {
     background-color: #E9AA0A;
 }
 
-
 .social-icons {
     display: flex;
     justify-content: center;
@@ -169,7 +165,5 @@ body {
 
     .extras label {
         margin-bottom: 1rem;
-    }
-    
-    
+    }    
 }

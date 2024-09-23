@@ -1,0 +1,126 @@
+body {
+    font-family: 'inter', sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+header h2 {
+    text-align:left;
+    color: #666;
+    padding: 0% 15% 0%;
+    font-size: 25px;
+}
+
+.form-container {
+    width: 70%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 2vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    display:flex;
+    margin-bottom: 4rem;
+}
+
+
+form {
+    flex:content;
+    margin: 3rem;
+}
+
+form h3 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 1vw;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 0.5vw;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1%;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="date"],
+.input-group input[type="number"] {
+    width: 100%;
+    padding: 1rem 0.5rem;
+    border: 2px 
+    solid #4285F4;
+    border-radius: 2vw;
+    font-size: 1rem;
+}
+
+.input-half-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-half-group .input-group {
+    width: 45%;
+}
+
+.contenedor-btn {
+    text-align: center;
+    padding: 3rem;
+}
+.btn-registrar {
+    background-color: #f9a825;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    border-radius: 2vw;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 2vw;
+    box-shadow:  0 6px 8px rgba(0, 0, 0, 0.1);
+}
+.help-link {
+    margin-top: 3%;
+    text-align: center;
+
+}
+/* Barra vertical */
+.vertical-bar {
+    width: 1px;
+    background-color: #ccc;
+    margin: 3rem;
+}
+/*2do bloque de contenido */
+.top{
+    flex:content;
+    margin: 5%
+}
+.pic-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.profile-pic {
+    flex: content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 1rem;
+    width: 100%;
+    margin-top: -5%;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 2cap;
+}
+@media (width: 800px ) {
+    .imagen-de-perfil {width: 100%;}
+    .form-container { width: 100%;}
+    .input-group { width: 100%;}
+    .input-half-group { width: 100%;}
+}

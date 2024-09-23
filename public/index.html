@@ -3,19 +3,339 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hola Mundo</title>
-    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Turnito - Reserva tu turno fácilmente</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Bienvenido Trunito</h1>
+    <header class="main-header">
+        <div>
+            <div class="navbar">
+                <a href="#"><img src="../assets/images/Logo-Turnito.png" alt="Turnito Logo" class="logo"></a>
+                
+                <div class="header-buttons">
+                    <a href="#" class="btn primary-heder">Regístrate</a>
+                    <a href="#" class="btn secondary-btn">Iniciar Sesión</a>
+                </div>
+                
+            </div>
+            <nav class="navbar-links">
+                <ul class="nav-links">
+                    <li><a href="#benefits">Beneficios</a></li>
+                    <li><a href="#how-it-works">¿Cómo funciona?</a></li>
+                    <li><a href="#plans">Planes</a></li>
+                    <li><a href="#faq">Preguntas Frecuentes</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+            </ul>
+            </nav>
+            <a href="#" class="up">
+                <button id="buttonup" class="secondary-btn">
+                    <p>up</p>
+                </button>
+            </a>
+        </div>
     </header>
     <main>
-        <p>Hola Mundo</p>
+    
+
+    <section id="hero" class="hero-section">
+        <img src="../assets/images/Rectangle-fondo-1.png" alt="background-image" class="background-image">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>¡Bienvenido a Turnito!</h1>
+                <p>Reserva tu turno de manera rápida y sencilla. <br> Disfrutá de una experiencia sin esperas.</p>
+                <a href="#" class="btn primary-btn">Regístrate</a>
+            </div>
+            <div class="image-stack">
+                <img src="../assets/images/smartmockups_m000lpz7 1.png" alt="Imagen 1" class="image-top">
+                <img src="../assets/images/smartmockups_m0011h8o 1.png" alt="Imagen 2" class="image-bottom">
+            </div>
+    </section>
+
+    <section id="benefits" class="benefits-section">
+        <div class="container">
+            <h2>Beneficios</h2>
+            <div class="benefits-cards">
+                <div class="card">
+                    <img src="../assets/icons/Icon-estrella-azul.png" alt="Reducción del Absentismo">
+                    <div>
+                        <h3>Reducción del Absentismo</h3>
+                        <p>Gracias a nuestros recordatorios podrás reducir el absentismo un 80%.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../assets/icons/Icon-auriculares-azul.png" alt="Turnos Online 24/7">
+                    <div>
+                        <h3>Turnos Online 24/7</h3>
+                        <p>Sabias que el 60% de los turnos se reserva fuera del horario laboral?<br>Abri tu agenada Online ya!</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../assets/icons/Icon-bandera-azul.png" alt="Administración">
+                    <h3>Administración</h3>
+                    <p>Con nuestro sistema de Administracion podras llevar un registro de tus clientes y cantidad de turnos para mejorar tu rendimiento</p>
+                </div>
+                <div class="card">
+                    <img src="../assets/icons/Icon-imagen-azul.png" alt="Mejor Rendimiento">
+                    <h3>Mejor Rendimiento</h3>
+                    <p>Facilita la organización y asignación de turnos de manera automática, reduciendo errores humanos y optimizando el tiempo tanto para los clientes como para los emprendedores</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works-section">
+        
+        <div class="container">
+            <div class="how-container">
+                <div class="steps">
+                    <h2>¿Cómo Funciona Turnito?</h2>
+                    <div class="step">
+                        <h3>1. Registro Rápido</h3>
+                        <p>Empieza creando tu cuenta en pocos pasos. Completa tu perfil, configura tu disponibilidad y estarás listo para comenzar a recibir turnos.</p>
+                    </div>
+                    <div class="step">
+                        <h3>2. Reserva Fácil</h3>
+                        <p>Tus clientes pueden ingresar a tu perfil y seleccionar el horario que mejor les convenga. El proceso de reserva es sencillo, rápido y está disponible las 24 horas del día.</p>
+                    </div>
+                    <div class="step">
+                        <h3>3. Confirmación Inmediata</h3>
+                        <p>Una vez que el cliente selecciona su turno, recibirás una notificación instantánea. El cliente también recibirá una confirmación con los detalles de la reserva.</p>
+                    </div>
+                </div>
+                <div class="image-stack">
+                    <img src="../assets/images/rectangle-fondo-2.png" class="background-image2" alt="Fondo">
+                    <img class="img-top-left" src="../assets/images/chicaEnNoteboock-1.png" alt="chicaEnNoteboock-1">
+                    <img class="img-bottom-right" src="../assets/images/smartmockups_m0011h8o 2.png" alt="notebock-con-graficos">
+                </div>
+            </div>
+            
+        </div>
+        <div class="container">
+            <div class="how-container">
+                <img src="../assets/images/rectangle-fondo-3 .png" class="background-image3" alt="rectangle-fondo-3">
+                <img src="../assets/images/grafico-simple-1.png" alt="grafico-simple-1" class="image-stack" >
+                <div class="steps-2">
+                    
+                    <div class="step">
+                        <h3>4. Recordatorios Automáticos</h3>
+                        <p>Turnito se encarga de enviar recordatorios automáticos a tus clientes antes de su cita. Esto ayuda a reducir las ausencias y mantiene a todos informados.</p>
+                    </div>
+                    <div class="step">
+                        <h3>5. Gestión de Turnos Sin Complicaciones</h3>
+                        <p>Administra tus turnos fácilmente desde cualquier dispositivo. Podrás reasignar, cancelar o modificar citas con solo unos clics, adaptándote a cualquier cambio en tu agenda.</p>
+                    </div>
+                    <div class="step">
+                        <h3>6. Reportes y Estadísticas</h3>
+                        <p>Accede a reportes detallados sobre la gestión de tus turnos. Conoce los horarios más solicitados, la tasa de asistencia y otros datos que te ayudarán a optimizar tu servicio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="coments" >
+        <div class="container">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <p>Nuestros usuarios confían en Turnito para mejorar la gestión de sus turnos. Descubre cómo hemos ayudado a optimizar sus negocios y a elevar la satisfacción de sus clientes.</p>
+            <div class="coments">
+                <div class="card-comments">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore libero commodi nihil fugit, minus soluta, error, eius ipsam similique sint quis blanditiis. Iusto culpa esse quas aliquid nulla aliquam quisquam!</p>
+                    <button class="secondary-btn">link a perfil</button>
+                </div>
+                <div class="card-comments">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore libero commodi nihil fugit, minus soluta, error, eius ipsam similique sint quis blanditiis. Iusto culpa esse quas aliquid nulla aliquam quisquam!</p>
+                    <button class="secondary-btn">link a perfil</button>
+                </div>
+                <div class="card-comments">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore libero commodi nihil fugit, minus soluta, error, eius ipsam similique sint quis blanditiis. Iusto culpa esse quas aliquid nulla aliquam quisquam!</p>
+                    <button class="secondary-btn">link a perfil</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="plans" class="plans-section">
+        <div class="container">
+            <h2>Elige Tu Plan</h2>
+            <h3>Encuentra el plan ideal para tu negocio. En Turnito, ofrecemos opciones flexibles para optimizar la gestión de tus turnos.</h3>
+            <div class="plans">
+                <div class="plan-card">
+                    <div>
+                        <h3>Free Plan</h3>
+                        <p class="price">Free</p>
+                        <ul>
+                            <li>Configuración básica del negocio</li>
+                            <li>Asignación y modificación de turnos
+                                de manera manual.</li>
+                            <li>Los clientes pueden reservar
+                                turnos online.</li>
+                            <li>Confirmaciones de reserva 
+                                automáticas.</li>
+                            <li>Acceso a un calendario básico</li>
+                            <li>Recordatorios limitados para
+                                los clientes</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn secondary-btn">Comparar</a>
+                </div>
+                <div class="plan-card">
+                    <div>
+                        <h3>Pro Plan</h3>
+                        <p class="price">$4000/mes</p>
+                        <ul>
+                            <li>Incluye todas las características 
+                                del plan Free</li>
+                            <li>Asignación automática de turnos 
+                                basados en la disponibilidad.</li>
+                            <li>Recordatorios automáticos y 
+                                personalizados para clientes.</li>
+                            <li>Permite a los clientes cancelar y 
+                                reasignar turnos con facilidad.</li>
+                            <li>Acceso a soporte técnico con
+                                tiempos de respuesta más rápidos</li>
+                            <li>Reportes sobre la actividad de los
+                                turnos y asistencia</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn secondary-btn">Comparar</a>
+                </div>
+                <div class="plan-card">
+                    <div>
+                        <h3>Premium Plan</h3>
+                        <p class="price">$7000/mes</p>
+                        <ul>
+                            <li>Incluye todas las características 
+                                del plan Pro.</li>
+                            <li>Permite que varios usuarios 
+                                gestionen los turnos desde 
+                                diferentes dispositivos.</li>
+                            <li>Conexión con otras plataformas
+                                como MP o sistemas de pago.</li>
+                            <li>Reportes detallados y analíticas
+                                para optimizar la operación
+                                del negocio.</li>
+                            <li>Recordatorios automáticos sin 
+                                restricciones, incluyendo SMS y 
+                                correo electrónico.</li>
+                            <li>Acceso a soporte técnico 
+                                especializado en cualquier momento.</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn secondary-btn">Comparar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Empieza-ya" class="container">
+        <div class="register-card">
+            <h2>¡Registrate y Empieza Hoy!</h2>
+            <h3>Únete a Turnito y simplifica la gestión de tus turnos en minutos. No esperes más para llevar tu negocio al siguiente nivel. <br><br> 
+            ¡Es rápido, fácil y te ayudará a optimizar tu tiempo!</h3>
+            <a href="#" class="btn primary-btn">Regístrate</a>
+        </div>
+        
+    </section>
+
+    <section id="faq" class="container">
+        <div class="faq-section">
+            <div class="faq-title">
+                <h2>Preguntas Frecuentes</h2>
+                <h3>Encuentra respuestas a las preguntas más comunes sobre Turnito. Si necesitas más ayuda, contáctanos.</h3>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div>
+                        <h3>¿Puedo cambiar mi turno cuando me voy de vacaciones?</h3>
+                        <p>Sí, puedes modificar tu reserva en cualquier momento.</p>
+                    </div>
+                    <img src="../assets/icons/logo-signo-mas.png" alt="Más">
+                </div> <hr>
+                <div class="faq-item">
+                    <div>
+                        <h3>¿Cómo sé si mi turno está confirmado?</h3>
+                        <p>Recibirás una confirmación por email.</p>
+                    </div>
+                    <img src="../assets/icons/logo-signo-mas.png" alt="Más">
+                </div> <hr>
+                <div class="faq-item">
+                    <div>
+                        <h3>¿Qué pasa si olvido mi turno?</h3>
+                        <p>Recibirás un recordatorio antes de tu cita.</p>
+                    </div>
+                    <img src="../assets/icons/logo-signo-mas.png" alt="Más">
+                </div> <hr>
+                <div class="faq-item">
+                    <div>
+                        <h3>¿Puedo cancelar o reprogramar mi turno?</h3>
+                        <p>Sí, puedes cancelar o reprogramar en cualquier momento.</p>
+                    </div>
+                    <img src="../assets/icons/logo-signo-mas.png" alt="Más">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contáctenos</h2>
+            <form action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <div>
+                        <label for="name">Nombre Completo</label>
+                        <input  type="text" id="name" name="name" required placeholder="Nombre Completo">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="hola@turnito.com">
+                    </div>
+                </div>
+                <div class="form-group-message">
+                    <label for="message">¿Cómo podemos ayudarte?</label>
+                    <textarea id="message" name="message" required placeholder="Describenos tu inquietud"></textarea >
+                </div>
+                <button type="submit" class="btn primary-btn">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="masters" class="masters">
+        <img src="../assets/images/Artech-Logo.png" alt="logo artech">
+        <img  src="../assets/images/Logo-Pescar-completo.png" alt="logo pescar">
+        <img id="morgan" src="../assets/images/JPMorgan_Logo_2008_1.svg.png" alt="logo JP Morgan">
+    </section>
     </main>
+    <div>
+        <li><a href="#" onclick="MostrarPagina('page1')"><img class="iconMenu" src="/assets/icons/inicio.png" alt="incioMenu">inicio</a></li>
+        <li><a href="/pages/usuario_Emprendimiento.html"><img class="iconMenu" src="x" alt="AgendaMenu">Agenda</a></li>
+        <li><a href="#" onclick="MostrarPagina('page2')"><img class="iconMenu" src="/assets/icons/history.png" alt="historialMenu">Historial</a></li>
+        <li><a href="#" onclick="MostrarPagina('page3')"><img class="iconMenu" src="/assets/icons/comment.png" alt="comentariosMenu">Comentarios</a></li>
+    </div>
     <footer>
         <p>© 2024 Mi Proyecto</p>
+    <footer class="main-footer">
+        <div class="container ">
+            <h2>Turnito</h2>
+            <hr>
+            <div class="container-footer">
+                    <div>
+                        <h3>contactanos</h3>
+                        <p>+011123456</p>
+                        <p>contacto@gmail.com</p>
+                    </div>
+                    <div class="footer-registro">
+                    <h3>Genera ganancias ya</h3>
+                    <button class="btn primary-btn">Registrate</button>
+                    </div>
+                    <div >
+                        <h3>seguinos en redes</h3>
+                        <a href="">ig</a>
+                        <a href="">face</a>
+                        <a href="">x</a>
+                    </div>
+            </div>
+            <p>&copy; 2024 Turnito. Todos los derechos reservados.</p>
+        </div>
     </footer>
-    <script src="/public/js/index.js"></script>
 </body>
 </html>
