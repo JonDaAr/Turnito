@@ -11,7 +11,8 @@
         <header>
             <h2>Bienvenido a Turnito</h2>
         </header>
-        <div class="form-container"><!--Primer bloque de contenido-->
+        <main class="form-container"><!--contenedor de formulario completo, seria parte blanca-->
+        <!--Primer bloque de contenido-->
             <form method="post">
                 <h3>REGÍSTRATE</h3>
     <!--Registro-->
@@ -33,7 +34,7 @@
                     </div>
             <!--Fecha nacimiento-->
                     <div class="input-group">
-                        <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+                        <label for="fecha-nacimiento">Fecha/Nacimiento</label>
                         <input type="date" id="fecha-nacimiento" placeholder="dd/mm/aaaa">
                     </div>
                 </div>
@@ -71,30 +72,27 @@
                 </div>
             </form>
             <!--Fin de bloque-contenido-->
-            
             <!-- Barra vertical -->
             <div class="vertical-bar"></div>
         <!--2do bloque-contenido-->
             <div class="top">
-                <div class="container">
+                <div class="pic-container">
                     <div class="profile-pic">
-                        <img src="../../assets/images/icon.1.svg" alt="Avatar">
-                        </div>
+                        <img src="../../assets/images/icon.1.svg" alt="Avatar" class="imagen-de-perfil">
                     </div>
+                </div>
                     <div class="contenedor-btn">
                         <input type="checkbox" id="terminos" name="terminos">
                         <label for="terminos">Acepto los términos y política de privacidad</label>
                         <br><br>
                         <button class="btn-registrar">REGISTRAR</button>
                     </div>
-                    
                     <div class="help-link">
                         <a href="#">¿Necesitas ayuda? Haz click aquí</a>
                     </div>
                 </div>
-            </div>
             <!--fin de 2do bloque-contenido-->
-        </div><!--contenor de formulario completo, seria parte blanca-->  
+    </main><!--contenor de formulario completo, seria parte blanca-->  
     </div>    
 </body>
 </html>
