@@ -13,8 +13,7 @@ body {
 
 .container {
     display: flex;
-    width: 90%;
-    max-width: 1200px;
+    width: 60%;
     background-color: white;
     border-radius: 30px;
     overflow: hidden;
@@ -23,22 +22,27 @@ body {
 }
 
 .left {
-    flex: 1;
-    background-color: #7DACF3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 40px;
-    color: white;
+        width: 50%;
+        background-color: #7DACF3;
+        display: flex;
+        flex-direction: column;
+        border-Radius: 30px 0px 0 30px;
+        align-items: center;
+        justify-Content: center;
+        color: white;
+        padding: 30px 5px 113px ;
+        
 }
 
 .right {
-    flex: 1;
-    background-color: white;
+   
+    width: 50%;
+    background-color: #ffff;
     display: flex;
+    justify-Content: center;
+    align-items: center;
     flex-direction: column;
     padding: 40px;
-    position: relative;
 }
 
 .tab {
@@ -100,15 +104,11 @@ body {
 }
 
 .client {
-    background-color: #E9AA0A;
+    background-color: #E9AA0A; 
 }
 
 .entrepreneurship {
     background-color: #E9AA0A;
-}
-.inicio{
-    display: ruby-text;
-    color: #7A7A7A;
 }
 
 .social-icons {
@@ -118,9 +118,10 @@ body {
 }
 
 .quote {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 40px;
+    font-size: 30px;
+    margin-bottom:20px;
+    text-align:center;
+    max-width: 70%;
 }
 
 .highlight {
@@ -135,3 +136,34 @@ body {
     max-width: 200px;
 }
 
+.inicio {
+    text-align: center;
+    margin-bottom: 2px;
+    color: #7A7A7A;
+}
+
+
+@media (max-width: 1700px) {
+    
+    .left {
+        border-radius: 1rem;
+    }
+
+    .right {
+        padding-top: 1rem;
+    }
+}
+
+@media (min-width: 200px) {
+    .left, .right {
+        padding: 1rem;
+    }
+    .extras {
+        
+        align-items: center;
+    }
+
+    .extras label {
+        margin-bottom: 1rem;
+    }    
+}
