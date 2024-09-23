@@ -27,37 +27,20 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logoName">
-                <div class="logoNav">
-                    <img src="/assets/images/final-turnito-sin fondo.png" alt="Logo">
+        <div class="logo">
+            <img src="/Turnito/assets/images/Logo.svg" alt="Logo"> <!-- Replace with your image source -->
+        </div>
+        <div class="header-right">
+            <input type="text" class="search-bar" placeholder="Buscar...">
+            <div class="icons">
+                <div class="icon notification-icon">
+                    <img src="/Turnito/assets/icons/Notification.svg" alt="Notification">
+                </div>
+                <div class="icon profile-icon">
+                    <img src="/Turnito/assets/icons/Profile.svg" alt="Profile">
                 </div>
             </div>
-            <div class="tituloNav">
-                <h1>Quing Burger</h1>
-            </div>
-            <div class="eventNav">
-                <div class="buscadorNav">
-                    <button type="submit">
-                        <span>
-                            <img class="lupaNav" src="/assets/icons/lupa-vector.png" alt="Lupa">
-                        </span>
-                    </button>
-                    <input class="lupaBuscador" type="text" placeholder="Buscar..." aria-label="Buscar">
-                </div>
-                <div class="notificacionesNav">
-                    <button aria-label="notificaciones">
-                    <img class="campNoti" src="/assets/icons/camp-noti.png" alt="Notificacion">
-                    </button>
-                </div>
-                <div class="menuNav">
-                    <button aria-label="perfil">
-                        <img src="/assets/images/Foto-Perfil.png" alt="PerfilFoto">
-                    </button>
-
-                </div>
-            </div>
-        </nav>
+        </div>
     </header>
     <aside class="menuIzquierda">
         <div class="userPerfil">
@@ -223,146 +206,103 @@
             </div>
         </div>
     
-        <div id="page3" class="page">
-            <div class="contenedorComentario">
-           
-            <div class="comentarios">
-                <h2>Comentarios y valoraciones</h2>
-                <div class="filtro">
-                    <h7>Su Calificación y lo que piensan de ti</h7>
-                
-                  <button>ORDENAR <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.4502 1.70874L7.17936 6.91707L12.9085 1.70874" stroke="#7D8DA6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg></button>
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="profile">
+                <img src="/Turnito/assets/icons/Profile.svg" alt="Profile Picture">
+                <div class="text">
+                    <span>Cliente</span>
+                    <span>Perfil</span>
                 </div>
-                <div class="comentario">
-                  <div class="comentario-header">
-                    <div>
-                        <span>
-                            <img src="/assets/images/foto1.png" alt="perfilComentario">
-                        </span>
-                        <span class="usuario">Kalb </span>
-                    </div>
-                    <div>
-                        <span class="fecha"> - 22 Jul</span>
-                    </div>
-                  </div>
-                  <p>Toby Burger was amazing with our cats! 😍🙌</p>
-                  <p class="comentario-corto">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                    <span class="ver-mas">Ver Más</span>
-                  </p>
-                  <div class="comentario-footer">
-                    <span>👍 1</span>
-                    <span class="responder">Comentar</span>
-                  </div>
+            </div>
+            <ul>
+                <li>
+                    <i class="icon-home">
+                        <img src="/Turnito/assets/icons/Home.svg" alt="Home">
+                    </i>
+                    Inicio
+                </li>
+                <li>
+                    <i class="icon-plus">
+                        <img src="/Turnito/assets/icons/Plus.svg" alt="Plus">
+                    </i> 
+                    Ver emprendimientos
+                </li>
+                <li>
+                    <i class="icon-comments">
+                        <img src="/Turnito/assets/icons/Comments.svg" alt="Comments">
+                    </i>
+                    Comentarios
+                </li>
+            </ul>
+            <div class="bottom-section"> <!-- New section for bottom links -->
+                <ul>
+                    <li>
+                        <i class="icon-config">
+                            <img src="/Turnito/assets/icons/Configuration.svg" alt="Configuration">
+                        </i>Configuración
+                    </li>
+                    <li>
+                        <i class="icon-logout">
+                            <img src="/Turnito/assets/icons/Logout.svg" alt="Logout">
+                        </i>Salir
+                    </li>
+                </ul>
+            </div>
+        </nav>        
+        <div class="content">
+            <div class="left-side">
+                <div class="carousel">
+                    <img src="/Turnito/assets/images/Nails.jpg" alt="Nails Image">
                 </div>
-                <div class="comentario">
-                    <div class="comentario-header">
-                        <div>
-                            <span>
-                                <img src="/assets/images/foto2.png" alt="perfilComentario">
-                            </span>
-                            <span class="usuario">Kalb </span>
-                        </div>
-                        <div>
-                            <span class="fecha"> - 22 Jul</span>
-                        </div>
-                      </div>
-                    <p>Toby Burger was amazing with our cats! 😍🙌</p>
-                    <p class="comentario-corto">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                      <span class="ver-mas">Ver Más</span>
-                    </p>
-                    <div class="comentario-footer">
-                      <span>👍 1</span>
-                      <span class="responder"> 1 Comentar</span>
-                    </div>
-                  </div>
-                  <div class="conteiner-respuesta">
-                    <div class="comentario respuesta">
-                        <div class="comentario-header">
-                        <div>
-                            <span>
-                                <img src="/assets/images/perfil-coment.png" alt="perfilComentario">
-                            </span>
-                            <span class="usuario">Kalb </span>
-                        </div>
-                        <div>
-                            <span class="fecha"> - 22 Jul</span>
-                        </div>
-                    </div>
-                        <p class="comentario-corto">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit...
-                          <span class="ver-mas">Ver Más</span>
-                        </p>
-                        <div class="comentario-footer">
-                          <span>👍 1</span>
-                          <span class="responder">Comentar</span>
-                        </div>
-                    </div>
-                  </div>
-                  
-                  <div class="comentario">
-                    <div class="comentario-header">
-                        <div>
-                            <span>
-                                <img src="/assets/images/foto3.png" alt="perfilComentario">
-                            </span>
-                            <span class="usuario">Kalb </span>
-                        </div>
-                        <div>
-                            <span class="fecha"> - 22 Jul</span>
-                        </div>
-                    </div>
-                    <p>Toby Burger was amazing with our cats! 😍🙌</p>
-                    <p class="comentario-corto">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                      <span class="ver-mas">Ver Más</span>
-                    </p>
-                    <div class="comentario-footer">
-                        <span>👍 1</span>
-                      <span class="responder">Comentar</span>
-                    </div>
-                  </div>
-                  <div class="comentario">
-                    <div class="comentario-header">
-                        <div>
-                            <span>
-                                <img src="/assets/images/foto1.png" alt="perfilComentario">
-                            </span>
-                            <span class="usuario">Kalb </span>
-                        </div>
-                        <div>
-                            <span class="fecha"> - 22 Jul</span>
-                        </div>
-                    </div>
-                    <p>Toby Burger was amazing with our cats! 😍🙌</p>
-                    <p class="comentario-corto">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                      <span class="ver-mas">Ver Más</span>
-                    </p>
-                    <div class="comentario-footer">
-                      <span>👍 1</span>
-                      <span class="responder">Comentar</span>
-                    </div>
-                  </div>
-                    
-                <!-- Agrega más comentarios aquí -->
-              </div>
-            
-              <div class="informacion-lugar">
-                <div class="tituloCambiar">
-                    <h2 id="nombre-lugar">Nombre del Lugar</h2>
-                      <button class="btn-cambiar-nombre">
-                           <img src="/assets/icons/lapiz.svg" alt="Cambiar Nombre">
-                     </button>
+                <div class="comment-section">
+                    <h3>Dejanos tu comentario</h3>
+                    <textarea placeholder="Agregue un comentario"></textarea>
+                    <button>Agregar Comentario</button>
                 </div>
-                
-    <!-- Campo de entrada para el nuevo nombre -->
-    <div id="edit-container" style="display: none;">
-        <input class="inputTitulo" type="text" id="nuevo-nombre" value="">
-        <button id="guardar-cambio">Guardar</button>
+                <div class="comments">
+                    <div class="comment">
+                        <div class="comment-header">
+                            <span>Kaib</span>
+                            <span>22 Jul</span>
+                            <span>★★★★★</span>
+                        </div>
+                        <div class="comment-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum imperdiet commodo.
+                                Phasellus rhoncus quam vitae tortor lobortis blandit. Integer commodo diam eget augue egestas,
+                                ut vehicula tortor tempor. Suspendisse ultrices molestie urna a finibus. Donec eget metus quis
+                                nunc ultricies porttitor eu vitae elit. Aliquam quis euismod orci, aliquam euismod felis. Phasellus
+                                vitae blandit lacus.Donec ut turpis a ligula laoreet rhoncus nec in massa. Cras ut laoreet purus,
+                                quis accumsan urna. Aenean facilisis ex non dolor fermentum, id placerat eros aliquet. Sed imperdiet
+                                sem eget tempus varius. Nulla ligula lorem, tempor ac maximus nec, lacinia rhoncus sem.
+                                Donec placerat velit sollicitudin dolor euismod ultricies.</p>
+                        </div>
+                    </div>
+                    <!-- Repeat similar comment cards -->
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="rating-section">
+                    <h2>4.8 ★</h2>
+                    <h3>NAILS COMPANY</h3>
+                </div>
+                <div class="presentation">
+                    <h3>Presentación</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum imperdiet commodo.
+                        Phasellus rhoncus quam vitae tortor lobortis blandit. Integer commodo diam eget augue egestas,
+                        ut vehicula tortor tempor. Suspendisse ultrices molestie urna a finibus. Donec eget metus quis
+                        nunc ultricies porttitor eu vitae elit. Aliquam quis euismod orci, aliquam euismod felis. Phasellus
+                        vitae blandit lacus.Donec ut turpis a ligula laoreet rhoncus nec in massa. Cras ut laoreet purus,
+                        quis accumsan urna. Aenean facilisis ex non dolor fermentum, id placerat eros aliquet. Sed imperdiet
+                        sem eget tempus varius. Nulla ligula lorem, tempor ac maximus nec, lacinia rhoncus sem.
+                        Donec placerat velit sollicitudin dolor euismod ultricies.  </p>
+                </div>
+                <div class="appointment-section">
+                    <h3>Selecciona tu TURNO</h3>
+                    <button>SELECCIONAR TURNO</button>
+                </div>
+            </div>
+        </div>
     </div>
                 <img src="/assets/images/tienda_uñas.jpg" alt="Restaurant" class="imagen-lugar">
                 <div class="calificacion">
