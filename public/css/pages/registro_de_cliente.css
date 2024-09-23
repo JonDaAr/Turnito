@@ -1,49 +1,50 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'inter', sans-serif;
     background-color: #f3f3f3;
     margin: 0;
     padding: 0;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 header h2 {
-    text-align: left;
+    text-align:left;
     color: #666;
+    padding: 0% 15% 0%;
+    font-size: 25px;
 }
 
 .form-container {
-    display: flex;
+    width: 70%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-top: 20px;
+    border-radius: 2vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    display:flex;
+    margin-bottom: 4rem;
 }
 
+
 form {
-    flex: 2;
+    flex:content;
+    margin: 3rem;
 }
 
 form h3 {
     font-size: 2rem;
     color: #222;
-    margin-bottom: 20px;
+    margin-bottom: 1vw;
 }
 
 .input-group {
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 0.5vw;
 }
 
 .input-group label {
     display: block;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 1%;
 }
 
 .input-group input[type="text"],
@@ -51,46 +52,40 @@ form h3 {
 .input-group input[type="date"],
 .input-group input[type="number"] {
     width: 100%;
-    padding: 10px;
-    border: 2px solid #4285F4;
-    border-radius: 15px;
+    padding: 1rem 0.5rem;
+    border: 2px 
+    solid #4285F4;
+    border-radius: 2vw;
     font-size: 1rem;
 }
 
 .input-half-group {
     display: flex;
-    justify-content:space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .input-half-group .input-group {
-    width: 47%;
+    width: 45%;
 }
 
-.checkbox-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.checkbox-group input {
-    margin-right: 10px;
-}
 .contenedor-btn {
     text-align: center;
+    padding: 3rem;
 }
 .btn-registrar {
     background-color: #f9a825;
     color: #fff;
     border: none;
-    padding: 15px 20px;
-    border-radius: 20px;
+    padding: 1rem;
+    border-radius: 2vw;
     font-size: 1rem;
     cursor: pointer;
-    margin-top: 10px;
-    box-shadow: #222;
+    margin-top: 2vw;
+    box-shadow:  0 6px 8px rgba(0, 0, 0, 0.1);
 }
 .help-link {
-    margin-top: 5%;
+    margin-top: 3%;
     text-align: center;
 
 }
@@ -98,35 +93,34 @@ form h3 {
 .vertical-bar {
     width: 1px;
     background-color: #ccc;
-    margin: 0 60px;
+    margin: 3rem;
 }
+/*2do bloque de contenido */
 .top{
-    padding-right: 20px;
+    flex:content;
+    margin: 5%
+}
+.pic-container{
+    display: flex;
+    flex-wrap: wrap;
 }
 .profile-pic {
-    flex: 1;
+    flex: content;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     flex-direction: column;
-    margin-left: 4px;
-}
-
-.profile-icon {
-    position: relative;
-    font-size: 10rem;
-    color: #ccc;
+    margin-left: 1rem;
+    width: 100%;
+    margin-top: -5%;
 }
 
 footer p {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 2cap;
 }
-
-footer a {
-    color: #2979ff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
+@media (width: 800px ) {
+    .imagen-de-perfil {width: 100%;}
+    .form-container { width: 100%;}
+    .input-group { width: 100%;}
+    .input-half-group { width: 100%;}
 }

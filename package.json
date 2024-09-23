@@ -2,8 +2,18 @@
   "name": "turnito",
   "version": "1.0.0",
   "description": "Una página web para emprendedores para organizar sus turnos y su administración",
-  "main": "src/app.js",
-  
+  "main": "server.js",
   "author": "Laura, Tobias, Milena, Sofia, Jonatan",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@fullcalendar/core": "^6.1.15",
+    "@fullcalendar/daygrid": "^6.1.15",
+    "@fullcalendar/interaction": "^6.1.15",
+    "express": "^4.21.0",
+    "nodemon": "^3.1.4"
+  }
 }

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/pages/usuario_cliente.css">
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+        <nav>
+            <div class="logoName">
+                <div class="logoNav">
+                    <img src="/public/assets/images/final-turnito-sin fondo.png" alt="Logo">
+                </div>
+            </div>
+            
+            <div class="eventNav">
+                <div class="buscadorNav">
+                    <button type="submit">
+                        <span>
+                            <img class="lupaNav" src="/public/assets/icons/lupa-vector.png" alt="Lupa">
+                        </span>
+                    </button>
+                    <input class="lupaBuscador" type="text" placeholder="Buscar..." aria-label="Buscar">
+                </div>
+                <div class="notificacionesNav">
+                    <button aria-label="notificaciones">
+                    <img class="campNoti" src="/public/assets/icons/camp-noti.png" alt="Notificacion">
+                    </button>
+                </div>
+                <div class="menuNav">
+                    <button aria-label="perfil">
+                        <img src="/public/assets/Mask Group.svg" alt="PerfilFoto">
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <aside class="menuIzquierda">
+        <div class="userPerfil">
+            <img src="/public/assets/Mask Group.svg" alt="imgPerfil">
+            <div class="userText">
+                <h3>Toby Burger</h3>
+                <p>Usuario</p>
+            </div>
+        </div>
+        <ul class="container-menu">
+            <div>
+                <li><a href="#" onclick="MostrarPagina('page1'); return false"><img class="iconMenu" src="/public/assets/icons/inicio.png" alt="incioMenu">inicio</a></li>
+                <li><a href="#" onclick="MostrarPagina('page2'); return false"><img class="iconMenu" src="/public/assets/icons/Plus.svg" alt="verEmprendimientos">Ver Emprendimientos</a></li>
+                <li><a href="#" onclick="MostrarPagina('page4'); return false"><img class="iconMenu" src="/public/assets/icons/comment.png" alt="comentariosMenu">Comentarios</a></li>
+            </div>
+            <div class="fin-menu">
+                <li><a href="#" onclick="MostrarPagina('page5')"><img class="iconMenu" src="/public/assets/icons/config.png" alt="configMenu">Configuracion</a></li>
+            <li><a href="#" id="logoutButton"><img class="iconMenu" src="/public/assets/icons/salir.png" alt="salirMenu">Salir</a></li>
+            </div>
+        </ul>
+    </aside>
+    <main>
+        <div id="page1" class="page active">
+            <div class="container">
+                <h2>Lista de Turnos</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre del Lugar</th>
+                            <th>Dirección</th>
+                            <th>Teléfono</th>
+                            <th>Confirmado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="turnos-body">
+                    </tbody>
+                </table>
+            </div>
+            <div class="container2">
+                <div class="container-historial">
+                    <h2>Historial de Turnos</h2>
+                    <input type="text" id="search" placeholder="Buscar Emprendimiento..." onkeyup="filtrarTurnos()">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Emprendimientos</th>
+                            <th>Teléfono</th>
+                            <th>Email</th>
+                            <th>Día y Hora</th>
+                            <th>Asistencia</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historial-body">
+                        <!-- Historial será agregado aquí dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="page2" class="page">
+            <section id="ver-emprendimientos">
+                <h2>Ver Emprendimientos</h2>
+                <input type="text" id="buscador" placeholder="Buscar emprendimiento..." />
+                <div id="lista-emprendimientos"></div>
+            </section>
+        </div>
+        <div id="page4" class="page">
+            <section id="comentarios">
+                <h2>Mis Comentarios</h2>
+                <div id="contenido">
+                    <div id="lista-comentarios"></div>
+                    <div id="detalles-lugar"></div>
+                </div>
+            </section>
+        </div>
+        <div id="page5" class="page">
+            <div class="containConfi1">
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="perfilConfig">Perfil</button>
+                    <button class="tab-button" data-tab="preferenciasConfig">Preferencias</button>
+                    <button class="tab-button" data-tab="seguridadConfig">Seguridad</button>
+                </div>
+                
+                <form id="configForm" class="formPerfil">
+                    <!-- Perfil -->
+                    <div class="tab-content active" id="perfilConfig">
+                        <div class="columns">
+                            <div class="column1">
+                                <label class="formImg" for="profilePicture"><img src="/public/assets/images/PerfilDeterminado.svg" alt="perfilEditConfig"></label>
+                                <input class="formInput" type="file" id="profilePicture" name="profilePicture">
+                            </div>    
+                            <div class="column">
+                                <label for="name">Nombre:</label><br>
+                                <input type="text" id="name" name="name"><br>
+                                <label for="other">Codigo Postal</label><br>
+                                <input type="text" id="other" name="other">
+                                <label for="address">Fecha de Nacimiento</label>
+                                <input type="date" id="address" name="address">
+                                
+                            </div>
+                            <div class="column">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email">
+
+                                <label for="other">Direccion:</label>
+                                <input type="text" id="other" name="other">
+
+                                <label for="other">Ciudad:</label>
+                                <input type="text" id="other" name="other">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Preferencias -->
+                    <div class="tab-content" id="preferenciasConfig">
+                        <h2>Notificaciones</h2>
+                        
+                        <label for="notifyClients">Notificar si se libera un turno</label>
+                        <label class="switch">
+                            <input type="checkbox" id="notifyClients" name="notifyClients">
+                            <span class="slider round"></span>
+                        </label><br>
+                
+                        <label for="remindClients">Recordatorio del Turno</label>
+                        <label class="switch">
+                            <input type="checkbox" id="remindClients" name="remindClients">
+                            <span class="slider round"></span>
+                        </label><br>
+                
+                        <div id="reminderInput" class="slide">
+                            <label for="reminderText">Texto del recordatorio:</label><br>
+                            <input class="inputRecordatorio" type="text" id="reminderText" name="reminderText">
+                        </div>
+                    </div>
+                
+                    <!-- Seguridad -->
+                    <div class="tab-content" id="seguridadConfig">
+                        <label for="twoFactor">Autenticación en dos pasos</label>
+                        <label class="switch">
+                            <input type="checkbox" id="twoFactor" name="twoFactor">
+                            <span class="slider round"></span>
+                        </label><br>
+                        
+                        <label for="password">Cambiar Contraseña:</label><br>
+                        <input type="password" id="password" name="password"><br>
+                
+                        <label for="confirmPassword">Confirmar Contraseña:</label><br>
+                        <input type="password" id="confirmPassword" name="confirmPassword">
+                    </div>
+                
+                    <button type="submit" class="save-button">Guardar</button>
+                </form>
+
+            </div>
+        </div>
+        </div>
+        <div id="logoutModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">¿Estás seguro de que quieres cerrar sesión?</div>
+                <div class="modal-buttons">
+                    <button class="modal-button confirm" id="confirmLogout">Cerrar sesión</button>
+                    <button class="modal-button cancel" id="cancelLogout">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/public/js/usuario_cliente.js"></script>
+</body>
+</html>

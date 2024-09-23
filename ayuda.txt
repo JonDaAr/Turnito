@@ -18,11 +18,13 @@
 #### Colores ####
     lo copian en el css y tiene los colores
     :root{
-        --main-fondo: #F5F7FA;
-        --btn-color: #E9AA0A;
-        --primary-color: #1C53C9;
-        --login-registro: #7DACF3;
-        --menu-sin-seleccionar: #DFDFDF;
-        --barra-navegacion-filtro: #D9D9D9;
-    }
+    --main-fondo: #F5F7FA;
+    --btn-color: #E9AA0A;
+    --primary-color: #1C53C9;
+    --login-registro: #7DACF3;
+    --menu-sin-seleccionar: #DFDFDF;
+    --barra-navegacion-filtro: #D9D9D9;
+    --separadores-pagina: #E6EFF5;
+    --fondo-comentario: #1c53c91f;
+}
 

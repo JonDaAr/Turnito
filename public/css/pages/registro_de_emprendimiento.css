@@ -5,45 +5,46 @@ body {
     padding: 0;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 20px 80px 20px;
-}
-
 header h2 {
-    text-align: left;
+    text-align:left;
     color: #666;
+    padding: 0% 15% 0%;
+    font-size: 25px;
 }
 
 .form-container {
-    display: flex;
+    width: 70%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-top: 20px;
+    border-radius: 2vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+    display:flex;
 }
 
 form {
-    flex: 2;
+    flex: content;
+    margin: 3rem;
+    margin-top: 1%;
+    margin-bottom: -2%;
 }
 
 form h3 {
     font-size: 2rem;
     color: #222;
-    margin-bottom: 20px;
+    margin-bottom: 1vw;
 }
 
 .input-group {
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 0.5vw;
 }
 
 .input-group label {
     display: block;
     font-weight: bold;
-    margin-bottom: 5px
+    margin-bottom: 1%;
 }
 
 .input-group input[type="text"],
@@ -51,85 +52,78 @@ form h3 {
 .input-group input[type="date"],
 .input-group input[type="number"] {
     width: 100%;
-    padding: 10px;
-    border: 2px solid #4285F4;
-    border-radius: 15px;
+    padding: 1rem 0.5rem;
+    border: 2px 
+    solid #4285F4;
+    border-radius: 2vw;
     font-size: 1rem;
 }
 
 .input-half-group {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .input-half-group .input-group {
-    width: 47%;
+    width: 46%;
 }
 
-.checkbox-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.checkbox-group input {
-    margin-right: 10px;
-}
 .contenedor-btn {
     text-align: center;
-    padding: 30px 0px 0px 0px;
+    padding: 3rem
 }
 
 .btn-registrar {
     background-color: #f9a825;
     color: #fff;
     border: none;
-    padding: 15px 20px;
-    border-radius: 20px;
+    padding: 1rem;
+    border-radius: 2vw;
     font-size: 1rem;
     cursor: pointer;
-    margin-top: 20px;
-    box-shadow: #222;
+    margin-top: 2vw;
+    box-shadow:  0 6px 8px rgba(0, 0, 0, 0.1);
 }
 .help-link {
-    margin-top: 18%;
+    margin-top: 10%;
     text-align: center;
 }
 /* Barra vertical */
 .vertical-bar {
     width: 1px;
     background-color: #ccc;
-    margin: 0 60px;
+    margin: 3rem;
 }
 /*2do bloque de contenido */
 .top{
-    padding-right: 20px;
-}
-.profile-pic {
-    flex: 1;
-    display: flex;
-    
-    align-items: center;
-    flex-direction: column;
-    margin-left: 4px;
+    flex:content;
+    margin: 5%
 }
 
-.profile-icon {
-    position: relative;
-    font-size: 1rem;
-    color: #ccc;
+.pic-container {
+    margin: 5%;
+    display: flex;
+    flex-wrap: wrap;
 }
+.profile-pic {
+    flex: content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 1rem;
+    width: 100%;
+}
+
 
 footer p {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 2cap;
 }
 
-footer a {
-    color: #2979ff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
+@media (width: 800px ) {
+    .imagen-de-perfil {width: 100%;}
+    .form-container { width: 100%;}
+    .input-group { width: 100%;}
+    .input-half-group { width: 100%;}
 }
