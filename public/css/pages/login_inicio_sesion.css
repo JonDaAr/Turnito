@@ -1,4 +1,11 @@
 body {
+<<<<<<< HEAD
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0A48A7;
+    color: #fff;
+=======
     font-family: 'Roboto', sans-serif;
     background-color: #0A48A7;
     margin: 0;
@@ -7,10 +14,50 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+>>>>>>> 113a2f926a1f62f41e252616f1d3668b337ba80c
 }
 
 .container {
     display: flex;
+<<<<<<< HEAD
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 400px 20px 400px;
+}
+
+.left { 
+    flex: 1;
+    background-color: #7DACF3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 20px 65px 20px ;
+    border-radius: 30px 0 0 30px;
+    
+}
+
+.right {
+    flex: 1;
+    background-color: #fff;
+    color: #000;
+    position: relative;
+    z-index: 1;
+    border-radius:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.2);
+    margin-left: -30px;
+}
+
+.quote {
+    font-size: 20px;
+    margin-bottom:20px;
+    text-align:left;
+    max-width: 70%;
+=======
     width: 60%; 
     background-color: white;
     border-radius: 30px;
@@ -47,6 +94,7 @@ body {
     margin-bottom:20px;
     text-align:center;
     max-width: 70%;  
+>>>>>>> 113a2f926a1f62f41e252616f1d3668b337ba80c
 }
 
 .highlight {
@@ -120,7 +168,11 @@ border-bottom: 1px solid #83B4FF;
 }
 
 .login-btn {
+<<<<<<< HEAD
+    background-color: #F4C622;
+=======
     background-color: #E9AA0A;
+>>>>>>> 113a2f926a1f62f41e252616f1d3668b337ba80c
     color: white;
     border: none;
     padding: 10px 60px;
@@ -144,6 +196,8 @@ border-bottom: 1px solid #83B4FF;
     font-size: 30px;
     margin: 0 10px;
     cursor: pointer;
+<<<<<<< HEAD
+=======
 }
 
 @media (max-width: 1700px) {
@@ -170,4 +224,5 @@ border-bottom: 1px solid #83B4FF;
         margin-bottom: 1rem;
     }
     
+>>>>>>> 113a2f926a1f62f41e252616f1d3668b337ba80c
 }
