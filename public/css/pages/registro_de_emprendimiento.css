@@ -5,6 +5,14 @@ body {
     padding: 0;
 }
 
+<<<<<<< HEAD
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+=======
+>>>>>>> 113a2f926a1f62f41e252616f1d3668b337ba80c
 header h2 {
     text-align:left;
     color: #666;
