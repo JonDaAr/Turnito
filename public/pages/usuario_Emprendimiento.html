@@ -3,44 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/pages/usuario_emprendimiento.css">
-    <link rel="stylesheet" href="/css/components/calendar.css">
+    <link rel="stylesheet" href="/css/pages/Usuario_Emrepndedor.css">
 
     <!-- Link Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
     <title>Turnito</title>
-    <link rel="shortcut icon" href="/public/css/pages/usuario_emprendimiento.css" type="image/x-icon">
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.15/index.global.min.js'></script>
-    <script>
+    <link rel="shortcut icon" href="/css/pages/usuario_emprendimiento.css" type="image/x-icon">
 
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'resourceTimelineWeek'
-        });
-        calendar.render();
-      });
 
-    </script>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="/Turnito/assets/images/Logo.svg" alt="Logo"> <!-- Replace with your image source -->
-        </div>
-        <div class="header-right">
-            <input type="text" class="search-bar" placeholder="Buscar...">
-            <div class="icons">
-                <div class="icon notification-icon">
-                    <img src="/Turnito/assets/icons/Notification.svg" alt="Notification">
-                </div>
-                <div class="icon profile-icon">
-                    <img src="/Turnito/assets/icons/Profile.svg" alt="Profile">
+        <nav>
+            <div class="logoName">
+                <div class="logoNav">
+                    <img src="/assets/images/final-turnito-sin fondo.png" alt="Logo">
                 </div>
             </div>
-        </div>
+            <div class="tituloNav">
+                <h1>Quing Burger</h1>
+            </div>
+            <div class="eventNav">
+                <div class="buscadorNav">
+                    <button type="submit">
+                        <span>
+                            <img class="lupaNav" src="/assets/icons/lupa-vector.png" alt="Lupa">
+                        </span>
+                    </button>
+                    <input class="lupaBuscador" type="text" placeholder="Buscar..." aria-label="Buscar">
+                </div>
+                <div class="notificacionesNav">
+                    <button aria-label="notificaciones">
+                    <img class="campNoti" src="/assets/icons/camp-noti.png" alt="Notificacion">
+                    </button>
+                </div>
+                <div class="menuNav">
+                    <button aria-label="perfil">
+                        <img src="/assets/images/Foto-Perfil.png" alt="PerfilFoto">
+                    </button>
+
+                </div>
+            </div>
+        </nav>
     </header>
     <aside class="menuIzquierda">
         <div class="userPerfil">
@@ -53,7 +58,7 @@
         <ul class="container-menu">
             <div>
                 <li><a href="#" onclick="MostrarPagina('page1'); return false"><img class="iconMenu" src="/assets/icons/inicio.png" alt="incioMenu">inicio</a></li>
-                <li><a href="/pages/agenda.html"><img class="iconMenu" src="/assets/icons/agenda_menu.png" alt="AgendaMenu">Agenda</a></li>
+                <li><a href="#" onclick="MostrarPagina('page5'); return false"><img class="iconMenu" src="/assets/icons/agenda_menu.png" alt="AgendaMenu">Agenda</a></li>
                 <li><a href="#" onclick="MostrarPagina('page2'); return false"><img class="iconMenu" src="/assets/icons/history.png" alt="historialMenu">Historial</a></li>
                 <li><a href="#" onclick="MostrarPagina('page3'); return false"><img class="iconMenu" src="/assets/icons/comment.png" alt="comentariosMenu">Comentarios</a></li>
             </div>
@@ -206,54 +211,11 @@
             </div>
         </div>
     
-    <div class="main-container">
-        <nav class="sidebar">
-            <div class="profile">
-                <img src="/Turnito/assets/icons/Profile.svg" alt="Profile Picture">
-                <div class="text">
-                    <span>Cliente</span>
-                    <span>Perfil</span>
-                </div>
-            </div>
-            <ul>
-                <li>
-                    <i class="icon-home">
-                        <img src="/Turnito/assets/icons/Home.svg" alt="Home">
-                    </i>
-                    Inicio
-                </li>
-                <li>
-                    <i class="icon-plus">
-                        <img src="/Turnito/assets/icons/Plus.svg" alt="Plus">
-                    </i> 
-                    Ver emprendimientos
-                </li>
-                <li>
-                    <i class="icon-comments">
-                        <img src="/Turnito/assets/icons/Comments.svg" alt="Comments">
-                    </i>
-                    Comentarios
-                </li>
-            </ul>
-            <div class="bottom-section"> <!-- New section for bottom links -->
-                <ul>
-                    <li>
-                        <i class="icon-config">
-                            <img src="/Turnito/assets/icons/Configuration.svg" alt="Configuration">
-                        </i>Configuración
-                    </li>
-                    <li>
-                        <i class="icon-logout">
-                            <img src="/Turnito/assets/icons/Logout.svg" alt="Logout">
-                        </i>Salir
-                    </li>
-                </ul>
-            </div>
-        </nav>        
+   
         <div class="content">
             <div class="left-side">
                 <div class="carousel">
-                    <img src="/Turnito/assets/images/Nails.jpg" alt="Nails Image">
+                    <img src="/assets/images/Nails.jpg" alt="Nails Image">
                 </div>
                 <div class="comment-section">
                     <h3>Dejanos tu comentario</h3>
@@ -344,32 +306,31 @@
                             </div>    
                             <div class="column">
                                 <label for="name">Nombre:</label><br>
-                                <input type="text" id="name" name="name"><br>
-                                
+                                <input type="text" id="name" name="name" autocomplete="name"><br>
                                 <label for="email">Email:</label><br>
-                                <input type="email" id="email" name="email">
+                                <input type="email" id="email" name="email" autocomplete="email">
                                 
                                 <label for="address">Fecha de Nacimiento</label>
                                 <input type="date" id="address" name="address">
                                 
-                                <label for="other">Dirección del Negocio:</label>
-                                <input type="text" id="other" name="other">
+                                <label for="Direc-Negocio">Dirección del Negocio:</label>
+                                <input type="text" id="Direc-Negocio" name="Direc-Negocio">
                                 
-                                <label for="other">Codigo Postal</label>
-                                <input type="text" id="other" name="other">
+                                <label for="codigo">Codigo Postal</label>
+                                <input type="text" id="codigo" name="codigo">
                             </div>
                             <div class="column">
-                                <label for="other">Nombre Del Negocio:</label><br>
-                                <input type="text" id="other" name="other"><br>
+                                <label for="nombreNegocio">Nombre Del Negocio:</label><br>
+                                <input type="text" id="nombreNegocio" name="nombreNegocio"><br>
 
-                                <label for="other">Contraseña:</label><br>
-                                <input type="text" id="other" name="other"><br>
+                                <label for="Contraseña">Contraseña:</label><br>
+                                <input type="text" id="Contraseña" name="Contraseña"><br>
 
-                                <label for="other">Direccion:</label><br>
-                                <input type="text" id="other" name="other"><br>
+                                <label for="Direccion">Direccion:</label><br>
+                                <input type="text" id="Direccion" name="Direccion"><br>
                                 
-                                <label for="other">Ciudad:</label><br>
-                                <input type="text" id="other" name="other"><br>
+                                <label for="ciudad">Ciudad:</label><br>
+                                <input type="text" id="ciudad" name="ciudad"><br>
                             </div>
                         </div>
                     </div>
@@ -381,7 +342,6 @@
                         <span>a</span>
                         <input type="time" id="horaFin" name="horaFin">
                         <button type="button" id="agregarHorario">Agregar otro horario</button><br>
-
                         <h5>Notificaciones</h5>
                         <label for="autoAccept">Aceptar automáticamente los turnos</label>
                         <label class="switch">
@@ -393,7 +353,6 @@
                             <input type="checkbox" id="notifyClients" name="notifyClients">
                             <span class="slider round"></span>
                         </label><br>
-                
                         <label for="remindClients">Recordatorio para los clientes</label>
                         <label class="switch">
                             <input type="checkbox" id="remindClients" name="remindClients">
@@ -420,15 +379,13 @@
                         <label for="confirmPassword">Confirmar Contraseña:</label><br>
                         <input type="password" id="confirmPassword" name="confirmPassword">
                     </div>
-                
                     <button type="submit" class="save-button">Guardar</button>
                 </form>
 
             </div>
         </div>
     </main>
-    <script src="/js/calendar.js" ></script>
     <script src="/js/emprendimiento.js"></script>
-    <script type="module" src="/src/app.js"></script>
+
 </body>
 </html>
