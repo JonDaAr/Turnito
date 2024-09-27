@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const confirmation = confirm("¿Estás seguro de que quieres salir?");
         if (confirmation) {
             // Redirige al usuario a la página de inicio
-            window.location.href = '/public/index.html'; 
+            window.location.href = '/index.html'; 
         }
     });
 });

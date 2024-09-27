@@ -3,48 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Registro</title>
-    <link rel="stylesheet" href="../css/pages/login_register.css">
+    <title>Página con Cuadros y Slider</title>
+    <link rel="stylesheet" href="/css/pages/login_register.css">
 </head>
 <body>
-
-    <main class="container">
-        <section class="right">
-            <div class="tab">
-                <a href="../pages/login_inicio_de_sesion.html">
-                    <button class="tablinks active">Iniciar Sesión</button>
-                </a>
-                <button class="tablinks">Registrarse</button>
-            </div>
-            <form class="form">
-                <h2>Registrarse</h2>
-                <input type="text" placeholder="Ingrese nombre de usuario" required>
-                <input type="email" placeholder="Ingrese tu correo" required>
-                <input type="password" placeholder="Ingrese tu contraseña" required>
-                <input type="password" placeholder="Confirma tu contraseña" required>
-                <div class="buttons">
-                    <button type="button" class="client">Cliente</button>
-                    <button type="button" class="entrepreneurship">Emprendimiento</button>
+    <div class="container">
+        <div class="box left-box" id="left-box">
+            <h2 id="phrase">¡Bienvenido de nuevo! Inicia sesión para continuar.</h2>
+        </div>
+        <div class="box right-box" id="right-box">
+            <form id="login-form" class="form">
+                <h2>Iniciar sesión</h2>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Ingresa tu correo" >
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" placeholder="Ingresa tu contraseña">
+                <div class="extras">
+                    <label><input type="checkbox">Recuérdame</label>
+                    <a href="#">¿Has olvidado tu contraseña?</a>
                 </div>
-                <div class="inicio">
-                    <p>o inicia sesión con</p>
+                <div class="conteinBTN">
+                    <button class="login-btn"><a href="\pages\usuario_Emprendimiento.html">INGRESAR</a></button>
                 </div>
-                <div class="social-icons">
-                    <img src="../../assets/images/logo_google.svg" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                <p class="alt-login">o inicia sesión con</p>
+                <div class="social-login">
+                    <img src="/assets/images/logo_google.svg" alt="">
                 </div>
             </form>
-        </section>
-        <aside class="left">
-            <article class="quote">
-                <p>La productividad nunca es un accidente.</p>
-                <p>Siempre es el <span class="highlight">resultado de un compromiso</span> con la excelencia, la planificación inteligente y el esfuerzo enfocado.</p>
-            </article>
-            <div class="logo">
-                <img src="../../assets/images/logotipo_sin_fondo.png" alt="Turnito Logo">
+        </div>
+        <div class="slider-container active5" id="containerButton">
+                <p class="slider-text active3" id="login-text">Iniciar Sesión</p>
+                <p class="slider-text " id="register-text">Registrarse</p>
+            <div id="slider-button" class="slider-button">
+                <p id="button-double" class="button-double">Iniciar Sesión</p>
+                <p id="button-double2" class="button-double active2">Registrarse</p>
             </div>
-        </aside>
-    </main>
+        </div>
+    </div>
+    
+
+    <script src="/js/login_Register.js"></script>
 </body>
 </html>

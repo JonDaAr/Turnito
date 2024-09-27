@@ -1,90 +1,195 @@
-body {
-
-    font-family: 'Roboto', sans-serif;
-    background-color: #0A48A7;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-
+    background-color: #f0f0f0;
 }
 
 .container {
+    width: 70vw;
+    height: 70vh;
     display: flex;
-    width: 60%;
-    background-color: white;
-    border-radius: 30px;
+    position: relative;
     overflow: hidden;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-    flex-direction: row-reverse; /* Invertir el orden de los contenedores */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: white;
 }
 
-.left {
-        width: 50%;
-        background-color: #7DACF3;
-        display: flex;
-        flex-direction: column;
-        border-Radius: 30px 0px 0 30px;
-        align-items: center;
-        justify-Content: center;
-        color: white;
-        padding: 30px 5px 113px ;
-        
-}
-
-.right {
-   
+.box {
     width: 50%;
-    background-color: #ffff;
     display: flex;
-    justify-Content: center;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 40px;
+    transition: transform 0.6s ease-in-out;
 }
 
-.tab {
-    background-color: #83B4FF;
-    border-radius: 40px;
+.left-box {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+}
+
+.right-box {
+    background-color: white;
+    color: #333;
+    padding: 2rem 0.5rem 0 0.5rem ;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #f3e306;
+}
+
+/* Slider */
+.slider-container{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 40px;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+    transition: left 0.8s ease;
+}
+.active5{
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 40px;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+
+
+.slider-button {
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    background-color: #007bff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: left 0.8s ease;
+    left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container.active .slider-button {
+    left: 105px; /* Mueve el botón deslizante a la derecha */
+}
+
+/* Transición de los cuadros */
+.container.active .left-box {
+    transform: translateX(100%);
+}
+
+.container.active .right-box {
+    transform: translateX(-100%);
+}
+
+.slider-text, .slider-text2{
+    display: none;
+}
+
+.active3{
+    font-size: 0.8rem;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
-    width: fit-content;
-    align-self: center;
+    gap: 1rem;
+}
+.active4{
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.button-double{
+    display: none;
+}
+.active2{
+    font-size: 0.8rem;
+    color: white;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.containnerButton{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.buttonRegistro{
+    width: 45%;
+    border-radius: 1rem;
+    background-color: yellow;
+    color: blue;
 }
 
-.tablinks {
-    padding: 10px 20px;
-    margin: 0 10px;
-    border: none;
-    border-radius: 25px;
-    background-color: #1C6EE7;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.tablinks.active {
-    background-color: transparent;
-    color: white;
-}
 
 .form input {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ccc;
+    width: 90%;
+    padding: 0.5rem 0.5rem 0.2rem 0.5rem;
     border-radius: 5px;
     border: none;
     border-bottom: 1px solid #ccc;
     align-self:center;
 }
-
+form>h2{
+    margin: 1rem;
+}
 .form input:focus{
     border: none;
     outline: none;
-    border-bottom: 1px solid #83B4FF;
+    border-bottom: 1px solid #e8ff83;
 }
 
 .buttons {
@@ -121,7 +226,7 @@ body {
     font-size: 30px;
     margin-bottom:20px;
     text-align:center;
-    max-width: 70%;
+    max-width: 90%;
 }
 
 .highlight {
@@ -141,29 +246,114 @@ body {
     margin-bottom: 2px;
     color: #7A7A7A;
 }
+.buttons {
 
-
-@media (max-width: 1700px) {
-    
-    .left {
-        border-radius: 1rem;
-    }
-
-    .right {
-        padding-top: 1rem;
-    }
+    border-radius: 40px ;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-@media (min-width: 200px) {
-    .left, .right {
-        padding: 1rem;
-    }
-    .extras {
-        
-        align-items: center;
-    }
+.btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    flex: 1;
+    margin: 6px 5px;
+}
 
-    .extras label {
-        margin-bottom: 1rem;
-    }    
+.btn.active {
+    background-color: #1C6EE7;
+    color: white;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    margin-bottom: 5px;
+}
+
+.login-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+.login-form input:focus {
+border: none;
+outline: none;
+border-bottom: 1px solid #f7e706;
+}
+
+.extras {
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    font-size: 14px;
+    gap: 1rem;
+}
+.extras>label{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.extras>label>input{
+    margin: 0;
+    width: 10%;
+}
+.conteinBTN{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-btn {
+    width: 50%;
+    background-color: #E9AA0A;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 15px;
+    margin: 0.4rem;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.alt-login {
+    text-align: center;
+    margin-bottom: 2px;
+    color: #7A7A7A;
+}
+
+.social-login {
+    text-align: center;
+}
+
+.social-login i {
+    font-size: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+button>a{
+    color: white;
+    text-decoration: none;
 }
