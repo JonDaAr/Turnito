@@ -86,7 +86,7 @@ button:hover {
     align-items: center;
     box-sizing: border-box;
     padding: 20px;
-    transition: left 0.8s ease;
+    transition: right 0.8s ease;
 }
 .active5{
     display: block;
@@ -114,15 +114,15 @@ button:hover {
     background-color: #007bff;
     border-radius: 15px;
     cursor: pointer;
-    transition: left 0.8s ease;
-    left: 5px;
+    transition: right 0.8s ease;
+    right: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .container.active .slider-button {
-    left: 105px; /* Mueve el botón deslizante a la derecha */
+    right: 105px; /* Mueve el botón deslizante a la derecha */
 }
 
 /* Transición de los cuadros */

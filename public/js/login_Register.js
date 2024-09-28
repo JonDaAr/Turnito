@@ -15,17 +15,17 @@ sliderButton.addEventListener('click', () => {
     container.classList.toggle('active');
     
     if(container.classList.contains('active')){
-        buttonDouble2.classList.remove('active2');
-        sliderText1.classList.remove('active3');
-        containerButton.classList.remove('active5');
-        buttonDouble.classList.add('active2');
-        sliderText2.classList.add('active4');
-    }else{
-        buttonDouble.classList.remove('active2');
-        sliderText2.classList.remove('active4');
         buttonDouble2.classList.add('active2');
+        buttonDouble.classList.remove('active2');
         sliderText1.classList.add('active3');
+        sliderText2.classList.remove('active4');
         containerButton.classList.add('active5');
+    }else{
+        buttonDouble2.classList.remove('active2');
+        buttonDouble.classList.add('active2');
+        sliderText1.classList.remove('active3');
+        sliderText2.classList.add('active4');
+        containerButton.classList.remove('active5');
     }
 
     
