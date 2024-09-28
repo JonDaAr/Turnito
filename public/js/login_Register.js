@@ -10,7 +10,7 @@ const phrase = document.getElementById('phrase');
 const loginForm = document.getElementById('login-form');
 
 // Evento de click en el botón deslizante
-sliderButton.addEventListener('click', () => {
+containerButton.addEventListener('click', () => {
     // Alternar la clase "active" en el contenedor
     container.classList.toggle('active');
     

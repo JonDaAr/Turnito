@@ -61,7 +61,6 @@ input {
 button {
     padding: 10px;
     margin-top: 10px;
-    cursor: pointer;
     color: white;
     border: none;
     font-size: 16px;
@@ -86,6 +85,7 @@ button:hover {
     align-items: center;
     box-sizing: border-box;
     padding: 20px;
+    cursor: pointer;
     transition: right 0.8s ease;
 }
 .active5{
