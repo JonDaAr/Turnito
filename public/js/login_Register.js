@@ -31,7 +31,7 @@ containerButton.addEventListener('click', () => {
     
     // Cambiar el título del formulario, la frase y el contenido del formulario según el estado activo
     if (container.classList.contains('active')) {
-        phrase.textContent = '¡Bienvenido! Regístrate para comenzar.';
+        phrase.innerHTML = '¡Bienvenido! <br> Regístrate para comenzar.';
         loginForm.innerHTML = `
             <form class="form">
                 <h2>Registrarse</h2>
@@ -52,7 +52,7 @@ containerButton.addEventListener('click', () => {
             </form>
             `;
     } else {
-        phrase.textContent = '¡Bienvenido de nuevo! Inicia sesión para continuar.';
+        phrase.innerHTML = '¡Bienvenido de nuevo! <br> Inicia sesión para continuar.';
         loginForm.innerHTML = `
         <form class="login-form">
                     <h2>Iniciar sesión</h2>
