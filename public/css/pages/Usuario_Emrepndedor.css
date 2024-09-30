@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
 body {
     background-color: var(--main-fondo);
     font-family: 'FORMULARIOS', sans-serif;
@@ -13,115 +19,103 @@ body {
     --fondo-comentario: #1c53c91f;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2.5vh 1vw; /* Adjusted padding */
-    background-color: #ffffff;
-    color: #ffffff;
-    height: 5vw;
+/* Ocultar Paginas */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    box-sizing: border-box;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--separadores-pagina);
+    background-color: white;
 }
-
-header .header-right {
+.logoName{
+    width: 20%;
     display: flex;
     align-items: center;
-    gap: 1.5vw; /* Add gap between search bar and icons */
+    box-sizing: content-box;
 }
-
-header .search-bar {
-    width: 25vw; /* Increased search bar width */
-    height: 2.5vh;
-    padding: 1.5vh; /* Increased padding */
-    border-radius: 2.5vh;
-    border: none;
-    background-color: #F5F7FA;
-    font-size: 1.8vh;
-}
-
-header .search-bar:focus {
-    outline: none;
-    border: 0.1vh solid #F5F7FA;
-    background-color: #F5F7FA;
-}
-
-header .icons {
-    display: flex;
-    align-items: center;
-}
-
-header .icon {
-    margin-left: 0.5vw; /* Adjusted margin */
-    cursor: pointer;
-    width: 6vh;
-    height: 6vh;
-    background-color: #F5F7FA;
-    border-radius: 50%;
+.logoNav {
+    width: 100%; /* Ajusta el ancho según el tamaño de tu imagen */
+    height: 70%; /* Ajusta la altura según el tamaño de tu imagen */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del contenedor */
+    border-right: 1px solid var(black);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
 }
 
-
-header .logo {
-    font-size: 2.5rem; /* Increased logo size */
-    font-weight: bold;
-    display: flex;
-    align-items: left;
-    gap: 1.5vw; /* Increased gap */
+.logoNav img {
+    max-width: 70%;
+    max-height: 100%;
+}
+.tituloNav>h1{
+    margin-left: 20px;
+    font-size: 28px;
 }
 
-header .logo img {
-    height: 7vh; /* Increased logo height */
-    width: auto;
-}
-
-.main-container {
-    display: flex;
-    width: 100%;
-    height: 100%; /* Adjusted height for larger header */
-}
-
-.sidebar {
-    width: 25vw; /* Increased sidebar width */
-    background-color: #F5F5F5;
-    color: #000;
-    padding: 1vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
-}
-
-.sidebar .profile {
+.eventNav{
+    margin:0 35px;
     display: flex;
     align-items: center;
-    margin-bottom: 3vh;
-    padding: 2vh 1vw; /* Adjust padding to your preference */
-    cursor: pointer;
-    background-color: #FFFFFF;
-    border-radius: 1.5vh;
-    font-size: 2.5rem; /* Adjust the font size as needed */
 }
 
-.sidebar .profile img {
-    margin-right: 1vw; /* Space between the icon and the text */
-    height: 5vh; /* Adjust icon size if needed */
-    width: auto;
-}
-
-.sidebar .profile .text {
+/*   Search */
+.buscadorNav{
+    position: relative;
     display: flex;
-    flex-direction: column;
-    gap: 0.5vh; /* Space between 'Cliente' and 'perfil' */
+    align-items: center;
+}
+.lupaBuscador{
+    padding-left: 40px;
+    height: 40px;
+    width: 255px;
+    background-color: var(--main-fondo) ;
+    border: none;
+    border-radius: 40px;
+}
+.buscadorNav>button{
+    position: absolute;
+    left: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.lupaBuscador[type="text"]:focus {
+    border: none;
+    outline: none;
 }
 
-.sidebar .profile .text span {
-    font-size: 3rem; /* Adjust text size if needed */
-    color: #000000; /* Change text color as needed */
+
+/* Notificacion */
+.notificacionesNav{
+    margin-left: 20px;
+}
+.notificacionesNav>button{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-fondo);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.campNoti{
+    padding-bottom: 2px;
 }
 
 
@@ -132,10 +126,16 @@ header .logo img {
     position: relative;
 }
 
-.sidebar ul li {
-    margin: 1vh 1vh;
-    padding: 2vh 1vw; /* Increased padding */
-    height: 2vh;
+.menuNav>button{
+    background-color: var(--main-fondo);
+    margin: 10px 0;
+    width: 60px;
+    height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
     cursor: pointer;
 }
 
@@ -147,15 +147,15 @@ header .logo img {
     left: 0;
     width: 20%;
     height: 100%;
-    background: white;
+    background-color: white;
     color: #ffffff;
     padding: 20px;
     border-right: 1px solid var(--separadores-pagina);
-    z-index: 20;
 }
 /* Li Menu izquierda */
 .menuIzquierda>div>ul{
     list-style: none;
+
 }
 .menuIzquierda>ul>div>li{
     margin: 10px 0;
@@ -163,19 +163,24 @@ header .logo img {
 .menuIzquierda>ul>div>li>a{
     display: flex;
     align-items: center;
-    transition: background-color 0.3s;
-    font-family: Lato-bold;
-    font-size: 2.5rem; /* Increase this value to make the text larger */
+    text-decoration: none;
+    border-radius: 6px;
+    color: var(--primary-color);
+    padding: 0.5rem;
 }
 
-.sidebar ul li:hover, .sidebar .bottom-section ul li:hover {
-    background-color: #1c53c9;
+.menuIzquierda>ul>div>li>a:hover{
+    background-color: var(--primary-color);
+    color: #ffffff;
 }
 
-.sidebar ul li i {
-    margin-right: 1.5vw;
+.menuIzquierda>ul>div>li>a>img{
+    width: 20px;
+    height: 20px;
 }
-
+ul{
+    padding-left: 0 !important;
+}
 .container-menu{
     height: 80%;
     display: flex;
@@ -190,22 +195,36 @@ header .logo img {
     width: 98%;
     height: 60px;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    transition: background-color 0.3s;
-    font-family: Lato-bold;
-    font-size: 2.5rem; /* Increase this value to make the text larger */
+    border: 0.8px solid #895c813a;
+    border-radius: 6px;
 }
-
-.sidebar .bottom-section ul li i {
-    margin-right: 1.5vw;
-}
-
-.content {
+.userText{
+    width: 80%;
+    height: 100%;
+    margin: 10px;
     display: flex;
-    flex-grow: 1;
-    background-color: #D2DDF4;
-    padding: 2.5vh 2vw; /* Increased padding */
-    box-sizing: border-box;
+    flex-direction: column;
+    padding: 10px;
+}
+.userText>h3{
+    color: black;
+    font-size: 15px;
+}
+.userText>p{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 15px;
+}
+.menuIzquierda img{
+    width: 40px;
+    height: 40px;
+    margin: auto 10px;
+}
+.menuIzquierda ul li a.active {
+    background-color: var(--primary-color);
+    color: white;
+
 }
 
 
@@ -214,10 +233,11 @@ header .logo img {
 
 main{
     min-height: 100vh;
+    margin-top: 77px;
     margin-left: 20%;
     padding: 20px;
-    padding-top: 77px;
     background-color: var(--main-fondo);
+
 }
 /* Pagina Inicio */
 /* sectio 1 Graficoas */
@@ -238,84 +258,127 @@ main{
     margin:10px 0;
 }
 
-.right-side {
+
+.graficoBalance>img{
+    width: 94%;
+    margin: 10px 0;
+}
+
+/* SECTION 2 Ultimos Clientes y Balance Mensual*/
+.comentarioBalanceMensual{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.carruselComentarios{
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+}
+
+.ContenedorCarrusel{
     width: 45%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
 }
 
-.left-side .carousel img {
+.col-md-4{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.col-md-4 h5{
+    color: #000000;
+    font-size: 20px;
+}
+.col-md-4 p{
+    font-size: 16px;
+    color: #00000065;
+}
+
+.balanceMensual{
+    width: 50%;
+    margin: 0 30px;
+}
+
+.balanceMensual>img{
     width: 100%;
-    height: 45vh;
-    border-radius: 1.5vh; /* Increased border radius */
-    margin-bottom: 0.1vh; /* Increased margin */
 }
 
-.left-side .comment-section,
-.right-side .presentation,
-.right-side .appointment-section {
-    background-color: #D2DDF4;
-    padding: 0.1vh 0vw; /* Increased padding */
-    width: 100%;
-    border: none;
-    margin-top: 0.01vw;
-    margin-bottom: 0.5vw; /* Increased margin */
-    font-size: 3.5rem;
+
+
+
+
+
+
+
+
+
+
+
+/*  Historial  */
+
+.historial {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
 }
 
-.left-side .comment-section textarea {
-    width: 98%;
-    height: 5vh;
-    padding: 1.5vh 0.5vw; /* Increased padding */
-    border-radius: 2vh;
-    border: none;
-    outline: none; /* Remove any outline */
-    box-shadow: none;
-    margin-bottom: 0.5vh;
-    font-size: 3rem;
+.tituloHistorial>.visita-asistio{
+    color: #16c098;
 }
 
-.left-side .comment-section textarea:focus {
-    outline: none; /* Remove the default outline */
-    border: 0.1vh solid #FFFFFF; /* Set a custom border color */
-    background-color: #FFFFFF; /* Optional: change the background color on focus */
+.tituloHistorial>.visita-no-asistio{
+    color: #ff9800 ;
 }
 
-.left-side .comment-section button {
-    background-color: #E9AA0A;
-    border: none;
-    padding: 1vh 1vw; /* Increased padding */
-    border-radius: 1vh;
-    cursor: pointer;
-    font-family: Inter-italic;
-    font-size: 2rem; /* Increased font size */
+.tituloHistorial>.visita-cancelo{
+    color:#DF0404; ;
 }
 
-.right-side .appointment-section button {
-    background-color: #E9AA0A;
-    border: none;
-    padding: 1vh 1vw; /* Increased padding */
-    border-radius: 1vh;
-    cursor: pointer;
-    font-family: Inter-italic;
-    font-size: 3rem; /* Increased font size */
+.resumen-clientes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 8.3%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.left-side .comments {
-    max-height: 60vh; /* Increased max height */
-    width: 96%;
-    padding: 1vh 1vw;
-    background-color: #FFFFFF;
-    border-radius: 1vh;
-    overflow-y: scroll;
+.resumen-item {
+    color: #0000006b;
+    background-color: white;
+    padding: 20px;
+    flex: 1;
+    border-radius: 8.3%;
+    text-align: center;
+}
+
+.resumen-item>p{
+    color: #000;
     font-size: 2rem;
 }
 
-.rating-section h2 {
-    font-size: 4rem; /* Increased font size */
+.resumen-item:last-child {
+    margin-right: 0;
 }
 
-.rating-section h3 {
-    font-size: 4rem;
-    border: none /* Increased font size */
+.historial-clientes {
+    background-color: #fff;
+    padding: 4rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .historial-clientes table {
@@ -399,12 +462,18 @@ main{
 }
 
 
+
+
+
+
+
+
 /* COMENTARIOSSSS*/
 
 
 .contenedorComentario {
     display: flex;
-    width: 100%;
+    width: 100%; 
     height: 100%;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     background-color: var(--fondo-comentario);
@@ -471,6 +540,8 @@ main{
 .comentario-header>div{
     display: flex;
     align-items: center;
+    font-weight: bold;
+    gap: 1rem;
 }
 
 .comentario-footer {
@@ -563,6 +634,20 @@ main{
 #guardar-cambio-descripcion:hover {
     background-color: var(--primary-color);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -809,6 +894,7 @@ input:checked + .slider:before {
     outline: none;
 }
 
+
 /* salir */
 modal {
     display: none; 
@@ -868,3 +954,4 @@ modal {
 .cancel:hover {
     background-color: #ffb700;
 }
+

@@ -159,3 +159,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('logoutButton').addEventListener('click', (event) => {
+        event.preventDefault();  // Evita que el enlace realice la navegación por defecto
+
+        const confirmation = confirm("¿Estás seguro de que quieres salir?");
+        if (confirmation) {
+            // Redirige al usuario a la página de inicio
+            window.location.href = '/index.html'; 
+        }
+    });
+});

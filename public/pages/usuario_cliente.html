@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/pages/usuario_cliente.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/pages/usuario_cliente.css">
+    <title>Turnito</title>
+    <link rel="shortcut icon" href="/assets/favicon-16x16.png" type="image/x-icon">
 </head>
 <body>
-    <header></header>
+    <header>
+
+    </header>
         <nav>
             <div class="logoName">
                 <div class="logoNav">
-                    <img src="/public/assets/images/final-turnito-sin fondo.png" alt="Logo">
+                    <a href="/index.html">
+                        <img src="/assets/images/final-turnito-sin fondo.png" alt="Logo">
+                    </a>
                 </div>
             </div>
             
@@ -19,19 +24,19 @@
                 <div class="buscadorNav">
                     <button type="submit">
                         <span>
-                            <img class="lupaNav" src="/public/assets/icons/lupa-vector.png" alt="Lupa">
+                            <img class="lupaNav" src="/assets/icons/lupa-vector.png" alt="Lupa">
                         </span>
                     </button>
                     <input class="lupaBuscador" type="text" placeholder="Buscar..." aria-label="Buscar">
                 </div>
                 <div class="notificacionesNav">
                     <button aria-label="notificaciones">
-                    <img class="campNoti" src="/public/assets/icons/camp-noti.png" alt="Notificacion">
+                    <img class="campNoti" src="/assets/icons/camp-noti.png" alt="Notificacion">
                     </button>
                 </div>
                 <div class="menuNav">
                     <button aria-label="perfil">
-                        <img src="/public/assets/Mask Group.svg" alt="PerfilFoto">
+                        <img src="/assets/Mask Group.svg" alt="PerfilFoto">
                     </button>
                 </div>
             </div>
@@ -39,7 +44,7 @@
     </header>
     <aside class="menuIzquierda">
         <div class="userPerfil">
-            <img src="/public/assets/Mask Group.svg" alt="imgPerfil">
+            <img src="/assets/Mask Group.svg" alt="imgPerfil">
             <div class="userText">
                 <h3>Toby Burger</h3>
                 <p>Usuario</p>
@@ -47,13 +52,13 @@
         </div>
         <ul class="container-menu">
             <div>
-                <li><a href="#" onclick="MostrarPagina('page1'); return false"><img class="iconMenu" src="/public/assets/icons/inicio.png" alt="incioMenu">inicio</a></li>
-                <li><a href="#" onclick="MostrarPagina('page2'); return false"><img class="iconMenu" src="/public/assets/icons/Plus.svg" alt="verEmprendimientos">Ver Emprendimientos</a></li>
-                <li><a href="#" onclick="MostrarPagina('page4'); return false"><img class="iconMenu" src="/public/assets/icons/comment.png" alt="comentariosMenu">Comentarios</a></li>
+                <li><a href="#" onclick="MostrarPagina('page1'); return false"><img class="iconMenu" src="/assets/icons/inicio.png" alt="incioMenu">inicio</a></li>
+                <li><a href="#" onclick="MostrarPagina('page2'); return false"><img class="iconMenu" src="/assets/icons/Plus.svg" alt="verEmprendimientos">Ver Emprendimientos</a></li>
+                <li><a href="#" onclick="MostrarPagina('page4'); return false"><img class="iconMenu" src="/assets/icons/comment.png" alt="comentariosMenu">Comentarios</a></li>
             </div>
             <div class="fin-menu">
-                <li><a href="#" onclick="MostrarPagina('page5')"><img class="iconMenu" src="/public/assets/icons/config.png" alt="configMenu">Configuracion</a></li>
-            <li><a href="#" id="logoutButton"><img class="iconMenu" src="/public/assets/icons/salir.png" alt="salirMenu">Salir</a></li>
+                <li><a href="#" onclick="MostrarPagina('page5')"><img class="iconMenu" src="/assets/icons/config.png" alt="configMenu">Configuracion</a></li>
+            <li><a href="#" id="logoutButton"><img class="iconMenu" src="/assets/icons/salir.png" alt="salirMenu">Salir</a></li>
             </div>
         </ul>
     </aside>
@@ -124,7 +129,7 @@
                     <div class="tab-content active" id="perfilConfig">
                         <div class="columns">
                             <div class="column1">
-                                <label class="formImg" for="profilePicture"><img src="/public/assets/images/PerfilDeterminado.svg" alt="perfilEditConfig"></label>
+                                <label class="formImg" for="profilePicture"><img src="/assets/images/PerfilDeterminado.svg" alt="perfilEditConfig"></label>
                                 <input class="formInput" type="file" id="profilePicture" name="profilePicture">
                             </div>    
                             <div class="column">
@@ -191,17 +196,16 @@
 
             </div>
         </div>
-        </div>
         <div id="logoutModal" class="modal">
             <div class="modal-content">
                 <div class="modal-header">¿Estás seguro de que quieres cerrar sesión?</div>
                 <div class="modal-buttons">
-                    <button class="modal-button confirm" id="confirmLogout">Cerrar sesión</button>
+                    <button class="modal-button confirm" id="confirmLogout"><a href="/index.html">Cerrar sesión</a></button>
                     <button class="modal-button cancel" id="cancelLogout">Cancelar</button>
                 </div>
             </div>
         </div>
     </main>
-    <script src="/public/js/usuario_cliente.js"></script>
+    <script src="/js/usuario_cliente.js"></script>
 </body>
 </html>

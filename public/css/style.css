@@ -1,38 +1,51 @@
 /* styles.css */
+@font-face {
+    font-family: 'FORMULARIOS';
+    src: url('/assets/formulario/fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype'),
+        url('/assets/formulario/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: normal;     /* controla el grosor de las letras /
+   font-style: normal;     / controla el grosor de las letras */
+}
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'FORMULARIOS', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
     color: #333;
     background-color: #fff;
+    overflow-x: hidden;
 }
 main{
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    overflow-x: hidden;
 }
 
+
 .container {
-    padding: 0rem 2rem;
-    width: 100%;
-    margin: 0 auto;
-    max-width: 1440px;
+    width: 90%;
+    margin: auto;
 }
-.container h2{
+section h2{
     text-align: center;
     font-size: 3rem;
     }
 
+/* ------------------seccion de header------------------ */
+
 .main-header {
     position: fixed;
-    top: 0; /* Fija el navbar en la parte superior de la ventana */
+    top: 0; 
     left: 0;
-    width: 100%; /* Asegura que el navbar ocupe todo el ancho de la pantalla */
-    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+    width: 100%; 
+    z-index: 1000; 
 }
 
 .navbar {
-    padding: 0rem 3rem;
+    padding: .5rem 3rem;
     background-color: #fff;
     display: flex;
     justify-content: space-between;
@@ -41,6 +54,9 @@ main{
     position: relative;
     z-index: 2;
 }
+
+/* ------------------seccion de nav------------------ */
+
 .navbar-links{
     width: 100%;
     display: flex;
@@ -52,15 +68,11 @@ main{
     display: flex;
     list-style: none;
     justify-content: center;
-    background-color: #1C53C9; /* Color de fondo azul */
-    border-radius: 0 0 25px 25px; /* Bordes redondeados en la parte inferior */
+    background-color: #1C53C9; 
+    border-radius: 0 0 25px 25px; 
     gap: 2em;
     padding: .4em 3rem;
     margin: 0%;
-    /* list-style: none;
-    display: flex;
-    gap: 20px;
-    justify-content: space-evenly; */
 }
 
 .nav-links a {
@@ -102,29 +114,33 @@ main{
 
 #buttonup{
     position: fixed;
-    bottom: 2rem; /* Distancia desde la parte inferior */
-    right: 2rem;   /* Distancia desde la parte izquierda */
-    padding: .5rem 1.5rem;
-    background-color: #1C53C9;
-    color: white;
-    border: none;
-    border-radius: 50%;
+    bottom: 2rem; 
+    right: 2rem;   
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    border-radius: 100%;
     cursor: pointer;
     z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     }
 
+/* ------------------seccion de hero---------------- */
+
 .background-image {
-        position: absolute;
-        width: 90%;
-        height: 90%;
-        left: 0%;
-        background-size: cover;
-        z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 85vh;
+    background: linear-gradient(180deg, #1C53C9, #4964f9);
+    clip-path: polygon(0% 0%, 76% 0%, 90% 100%, 0% 85%);
+    z-index: -1;
 }
 
 .hero-section {
     height: 45rem;
-    margin-top: 3.5rem;
+    margin-top: 3rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -134,20 +150,21 @@ main{
 .hero-content {
     display: flex;
     align-items: normal;
-    justify-content: space-around;
-    margin: 3.8rem 3.8rem 10rem 3.8rem;
+    justify-content: space-between;
+    height: 100%;
+    margin-top: 2rem;
 }
 
 .hero-text h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #ffffffd5;
     padding-top: 4rem; ;
 }
 
 .hero-text p {
     color: #f5f5f5;
-    font-size: 2rem;
-    margin: 4rem 0;
+    font-size: 1.5rem;
+    margin: 2rem 0;
 }
 
 .hero-image img {
@@ -155,10 +172,16 @@ main{
     height: auto;
 }
 
+.image-combinada{
+    margin: auto;
+    display: block;
+    max-height: 80%;
+}
+
 .image-stack {
     background-size: contain;
     position: relative;
-    width: 40%;
+    width: 30%;
     margin-top: 4rem;
 }
 
@@ -166,25 +189,26 @@ main{
     position: relative;
     z-index: 1;
     left: 8rem;
-    margin-top: 13rem; /* Ajusta para darle espacio entre las imágenes */
+    margin-top: 13rem;
 }
 
 .image-top {
     position: absolute;
     left: 7rem;
     z-index: 2;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/* Sombra opcional para la imagen superior */ 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .image-bottom {
     position: absolute;
-    top: 12rem;/* Ajusta para la superposición vertical */
-    left: 19rem;/* Ajusta para la superposición horizontal */
+    top: 12rem;
+    left: 19rem;
     z-index: 1;
 }
 
+/* ------------------seccion de beneficios------------------ */
+
 .benefits-section {
-    margin-top: 10rem;
     background-color: #fff;
     text-align: center;
 }
@@ -194,13 +218,14 @@ main{
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 0.4rem;
 }
 
 .card {
     background-color: #f5f5f5;
     border-radius: 10px;
     padding: 2rem;
-    width: 40rem;
+    width: 35%;
     box-shadow: -6px 6px 4px rgba(0,0,0,0.1);
     text-align: center;
 }
@@ -216,8 +241,9 @@ main{
 
 .how-it-works-section {
     background-color: #ffffff;
-    padding: 60px 0;
 }
+
+/* ------------------seccion de como funciona------------------ */
 
 .how-container{
     width: 100%;
@@ -234,26 +260,31 @@ main{
 .img-top-left{
     border-radius: 2rem;
     position: absolute;
-    right: 0rem;
+    left: 45%;
     z-index: 2;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/* Sombra opcional para la imagen superior */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .img-bottom-right{
     border-radius: 2rem;
     position: absolute;
-    bottom: 4rem;/* Ajusta para la superposición vertical */
-    right: 10rem;/* Ajusta para la superposición horizontal */
+    top: 16rem;
+    left: 27%; 
     z-index: 1;
 }
 
+.image-computadora{
+    position: absolute;
+    right: 0%;
+}
+
 .background-image2 {
-    position: absolute; /* Cambiado de fixed a absolute */
+    position: absolute; 
     }
 
 .background-image3{
     position: absolute;
-    left: -10%;
+    right: 0;
 }
 
 .steps {
@@ -262,6 +293,7 @@ main{
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
+    padding-left: 0.8rem;
 }
 
 .steps-2{
@@ -271,6 +303,7 @@ main{
     flex-wrap: wrap;
     flex-direction: column;
     padding-left: 5rem;
+    margin-top:1.5rem ;
 }
 
 .step {
@@ -284,31 +317,40 @@ main{
 }
 
 .step p {
-    padding: 0rem 2rem ;
+    padding-left:2rem ;
     font-size: 16px;
 }
 
+/* ------------------seccion de comentarios------------------ */
+
+.coment{
+    display: flex;
+    justify-content: space-around;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+}
 .coments{
     display: flex;
-    justify-content: space-between;
-    gap: 2%;
-    margin: 6rem 0rem;
+    justify-content: space-around;
+    gap: 0.8rem;
+    flex-wrap: wrap;
 }
-
 .card-comments{
     background-color: #f5f5f5;
     border-radius: 10px;
     padding: 2rem;
     margin: 2rem 0rem;
-    width: auto;
+    width: 20%;
     box-shadow: -6px 6px 4px rgba(0,0,0,0.1);
     text-align: initial;
 }
 
+/* ------------------seccion de planes------------------ */
+
 .plans-section {
     text-align: center;
     position: relative;
-    padding: 60px 0;
     background-color: #1C53C9;
     color: #ccc;
     z-index: -1;
@@ -341,7 +383,7 @@ main{
     justify-content: space-between;
     border-radius: 10px;
     padding: 1rem;
-    width: 18rem;
+    width: 25%;
     box-shadow: -6px 6px 6px 8px rgba(0,0,0,0.1);
     text-align: center;
 }
@@ -358,14 +400,14 @@ main{
     margin: 10px 0;
 }
 
-
+/* ------------------seccion de registro------------------ */
 
 .register-card{
     text-align: center;
     width: 50%;
     height: auto;
     padding: 0rem 3rem 3rem 3rem;
-    margin: 3rem;
+    margin: 12%;
     border:solid 2px #1C53C9;
     border-radius: 2rem;
     background-color: #fff;
@@ -375,10 +417,14 @@ main{
     margin-bottom: 4rem;
 }
 
+/* ------------------seccion de FAQ------------------ */
+
 .faq-section {
     display: flex;
     background-color: #ffffff;
     padding: 60px 0;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .faq-title{
@@ -406,7 +452,7 @@ hr{
 }
 
 .faq-item h3 {
-    margin-bottom: 10px;
+    margin: 0 2rem;
     text-align: left;
 }
 
@@ -418,6 +464,8 @@ hr{
     padding-left: 5rem;
 }
 
+/* ------------------seccion de contacto------------------ */
+
 .contact-section {
     background-color: #fff;
     padding-bottom: 10rem;
@@ -427,7 +475,7 @@ hr{
     border-radius: 1rem;
     padding: 2rem;
     background-color: #660d0d00;
-    max-width: 45%;
+    max-width: 700px;
     margin: 0 auto;
     display: block;
     font-weight: bold;
@@ -435,9 +483,16 @@ hr{
 }
 
 .form-group {
+    width: 100%;
     display: flex;
     margin-bottom: 20px;
-    gap: 1rem;
+    gap: 0.5rem;
+}
+.form-group>div{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 65%;
 }
 .form-group-message{
     display: flex;
@@ -458,6 +513,8 @@ hr{
     margin-top: 1rem;
 }
 
+/*------------------seccion de maestros------------------ */
+
 .masters{
     display: flex;
     justify-content:space-evenly;
@@ -476,30 +533,31 @@ hr{
 
 .form-group input,
 .form-group textarea {
-    width: 16rem;
+    width: 90%;
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.main-footer {
+/*------------------seccion de footer------------------ */
+
+footer {
     background-color: #1a237e;
     color: #fff;
-    padding: 20px 0;
+    padding:0 5rem;
     text-align: center;
 }
 
-.main-footer h2{
+footer h2{
+    font-size: 3rem;
     text-align: left;
     margin: 0rem
 }
 
 .container-footer{
-    width: 1440px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 1rem;
 }
 
 .footer-registro {
@@ -509,11 +567,23 @@ hr{
 
 .footer-links a {
     text-decoration: none;
-    color: #fdd835;
+    color: #E9AA0A;
+    border: #1a237e;
 }
 
-.main-footer p{
+footer p{
     margin: 0rem;
+}
+
+.redes{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.redes img{
+    max-width: 2rem;
+    max-height: 2rem;
+    display: flex;
 }
 
 #Empieza-ya{
