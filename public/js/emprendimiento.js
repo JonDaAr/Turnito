@@ -7,11 +7,8 @@ function MostrarPagina(pageId) {
     })
 
     var seleccionarPagina = document.getElementById(pageId);
-    seleccionarPagina.classList.add('active')
+    seleccionarPagina.classList.add('active');
 }
-
-
-
 
 /* Historial    */
 
@@ -64,7 +61,6 @@ function mostrarMas(elemento) {
     }
 }
 
-
 /* Configuracion */
 document.querySelectorAll('.tab-button').forEach(button => {
     button.addEventListener('click', () => {
@@ -92,33 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const btnCambiarNombre = document.querySelector('.btn-cambiar-nombre');
-    const editContainer = document.querySelector('#edit-container');
-    const nuevoNombreInput = document.querySelector('#nuevo-nombre');
-    const nombreLugar = document.querySelector('#nombre-lugar');
-    const guardarCambioBtn = document.querySelector('#guardar-cambio');
-
-    // Mostrar el campo de entrada cuando se hace clic en el botón
-    btnCambiarNombre.addEventListener('click', function() {
-        editContainer.style.display = 'block';
-        nuevoNombreInput.focus();
-    });
-
-    // Guardar el nuevo nombre cuando se hace clic en el botón
-    guardarCambioBtn.addEventListener('click', function() {
-        const nuevoNombre = nuevoNombreInput.value.trim();
-        if (nuevoNombre) {
-            nombreLugar.textContent = nuevoNombre;
-            editContainer.style.display = 'none';
-        }
-    });
-});
-
-
 
 document.addEventListener('DOMContentLoaded', function() {
     const btnCambiarDescripcion = document.querySelector('.btn-cambiar-descripcion');

@@ -26,6 +26,16 @@ body {
     --fondo-comentario: #1c53c91f;
 }
 
+/* Ocultar Paginas */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+
 nav {
     position: fixed;
     top: 0;
@@ -144,10 +154,10 @@ nav {
     left: 0;
     width: 20%;
     height: 100%;
+    background-color: white;
     color: #ffffff;
     padding: 20px;
     border-right: 1px solid var(--separadores-pagina);
-    z-index: 99;
 }
 /* Li Menu izquierda */
 .menuIzquierda>div>ul{
@@ -183,6 +193,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;    
 }
+
 
 /* Menu perfil */
 .userPerfil{
@@ -229,8 +240,8 @@ main{
     margin-top: 77px;
     margin-left: 20%;
     padding: 20px;
-    background: var(--main-fondo);
-}
+    background-color: var(--main-fondo);
+
 }
 /* Pagina Inicio */
 /* sectio 1 Graficoas */
@@ -251,84 +262,127 @@ main{
     margin:10px 0;
 }
 
-.right-side {
+
+.graficoBalance>img{
+    width: 94%;
+    margin: 10px 0;
+}
+
+/* SECTION 2 Ultimos Clientes y Balance Mensual*/
+.comentarioBalanceMensual{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.carruselComentarios{
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+}
+
+.ContenedorCarrusel{
     width: 45%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
 }
 
-.left-side .carousel img {
+.col-md-4{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.col-md-4 h5{
+    color: #000000;
+    font-size: 20px;
+}
+.col-md-4 p{
+    font-size: 16px;
+    color: #00000065;
+}
+
+.balanceMensual{
+    width: 50%;
+    margin: 0 30px;
+}
+
+.balanceMensual>img{
     width: 100%;
-    height: 45vh;
-    border-radius: 1.5vh; /* Increased border radius */
-    margin-bottom: 0.1vh; /* Increased margin */
 }
 
-.left-side .comment-section,
-.right-side .presentation,
-.right-side .appointment-section {
-    background-color: #D2DDF4;
-    padding: 0.1vh 0vw; /* Increased padding */
-    width: 100%;
-    border: none;
-    margin-top: 0.01vw;
-    margin-bottom: 0.5vw; /* Increased margin */
-    font-size: 3.5rem;
+
+
+
+
+
+
+
+
+
+
+
+/*  Historial  */
+
+.historial {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
 }
 
-.left-side .comment-section textarea {
-    width: 98%;
-    height: 5vh;
-    padding: 1.5vh 0.5vw; /* Increased padding */
-    border-radius: 2vh;
-    border: none;
-    outline: none; /* Remove any outline */
-    box-shadow: none;
-    margin-bottom: 0.5vh;
-    font-size: 3rem;
+.tituloHistorial>.visita-asistio{
+    color: #16c098;
 }
 
-.left-side .comment-section textarea:focus {
-    outline: none; /* Remove the default outline */
-    border: 0.1vh solid #FFFFFF; /* Set a custom border color */
-    background-color: #FFFFFF; /* Optional: change the background color on focus */
+.tituloHistorial>.visita-no-asistio{
+    color: #ff9800 ;
 }
 
-.left-side .comment-section button {
-    background-color: #E9AA0A;
-    border: none;
-    padding: 1vh 1vw; /* Increased padding */
-    border-radius: 1vh;
-    cursor: pointer;
-    font-family: Inter-italic;
-    font-size: 2rem; /* Increased font size */
+.tituloHistorial>.visita-cancelo{
+    color:#DF0404; ;
 }
 
-.right-side .appointment-section button {
-    background-color: #E9AA0A;
-    border: none;
-    padding: 1vh 1vw; /* Increased padding */
-    border-radius: 1vh;
-    cursor: pointer;
-    font-family: Inter-italic;
-    font-size: 3rem; /* Increased font size */
+.resumen-clientes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 8.3%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.left-side .comments {
-    max-height: 60vh; /* Increased max height */
-    width: 96%;
-    padding: 1vh 1vw;
-    background-color: #FFFFFF;
-    border-radius: 1vh;
-    overflow-y: scroll;
+.resumen-item {
+    color: #0000006b;
+    background-color: white;
+    padding: 20px;
+    flex: 1;
+    border-radius: 8.3%;
+    text-align: center;
+}
+
+.resumen-item>p{
+    color: #000;
     font-size: 2rem;
 }
 
-.rating-section h2 {
-    font-size: 4rem; /* Increased font size */
+.resumen-item:last-child {
+    margin-right: 0;
 }
 
-.rating-section h3 {
-    font-size: 4rem;
-    border: none /* Increased font size */
+.historial-clientes {
+    background-color: #fff;
+    padding: 4rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .historial-clientes table {
@@ -410,6 +464,12 @@ main{
     display: flex;
     gap: 1rem;
 }
+
+
+
+
+
+
 
 
 /* COMENTARIOSSSS*/
@@ -576,6 +636,20 @@ main{
 #guardar-cambio-descripcion:hover {
     background-color: var(--primary-color);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
