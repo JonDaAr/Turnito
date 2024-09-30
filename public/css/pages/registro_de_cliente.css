@@ -80,6 +80,10 @@ form h3 {
     text-align: center;
     padding: 0.5rem;
 }
+.btn-registrar a{
+    text-decoration: none;
+    color: #ffffff;
+}
 .btn-registrar {
     background-color: #f9a825;
     color: #fff;

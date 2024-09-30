@@ -116,16 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
 function addEvent() {
     const day = parseInt(document.getElementById('day').value);
     const time = parseInt(document.getElementById('time').value);
@@ -171,3 +161,31 @@ document.addEventListener('drop', function(e) {
         closestCell.appendChild(eventDiv);
     }
 });
+
+
+function cambiarNombre() {
+    // Obtener el elemento h2
+    const titulo = document.getElementById('s');
+    
+    // Crear un input para editar el nombre
+    const nuevoNombreInput = document.createElement('input');
+    nuevoNombreInput.type = 'text';
+    nuevoNombreInput.value = titulo.innerText; // Establecer el valor actual
+    nuevoNombreInput.id = 'nuevoNombre';
+    
+    // Crear un botón para guardar el nuevo nombre
+    const guardarBoton = document.createElement('button');
+    guardarBoton.innerText = 'Guardar';
+    guardarBoton.onclick = function() {
+        titulo.innerText = nuevoNombreInput.value; // Cambiar el texto del h2
+        // Eliminar el input y el botón después de guardar
+        nuevoNombreInput.remove();
+        guardarBoton.remove();
+    };
+    
+    // Reemplazar el título por el input
+    titulo.innerText = '';
+    titulo.appendChild(nuevoNombreInput);
+    titulo.appendChild(guardarBoton);
+    nuevoNombreInput.focus(); // Enfocar el input
+}
