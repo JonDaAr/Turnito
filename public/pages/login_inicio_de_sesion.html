@@ -38,7 +38,7 @@
                         <label><input type="checkbox"> Recuérdame</label>
                         <a href="#">¿Has olvidado tu contraseña?</a>
                     </div>
-                    <button class="login-btn">INGRESAR</button>
+                    <button type="button" class="login-btn">INGRESAR</button> <!-- Changed button type to button -->
                     <p class="alt-login">o inicia sesión con</p>
                     <div class="social-login">
                         <img src="../../assets/images/logo_google.svg" alt="">
@@ -47,5 +47,22 @@
             </article>
         </section>
       </main>
+
+      <!-- JavaScript to handle conditional redirection -->
+      <script>
+        document.querySelector('.login-btn').addEventListener('click', function() {
+            // Get the value of the email input
+            const email = document.getElementById('email').value;
+
+            // Check the email and redirect accordingly
+            if (email === 'emprendedor@gmail.com') {
+                window.location.href = "../pages/usuario_Emprendimiento.html"; // Redirect for emprendedor
+            } else if (email === 'cliente@gmail.com') {
+                window.location.href = "../pages/usuario_cliente.html"; // Redirect for cliente
+            } else {
+                alert('Correo no válido. Por favor ingresa un correo válido.');
+            }
+        });
+      </script>
 </body>
 </html>
