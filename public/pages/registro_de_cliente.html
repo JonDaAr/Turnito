@@ -58,7 +58,7 @@
                         <input type="checkbox" id="terminos" name="terminos">
                         <label for="terminos">Acepto los términos y política de privacidad</label>
                         <br><br>
-                        <button class="btn-registrar">REGISTRAR</button>
+                        <button type="button" class="btn-registrar">REGISTRAR</button>
                     </div>
                     
                     <div class="help-link">
@@ -67,6 +67,15 @@
                 </div>
             <!--fin de 2do bloque-contenido-->
         </main><!--contenor de formulario completo, seria parte blanca-->
-    </div>    
+    </div> 
+
+    <!-- JavaScript to handle the redirection -->
+    <script>
+        document.querySelector('.btn-registrar').addEventListener('click', function() {
+            // Add your redirect page URL here
+            window.location.href = "../pages/usuario_cliente.html"; // Replace with the actual page
+        });
+    </script>
+
 </body>
 </html>
