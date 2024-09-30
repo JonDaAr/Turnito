@@ -13,13 +13,12 @@ header h2 {
 }
 
 .form-container {
-    width: 70%;
+    width: 100%;
     margin: auto;
     box-shadow: rgba(0, 0, 0, 0.1);
     background-color: #fff;
     border-radius: 2vw;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap;
     display:flex;
 }
 
