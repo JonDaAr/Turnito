@@ -1,31 +1,3 @@
-@font-face {
-    font-family: 'Inter-italic'; /* Choose a name for the font */
-    src: url('/Turnito/assets/fonts/formulario/Inter-Italic-VariableFont_opsz\,wght.ttf') format('ttf');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Heebo'; /* Choose a name for the font */
-    src: url('/Turnito/assets/fonts/pagina/Heebo-VariableFont_wght.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Lato-bold'; /* Choose a name for the font */
-    src: url('/Turnito/assets/fonts/menu/Lato-Bold.ttf') format('ttf');
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'FORMULARIOS';
-   src: url('/assets/formulario/fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype'),
-        url('/assets/formulario/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
-   font-weight: normal;     /* controla el grosor de las letras /
-   font-style: normal;     / controla el grosor de las letras */
- }
-
 body {
     background-color: var(--main-fondo);
     font-family: 'FORMULARIOS', sans-serif;
@@ -835,4 +807,64 @@ input:checked + .slider:before {
 #nuevo-nombre:focus{
     border: none;
     outline: none;
+}
+
+/* salir */
+modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.confirm {
+    background-color: white;
+    border: 1px solid var(--separadores-pagina);
+    color: black;
+}
+
+.confirm:hover {
+    background-color: var(--fondo-comentario);
+}
+
+.cancel {
+    background-color: var(--btn-color);
+    color: white;
+}
+
+.cancel:hover {
+    background-color: #ffb700;
 }

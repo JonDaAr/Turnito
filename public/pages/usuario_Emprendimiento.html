@@ -9,16 +9,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <title>Turnito</title>
-    <link rel="shortcut icon" href="/css/pages/usuario_emprendimiento.css" type="image/x-icon">
-
-
+    <link rel="shortcut icon" href="/assets/favicon-16x16.png" type="image/x-icon">
 </head>
 <body>
     <header>
         <nav>
             <div class="logoName">
                 <div class="logoNav">
-                    <img src="/assets/images/final-turnito-sin fondo.png" alt="Logo">
+                    <a href="/index.html">
+                        <img src="/assets/images/final-turnito-sin fondo.png" alt="Logo">
+                    </a>
                 </div>
             </div>
             <div class="tituloNav">
@@ -58,7 +58,7 @@
         <ul class="container-menu">
             <div>
                 <li><a href="#" onclick="MostrarPagina('page1'); return false"><img class="iconMenu" src="/assets/icons/inicio.png" alt="incioMenu">inicio</a></li>
-                <li><a href="#" onclick="MostrarPagina('page5'); return false"><img class="iconMenu" src="/assets/icons/agenda_menu.png" alt="AgendaMenu">Agenda</a></li>
+                <li><a href="/pages/agenda.html"><img class="iconMenu" src="/assets/icons/agenda_menu.png" alt="AgendaMenu">Agenda</a></li>
                 <li><a href="#" onclick="MostrarPagina('page2'); return false"><img class="iconMenu" src="/assets/icons/history.png" alt="historialMenu">Historial</a></li>
                 <li><a href="#" onclick="MostrarPagina('page3'); return false"><img class="iconMenu" src="/assets/icons/comment.png" alt="comentariosMenu">Comentarios</a></li>
             </div>
@@ -157,8 +157,7 @@
                 </div>
             </section>
         </div>
-        <div id="page5" class="page"></div>
-
+        <div id="page5" class="page">
         </div>
         <div id="page2" class="page">
             <div class="historial">
@@ -210,61 +209,146 @@
                 </section>
             </div>
         </div>
-    
-   
-        <div class="content">
-            <div class="left-side">
-                <div class="carousel">
-                    <img src="/assets/images/Nails.jpg" alt="Nails Image">
+        <div id="page3" class="page">
+            <div class="contenedorComentario">
+           
+            <div class="comentarios">
+                <h2>Comentarios y valoraciones</h2>
+                <div class="filtro">
+                    <h7>Su Calificación y lo que piensan de ti</h7>
+                
+                  <button>ORDENAR <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.4502 1.70874L7.17936 6.91707L12.9085 1.70874" stroke="#7D8DA6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></button>
                 </div>
-                <div class="comment-section">
-                    <h3>Dejanos tu comentario</h3>
-                    <textarea placeholder="Agregue un comentario"></textarea>
-                    <button>Agregar Comentario</button>
+                <div class="comentario">
+                  <div class="comentario-header">
+                    <div>
+                        <span>
+                            <img src="/assets/images/foto1.png" alt="perfilComentario">
+                        </span>
+                        <span class="usuario">Kalb </span>
+                    </div>
+                    <div>
+                        <span class="fecha"> - 22 Jul</span>
+                    </div>
+                  </div>
+                  <p>Toby Burger was amazing with our cats! 😍🙌</p>
+                  <p class="comentario-corto">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                    <span class="ver-mas">Ver Más</span>
+                  </p>
+                  <div class="comentario-footer">
+                    <span>👍 1</span>
+                    <span class="responder">Comentar</span>
+                  </div>
                 </div>
-                <div class="comments">
-                    <div class="comment">
-                        <div class="comment-header">
-                            <span>Kaib</span>
-                            <span>22 Jul</span>
-                            <span>★★★★★</span>
+                <div class="comentario">
+                    <div class="comentario-header">
+                        <div>
+                            <span>
+                                <img src="/assets/images/foto2.png" alt="perfilComentario">
+                            </span>
+                            <span class="usuario">Kalb </span>
                         </div>
-                        <div class="comment-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum imperdiet commodo.
-                                Phasellus rhoncus quam vitae tortor lobortis blandit. Integer commodo diam eget augue egestas,
-                                ut vehicula tortor tempor. Suspendisse ultrices molestie urna a finibus. Donec eget metus quis
-                                nunc ultricies porttitor eu vitae elit. Aliquam quis euismod orci, aliquam euismod felis. Phasellus
-                                vitae blandit lacus.Donec ut turpis a ligula laoreet rhoncus nec in massa. Cras ut laoreet purus,
-                                quis accumsan urna. Aenean facilisis ex non dolor fermentum, id placerat eros aliquet. Sed imperdiet
-                                sem eget tempus varius. Nulla ligula lorem, tempor ac maximus nec, lacinia rhoncus sem.
-                                Donec placerat velit sollicitudin dolor euismod ultricies.</p>
+                        <div>
+                            <span class="fecha"> - 22 Jul</span>
+                        </div>
+                      </div>
+                    <p>Toby Burger was amazing with our cats! 😍🙌</p>
+                    <p class="comentario-corto">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                      <span class="ver-mas">Ver Más</span>
+                    </p>
+                    <div class="comentario-footer">
+                      <span>👍 1</span>
+                      <span class="responder"> 1 Comentar</span>
+                    </div>
+                  </div>
+                  <div class="conteiner-respuesta">
+                    <div class="comentario respuesta">
+                        <div class="comentario-header">
+                        <div>
+                            <span>
+                                <img src="/assets/images/perfil-coment.png" alt="perfilComentario">
+                            </span>
+                            <span class="usuario">Kalb </span>
+                        </div>
+                        <div>
+                            <span class="fecha"> - 22 Jul</span>
                         </div>
                     </div>
-                    <!-- Repeat similar comment cards -->
+                        <p class="comentario-corto">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit...
+                          <span class="ver-mas">Ver Más</span>
+                        </p>
+                        <div class="comentario-footer">
+                          <span>👍 1</span>
+                          <span class="responder">Comentar</span>
+                        </div>
+                    </div>
+                  </div>
+                  
+                  <div class="comentario">
+                    <div class="comentario-header">
+                        <div>
+                            <span>
+                                <img src="/assets/images/foto3.png" alt="perfilComentario">
+                            </span>
+                            <span class="usuario">Kalb </span>
+                        </div>
+                        <div>
+                            <span class="fecha"> - 22 Jul</span>
+                        </div>
+                    </div>
+                    <p>Toby Burger was amazing with our cats! 😍🙌</p>
+                    <p class="comentario-corto">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                      <span class="ver-mas">Ver Más</span>
+                    </p>
+                    <div class="comentario-footer">
+                        <span>👍 1</span>
+                      <span class="responder">Comentar</span>
+                    </div>
+                  </div>
+                  <div class="comentario">
+                    <div class="comentario-header">
+                        <div>
+                            <span>
+                                <img src="/assets/images/foto1.png" alt="perfilComentario">
+                            </span>
+                            <span class="usuario">Kalb </span>
+                        </div>
+                        <div>
+                            <span class="fecha"> - 22 Jul</span>
+                        </div>
+                    </div>
+                    <p>Toby Burger was amazing with our cats! 😍🙌</p>
+                    <p class="comentario-corto">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                      <span class="ver-mas">Ver Más</span>
+                    </p>
+                    <div class="comentario-footer">
+                      <span>👍 1</span>
+                      <span class="responder">Comentar</span>
+                    </div>
+                  </div>
+                    
+                <!-- Agrega más comentarios aquí -->
+              </div>
+            
+              <div class="informacion-lugar">
+                <div class="tituloCambiar">
+                    <h2 id="s">Nombre del Lugar</h2>
+                    <button class="btn-cambiar-nombre" onclick="cambiarNombre()">
+                        <img src="/assets/icons/lapiz.svg" alt="Cambiar Nombre">
+                    </button>
                 </div>
-            </div>
-            <div class="right-side">
-                <div class="rating-section">
-                    <h2>4.8 ★</h2>
-                    <h3>NAILS COMPANY</h3>
-                </div>
-                <div class="presentation">
-                    <h3>Presentación</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse rutrum imperdiet commodo.
-                        Phasellus rhoncus quam vitae tortor lobortis blandit. Integer commodo diam eget augue egestas,
-                        ut vehicula tortor tempor. Suspendisse ultrices molestie urna a finibus. Donec eget metus quis
-                        nunc ultricies porttitor eu vitae elit. Aliquam quis euismod orci, aliquam euismod felis. Phasellus
-                        vitae blandit lacus.Donec ut turpis a ligula laoreet rhoncus nec in massa. Cras ut laoreet purus,
-                        quis accumsan urna. Aenean facilisis ex non dolor fermentum, id placerat eros aliquet. Sed imperdiet
-                        sem eget tempus varius. Nulla ligula lorem, tempor ac maximus nec, lacinia rhoncus sem.
-                        Donec placerat velit sollicitudin dolor euismod ultricies.  </p>
-                </div>
-                <div class="appointment-section">
-                    <h3>Selecciona tu TURNO</h3>
-                    <button>SELECCIONAR TURNO</button>
-                </div>
-            </div>
-        </div>
+                
+    <!-- Campo de entrada para el nuevo nombre -->
+    <div id="edit-container" style="display: none;">
+        <input class="inputTitulo" type="text" id="nuevo-nombre" value="">
+        <button id="guardar-cambio">Guardar</button>
     </div>
                 <img src="/assets/images/tienda_uñas.jpg" alt="Restaurant" class="imagen-lugar">
                 <div class="calificacion">
@@ -287,7 +371,6 @@
               </div>     
             </div>
         </div>
-    
         <div id="page4" class="page">
             <div class="containConfi1">
                 <div class="tabs">
@@ -382,6 +465,15 @@
                     <button type="submit" class="save-button">Guardar</button>
                 </form>
 
+            </div>
+        </div>
+        <div id="logoutModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">¿Estás seguro de que quieres cerrar sesión?</div>
+                <div class="modal-buttons">
+                    <button class="modal-button confirm" id="confirmLogout">Cerrar sesión</button>
+                    <button class="modal-button cancel" id="cancelLogout">Cancelar</button>
+                </div>
             </div>
         </div>
     </main>

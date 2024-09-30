@@ -40,8 +40,8 @@ containerButton.addEventListener('click', () => {
                 <input type="password" placeholder="Ingrese tu contraseña" required>
                 <input type="password" placeholder="Confirma tu contraseña" required>
                 <div class="buttons">
-                    <button type="button" class="client"><a href="pages/registro_de_cliente.html"">Cliente</a></button>
-                    <button type="button" class="entrepreneurship"><a href="pages/registro_de_emprendimiento.html ">Emprendimiento</a></button>
+                    <button type="button" class="client"><a href="/pages/registro_de_cliente.html">Cliente</a></button>
+                    <button type="button" class="entrepreneurship"><a href="/pages/registro_de_emprendimiento.html ">Emprendimiento</a></button>
                 </div>
                 <div class="inicio">
                     <p>o inicia sesión con</p>
