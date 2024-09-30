@@ -16,6 +16,7 @@ header h2 {
     max-width: 900px;
     height: 600px;
     margin: auto;
+    margin-bottom: 2rem;
     box-shadow: rgba(0, 0, 0, 0.1);
     background-color: #fff;
     border-radius: 2vw;
@@ -132,3 +133,7 @@ footer p {
     margin-top: 2cap;
 }
 
+.contenedor-btn a{
+    text-decoration: none;
+    color: white;
+}
