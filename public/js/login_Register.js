@@ -10,28 +10,28 @@ const phrase = document.getElementById('phrase');
 const loginForm = document.getElementById('login-form');
 
 // Evento de click en el botón deslizante
-sliderButton.addEventListener('click', () => {
+containerButton.addEventListener('click', () => {
     // Alternar la clase "active" en el contenedor
     container.classList.toggle('active');
     
     if(container.classList.contains('active')){
-        buttonDouble2.classList.remove('active2');
-        sliderText1.classList.remove('active3');
-        containerButton.classList.remove('active5');
-        buttonDouble.classList.add('active2');
-        sliderText2.classList.add('active4');
-    }else{
-        buttonDouble.classList.remove('active2');
-        sliderText2.classList.remove('active4');
         buttonDouble2.classList.add('active2');
+        buttonDouble.classList.remove('active2');
         sliderText1.classList.add('active3');
+        sliderText2.classList.remove('active4');
         containerButton.classList.add('active5');
+    }else{
+        buttonDouble2.classList.remove('active2');
+        buttonDouble.classList.add('active2');
+        sliderText1.classList.remove('active3');
+        sliderText2.classList.add('active4');
+        containerButton.classList.remove('active5');
     }
 
     
     // Cambiar el título del formulario, la frase y el contenido del formulario según el estado activo
     if (container.classList.contains('active')) {
-        phrase.textContent = '¡Bienvenido! Regístrate para comenzar.';
+        phrase.innerHTML = '¡Bienvenido! <br> Regístrate para comenzar.';
         loginForm.innerHTML = `
             <form class="form">
                 <h2>Registrarse</h2>
@@ -52,7 +52,7 @@ sliderButton.addEventListener('click', () => {
             </form>
             `;
     } else {
-        phrase.textContent = '¡Bienvenido de nuevo! Inicia sesión para continuar.';
+        phrase.innerHTML = '¡Bienvenido de nuevo! <br> Inicia sesión para continuar.';
         loginForm.innerHTML = `
         <form class="login-form">
                     <h2>Iniciar sesión</h2>

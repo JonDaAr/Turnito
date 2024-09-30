@@ -5,11 +5,7 @@ body {
     color: #333;
     background-color: #fff;
     overflow-x: hidden;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    
 }
 
 h1{
@@ -37,6 +33,10 @@ h1{
     border:none
 }
 
+a{
+    text-decoration: none;
+}
+
 /* ------------------seccion de header------------------ */
 
 header{
@@ -45,7 +45,6 @@ header{
     left: 0;
     width: 100%; 
     z-index: 1000; 
-    grid-area: 1 / 1 / 2 / 13;;
 }
 
 .main-header {
@@ -66,18 +65,22 @@ header{
 
 /* ------------------seccion de Aside ------------------ */
 aside{
-    grid-area: 2 / 1 / 10 / 3;
+    grid-area: 1 / 1 / 13 / 3; 
+    margin-top: 5rem;
 }
+
 .listaCategorias{
     list-style: none;
     text-align: center;
     padding: 0;
+    
 }
 
 .categoria{
+    text-align: left;
     margin: .1rem;
     padding: .5rem 0;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 
@@ -85,8 +88,18 @@ aside{
 /* ------------------seccion de main ------------------ */
 
 main{
-    grid-area: 2 / 3 / 10 / 13;
-    display: flexbox;
+    display: grid;
+    max-width: 1280px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.container{
+    grid-area: 1 / 3 / 13 / 13; 
 }
 
 section{
@@ -102,7 +115,7 @@ section{
 }
 
 .card{
-    width: 24rem;
+    width: 100%;
     height: auto;
     margin: .5rem;
     padding: .5rem;
@@ -121,8 +134,15 @@ section{
     object-fit: none;
 }
 
-
 .contenido{
+    width: 80%;
+}
+
+.textContenido{
+    display: flex;
+}
+
+.valoracion{
     display: flex;
 }
 
@@ -131,11 +151,17 @@ section{
 }
 
 .star {
+    padding: .3rem;
     width: 1rem;
     height: 1rem;
     background: yellow;
     position: relative;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.verMas{
+    padding: 1rem;
+    text-align: end;
 }
 
 /*------------------seccion de footer------------------ */
@@ -185,12 +211,13 @@ footer p{
     display: flex;
 }
 
-@media (max-width: 780px){
+@media (max-width: 420px){
     body{grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(12, 1fr)}
-    header{ grid-area: 1 / 1 / 2 / 13; }
-    aside{ grid-area: 2 / 1 / 3 / 13; }
-    main{ grid-area: 3 / 1 / 11 / 13; }
-    footer{ grid-area: 11 / 1 / 13 / 13} 
+    aside { grid-area: 1 / 1 / 2 / 4; }
+    .container { grid-area: 2 / 1 / 4 / 4; }
 }
 
+@media (max-width: 780px){
+
+}

@@ -24,6 +24,10 @@ body {
     background-color: white;
 }
 
+h2{
+    text-align: center;
+}
+
 .box {
     width: 50%;
     display: flex;
@@ -33,9 +37,18 @@ body {
 }
 
 .left-box {
-    background-color: #007bff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #1C53C9;
     color: white;
     padding: 20px;
+}
+
+.left-box img{
+    width: 40%;
+    border-radius: 10px;
+    background-color: white;
 }
 
 .right-box {
@@ -47,12 +60,12 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     margin: 1rem;
 }
 
 input {
-    margin-bottom: 10px;
+    margin-bottom: 3rem;
     padding: 10px;
     font-size: 16px;
     width: 100%;
@@ -61,7 +74,6 @@ input {
 button {
     padding: 10px;
     margin-top: 10px;
-    cursor: pointer;
     color: white;
     border: none;
     font-size: 16px;
@@ -86,7 +98,8 @@ button:hover {
     align-items: center;
     box-sizing: border-box;
     padding: 20px;
-    transition: left 0.8s ease;
+    cursor: pointer;
+    transition: right 0.8s ease;
 }
 .active5{
     display: block;
@@ -111,18 +124,18 @@ button:hover {
     position: absolute;
     width: 90px;
     height: 30px;
-    background-color: #007bff;
+    background-color: #1C53C9;
     border-radius: 15px;
     cursor: pointer;
-    transition: left 0.8s ease;
-    left: 5px;
+    transition: right 0.8s ease;
+    right: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .container.active .slider-button {
-    left: 105px; /* Mueve el botón deslizante a la derecha */
+    right: 105px; /* Mueve el botón deslizante a la derecha */
 }
 
 /* Transición de los cuadros */
@@ -286,7 +299,7 @@ form>h2{
 
 .login-form input {
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border-radius: 5px;
     border: none;
     border-bottom: 1px solid #ccc;
