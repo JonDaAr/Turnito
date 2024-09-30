@@ -5,14 +5,6 @@ body {
     padding: 0;
 }
 
-<<<<<<< HEAD
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-=======
->>>>>>> 113a2f926a1f62f41e252616f1d3668b337ba80c
 header h2 {
     text-align:left;
     color: #666;
@@ -21,38 +13,38 @@ header h2 {
 }
 
 .form-container {
-    width: 70%;
+    max-width: 1000px;
+    height: 700px;
     margin: auto;
+    margin-bottom: 2rem;
     box-shadow: rgba(0, 0, 0, 0.1);
     background-color: #fff;
     border-radius: 2vw;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap;
     display:flex;
 }
 
 form {
-    flex: content;
-    margin: 3rem;
-    margin-top: 1%;
-    margin-bottom: -2%;
+    width: 60%;
+    margin: 0.5rem;
+    margin-top: 1.5rem;
+    margin-left: 0.9rem;
 }
 
 form h3 {
     font-size: 2rem;
     color: #222;
-    margin-bottom: 1vw;
+    margin: 10px;
 }
 
 .input-group {
-    position: relative;
-    margin-bottom: 0.5vw;
+    margin-bottom: 0.5rem;
 }
 
 .input-group label {
     display: block;
     font-weight: bold;
-    margin-bottom: 1%;
+    margin-bottom: 0.5rem;
 }
 
 .input-group input[type="text"],
@@ -60,17 +52,19 @@ form h3 {
 .input-group input[type="date"],
 .input-group input[type="number"] {
     width: 100%;
-    padding: 1rem 0.5rem;
-    border: 2px 
-    solid #4285F4;
+    padding: 0.6rem;
+    border: 2px solid #4285F4;
     border-radius: 2vw;
-    font-size: 1rem;
-}
 
+}
+.input-group input{
+    width: 90%;
+}
 .input-half-group {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 }
 
 .input-half-group .input-group {
@@ -79,7 +73,11 @@ form h3 {
 
 .contenedor-btn {
     text-align: center;
-    padding: 3rem
+    padding: 0.5rem;
+}
+.profile-pic>img{
+    width: 70%;
+    margin: auto;
 }
 
 .btn-registrar {
@@ -101,25 +99,31 @@ form h3 {
 .vertical-bar {
     width: 1px;
     background-color: #ccc;
-    margin: 3rem;
+    margin: 1.5rem;
 }
 /*2do bloque de contenido */
 .top{
-    flex:content;
-    margin: 5%
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .pic-container {
     margin: 5%;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
 }
 .profile-pic {
     flex: content;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-left: 1rem;
+    margin: auto;
     width: 100%;
 }
 
@@ -129,9 +133,7 @@ footer p {
     margin-top: 2cap;
 }
 
-@media (width: 800px ) {
-    .imagen-de-perfil {width: 100%;}
-    .form-container { width: 100%;}
-    .input-group { width: 100%;}
-    .input-half-group { width: 100%;}
+.contenedor-btn a{
+    text-decoration: none;
+    color: white;
 }

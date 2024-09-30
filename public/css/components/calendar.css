@@ -298,17 +298,11 @@ input:focus{
     box-sizing: border-box;
     padding: 0;
 }
-@font-face {
-    font-family: 'FORMULARIOS';
-   src: url('/assets/formulario/fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype'),
-        url('/assets/formulario/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
-   font-weight: normal;     /* controla el grosor de las letras /
-   font-style: normal;     / controla el grosor de las letras */
- }
+
 
 body {
     background-color: var(--main-fondo);
-    font-family: 'FORMULARIOS', sans-serif;
+
 }
 :root{
     --main-fondo: #F5F7FA;
