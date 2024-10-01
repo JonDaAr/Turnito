@@ -64,7 +64,7 @@ header{
 .search-form {
     display: flex;
     align-items: center;
-    margin-right: auto;
+
 }
 
 .search-input {
@@ -77,7 +77,7 @@ header{
 
 .search-btn {
     padding: 8px 15px;
-    background-color: #f50057;
+    background-color: var(--btn-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -190,6 +190,7 @@ header{
 
 /* Main section */
 main {
+    height: 90vh;
     display: flex;
     margin: 20px;
     margin-top: 5vh;
@@ -208,10 +209,14 @@ aside {
 }
 
 .listaCategorias .categoria a {
-    color: #4CAF50;
+    color: var(--primary-color);
     font-weight: bold;
 }
-
+#verTodas{
+    cursor: pointer;
+        color: var(--primary-color);
+        font-weight: bold;
+}
 .container {
     width: 75%;
     margin-left: 5%;
@@ -325,3 +330,4 @@ footer p {
     margin-top: 20px;
     font-size: 0.8em;
 }
+

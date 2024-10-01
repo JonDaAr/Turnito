@@ -1,3 +1,14 @@
+:root{
+    --main-fondo: #F5F7FA;
+    --btn-color: #E9AA0A;
+    --primary-color: #1C53C9;
+    --login-registro: #7DACF3;
+    --menu-sin-seleccionar: #DFDFDF;
+    --barra-navegacion-filtro: #D9D9D9;
+    --separadores-pagina: #E6EFF5;
+    --fondo-comentario: #1c53c91f;
+}
+
 /* styles.css */
 @font-face {
     font-family: 'FORMULARIOS';
@@ -19,7 +30,6 @@ main{
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 1440px;
     margin: 0 auto;
     overflow-x: hidden;
 }
@@ -352,7 +362,7 @@ section h2{
     text-align: center;
     position: relative;
     background-color: #1C53C9;
-    color: #ccc;
+    color: #ffffff;
     z-index: -1;
 }
 
@@ -542,7 +552,7 @@ hr{
 /*------------------seccion de footer------------------ */
 
 footer {
-    background-color: #1a237e;
+    background-color: var(--primary-color);
     color: #fff;
     padding:0 5rem;
     text-align: center;
@@ -591,4 +601,85 @@ footer p{
     display: flex;
     gap: 20px;
     justify-content: space-evenly;
+}
+.faq-answer {
+    display: none; /* Oculta todas las respuestas inicialmente */
+}
+
+.faq-item.active .faq-answer {
+    display: block; /* Muestra la respuesta cuando el elemento está activo */
+}
+
+.faq-toggle {
+    cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
+}
+
+.plans {
+    display: flex;
+    justify-content: space-around; /* Espacio entre tarjetas */
+    flex-wrap: wrap; /* Para que se ajusten en pantallas más pequeñas */
+    padding: 20px; /* Espaciado interno */
+
+}
+
+.plan-card {
+    background-color: #ffffff; /* Color de fondo de la tarjeta */
+    border: 1px solid #ddd; /* Borde ligero */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 300px; /* Ancho de las tarjetas */
+    margin: 10px; /* Espacio entre tarjetas */
+    padding: 20px; /* Espaciado interno */
+    transition: transform 0.2s; /* Transición suave al hacer hover */
+}
+
+.plan-card:hover {
+    transform: scale(1.05); /* Escalado al pasar el mouse */
+}
+
+.plan-card h3 {
+    color: #007bff; /* Color del título */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+.price {
+    font-size: 1.5em; /* Tamaño de fuente más grande */
+    color: #28a745; /* Color del precio */
+    margin-bottom: 15px; /* Margen inferior */
+}
+
+.plan-card ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+}
+
+.plan-card li {
+    margin: 10px 0; /* Espacio entre ítems de la lista */
+    padding-left: 15px; /* Espacio a la izquierda */
+    position: relative; /* Para posicionar el ícono */
+}
+
+.plan-card li::before {
+    content: '✔'; /* Ícono de verificación */
+    color: #007bff; /* Color del ícono */
+    position: absolute; /* Posicionamiento absoluto */
+    left: 0; /* Alineado a la izquierda */
+}
+
+.btn.secondary-btn {
+    display: inline-block; /* Mostrar como bloque */
+    margin-top: 20px; /* Margen superior */
+    padding: 10px 20px; /* Padding interno */
+    background-color: #007bff; /* Color del botón */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Centrar texto */
+    text-decoration: none; /* Sin subrayado */
+    transition: background-color 0.3s; /* Transición suave del color */
+}
+
+.btn.secondary-btn:hover {
+    background-color: #0056b3; /* Color al hacer hover */
 }
