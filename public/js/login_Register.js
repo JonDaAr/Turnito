@@ -35,10 +35,13 @@ containerButton.addEventListener('click', () => {
         loginForm.innerHTML = `
             <form class="form">
                 <h2>Registrarse</h2>
+                <div>
                 <input type="text" placeholder="Ingrese nombre de usuario" required>
                 <input type="email" placeholder="Ingrese tu correo" required>
                 <input type="password" placeholder="Ingrese tu contraseña" required>
                 <input type="password" placeholder="Confirma tu contraseña" required>
+                </div>
+                
                 <div class="buttons">
                     <button type="button" class="client"><a href="/pages/registro_de_cliente.html">Cliente</a></button>
                     <button type="button" class="entrepreneurship"><a href="/pages/registro_de_emprendimiento.html ">Emprendimiento</a></button>
@@ -69,7 +72,7 @@ containerButton.addEventListener('click', () => {
                     </div>
                     <p class="alt-login">o inicia sesión con</p>
                     <div class="social-login">
-                        <img src="/assets/images/logo_google.svg" alt="">
+                        <img src="/assets/images/logo_google.svg" alt="Google">
                     </div>
                 </form>`;
     }

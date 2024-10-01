@@ -191,13 +191,14 @@ button:hover {
 .form input {
     width: 90%;
     padding: 0.5rem 0.5rem 0.2rem 0.5rem;
-    border-radius: 5px;
     border: none;
     border-bottom: 1px solid #ccc;
     align-self:center;
+    margin: 0.5rem;
 }
 form>h2{
     margin: 1rem;
+    font-size: 2rem;
 }
 .form input:focus{
     border: none;
@@ -212,11 +213,11 @@ form>h2{
 }
 
 .client, .entrepreneurship {
-    flex: 1;
-    padding: 15px;
+    width: 50%;
+    padding: 0.8rem;
     margin: 0 5px;
     border: none;
-    border-radius: 25px;
+    border-radius: 2rem;
     color: white;
     cursor: pointer;
 }
@@ -291,6 +292,7 @@ form>h2{
 
 .login-form h2 {
     margin-bottom: 20px;
+
 }
 
 .login-form label {
@@ -316,7 +318,7 @@ border-bottom: 1px solid #f7e706;
     justify-content:center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-size: 14px;
     gap: 1rem;
 }
@@ -325,6 +327,7 @@ border-bottom: 1px solid #f7e706;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 0.4rem;
 }
 .extras>label>input{
     margin: 0;

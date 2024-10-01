@@ -1,15 +1,150 @@
-
-
-body {
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
-    overflow-x: hidden;
-    
+:root{
+    --main-fondo: #F5F7FA;
+    --btn-color: #E9AA0A;
+    --primary-color: #1C53C9;
+    --login-registro: #7DACF3;
+    --menu-sin-seleccionar: #DFDFDF;
+    --barra-navegacion-filtro: #D9D9D9;
+    --separadores-pagina: #E6EFF5;
+    --fondo-comentario: #1c53c91f;
 }
 
-h1{
-    padding-left: 3rem;
+
+/* Estilo general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+/* ------------------seccion de header------------------ */
+header{
+    height: 5vh;
+}
+.main-header {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    z-index: 1000; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding:0 0.5rem;
+}
+
+.navbar {
+    padding: .5rem 3rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+/*-----------SEARCH ------------------*/
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.search-input {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+
+.search-btn {
+    padding: 8px 15px;
+    background-color: #f50057;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.search-btn:hover {
+    background-color: #d4004d;
+}
+
+/* Efecto hover para las tarjetas */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    width: 250px;
+}
+/* ------------------seccion de nav------------------ */
+
+.navbar-links{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    width: max-content;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    background-color: #1C53C9; 
+    border-radius: 0 0 25px 25px; 
+    gap: 2em;
+    padding: .4em 3rem;
+    margin: 0%;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffffd3;
+    font-weight: bold;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 20px;
 }
 
 .btn {
@@ -19,6 +154,11 @@ h1{
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
+}
+
+.primary-heder{
+    background-color: none;
+    color: #1C53C9;
 }
 
 .primary-btn {
@@ -33,191 +173,155 @@ h1{
     border:none
 }
 
-a{
-    text-decoration: none;
-}
-
-/* ------------------seccion de header------------------ */
-
-header{
+#buttonup{
     position: fixed;
-    top: 0; 
-    left: 0;
-    width: 100%; 
-    z-index: 1000; 
-}
-
-.main-header {
-    padding: .5rem 3rem;
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 6px 3px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 2;
-}
-
-.header-buttons {
-    display: flex;
-    gap: 20px;
-}
-
-/* ------------------seccion de Aside ------------------ */
-aside{
-    grid-area: 1 / 1 / 13 / 3; 
-    margin-top: 5rem;
-}
-
-.listaCategorias{
-    list-style: none;
-    text-align: center;
-    padding: 0;
-    
-}
-
-.categoria{
-    text-align: left;
-    margin: .1rem;
-    padding: .5rem 0;
-    /* border: 1px solid black; */
-}
-
-
-
-/* ------------------seccion de main ------------------ */
-
-main{
-    display: grid;
-    max-width: 1280px;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    margin: auto;
-    margin-top: 5rem;
-}
-
-.container{
-    grid-area: 1 / 3 / 13 / 13; 
-}
-
-section{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.card{
-    width: 100%;
-    height: auto;
-    margin: .5rem;
-    padding: .5rem;
-    background-color: #f5f5f5;
-    display: flex;
-    gap: 1.5rem;
-    border: 1px solid #000;
-    border-radius: 10px;
-}
-
-.card p{
-    margin: 0;
-}
-
-.card img{
-    object-fit: none;
-}
-
-.contenido{
-    width: 80%;
-}
-
-.textContenido{
-    display: flex;
-}
-
-.valoracion{
-    display: flex;
-}
-
-.ubicacion{
-    text-align: end;
-}
-
-.star {
-    padding: .3rem;
-    width: 1rem;
-    height: 1rem;
-    background: yellow;
-    position: relative;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-}
-
-.verMas{
+    bottom: 2rem; 
+    right: 2rem;   
+    width: 4rem;
+    height: 4rem;
     padding: 1rem;
-    text-align: end;
+    border-radius: 100%;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+/* Main section */
+main {
+    display: flex;
+    margin: 20px;
+    margin-top: 5vh;
 }
 
-/*------------------seccion de footer------------------ */
+aside {
+    width: 20%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-footer {
-    background-color: #1a237e;
-    color: #fff;
-    padding:0 5rem;
+.listaCategorias .categoria {
+    margin: 10px 0;
+}
+
+.listaCategorias .categoria a {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.container {
+    width: 75%;
+    margin-left: 5%;
+}
+
+h1 {
+    color: #333;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 23%;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.contenido {
+    padding: 20px;
+}
+
+.textContenido h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.textContenido p {
+    font-size: 0.9em;
+    color: #777;
+    line-height: 1.6;
+}
+
+.valoracion {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.valoracion .star {
+    background: url('/assets/icons/star.svg') no-repeat center center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.ubicacion a {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.verMas {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #f50057;
+    color: white;
+    border-radius: 5px;
     text-align: center;
-    grid-area: 10 / 1 / 13 / 13;
 }
 
-footer h2{
-    font-size: 3rem;
-    text-align: left;
-    margin: 0rem
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
 }
 
-.container-footer{
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer .container-footer {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    padding: 20px 0;
 }
 
-.footer-registro {
-    font-size: x-large;
-    padding-bottom: 6rem;
+footer .redes a img {
+    width: 30px;
+    margin-right: 10px;
 }
 
-.footer-links a {
-    text-decoration: none;
-    color: #fdd835;
+footer .btn {
+    padding: 10px 20px;
+    background-color: var(--btn-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-footer p{
-    margin: 0rem;
-}
-
-.redes{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.redes img{
-    max-width: 2rem;
-    max-height: 2rem;
-    display: flex;
-}
-
-@media (max-width: 420px){
-    body{grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(12, 1fr)}
-    aside { grid-area: 1 / 1 / 2 / 4; }
-    .container { grid-area: 2 / 1 / 4 / 4; }
-}
-
-@media (max-width: 780px){
-
+footer p {
+    margin-top: 20px;
+    font-size: 0.8em;
 }
