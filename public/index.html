@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="main-header">
-        <div>
+        <div class="container_navbar">
             <div class="navbar">
                 <a href="#"><img src="/assets/images/Logo-Turnito.png" alt="Turnito Logo" class="logo"></a>
                 
@@ -26,70 +26,70 @@
                     <li><a href="#plans">Planes</a></li>
                     <li><a href="#faq">Preguntas Frecuentes</a></li>
                     <li><a href="#contact">Contacto</a></li>
-            </ul>
+                </ul>
             </nav>
-            <a href="#" class="up">
-                <button id="buttonup" class="secondary-btn">
-                    <img src="/assets/icons/flecha-hacia-arriba (1).png" alt="arrow" style="width: 200%;">
-                </button>
-            </a>
+            
         </div>
     </header>
     <main>
     
+        <section id="hero" class="hero-section">
+            <!-- Video de fondo -->
+            <video autoplay muted loop id="hero-video">
+                <source src="/assets/videos/agenda.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+            
+            <!-- Overlay azul -->
+            <div class="overlay"></div>
+            
+            <!-- Contenido -->
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>¡Bienvenido a Turnito!</h1>
+                    <p>La forma más rápida y sencilla de reservar turnos. <br> Simplificamos tu día para que disfrutes de una experiencia sin esperas.</p>
+                    <a href="/pages/login_register.html" class="btn primary-btn">Sacá tu turnito</a>
+                </div>
+            </div>
+        </section>
 
-    <section id="hero" class="hero-section">
+        <section id="benefits" class="benefits-section">
+            <div class="container">
+                <h2>Beneficios</h2>
+                <div class="benefits-cards">
+                    <div class="card card-left">
+                        <img src="/assets/icons/Icon-estrella-azul.png" alt="Reducción del Absentismo">
+                        <div>
+                            <h3>Reducción del Ausentismo</h3>
+                            <p>Gracias a nuestros recordatorios podrás reducir el absentismo un 80%.</p>
+                        </div>
+                    </div>
+                    <div class="card card-right">
+                        <img src="/assets/icons/Icon-auriculares-azul.png" alt="Turnos Online 24/7">
+                        <div>
+                            <h3>Turnos Online 24/7</h3>
+                            <p>Sabías que el 60% de los turnos se reserva fuera del horario laboral?<br>¡Abrí tu agenda online ya!</p>
+                        </div>
+                    </div>
+                    <div class="card card-left">
+                        <img src="/assets/icons/Icon-bandera-azul.png" alt="Administración">
+                        <div>
+                            <h3>Administración</h3>
+                            <p>Con nuestro sistema de Administración podrás llevar un registro de tus clientes y cantidad de turnos para mejorar tu rendimiento</p>
+                        </div>
+                    </div>
+                    <div class="card card-right">
+                        <img src="/assets/icons/Icon-imagen-azul.png" alt="Mejor Rendimiento">
+                        <div>
+                            <h3>Mejor Rendimiento</h3>
+                            <p>Facilita la organización y asignación de turnos de manera automática, reduciendo errores humanos y optimizando el tiempo tanto para los clientes como para los emprendedores</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         
-        <div class="container hero-content">
-            <div>
-                <img class="background-image" src="/assets/images/Fondo-Hero.png" alt="fondo-azul">
-                <img class="image-stack" src="/assets/images/imagen-combinada-1.png"  alt="">
-            </div>
-            <div class="hero-text">
-                <h1>¡Bienvenido a Turnito!</h1>
-                <p>Reserva tu turno de manera rápida y sencilla. <br> Disfrutá de una experiencia sin esperas.</p>
-                <a href="/pages/login_register.html" class="btn primary-btn">Sacá tu turnito</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="benefits" class="benefits-section">
-        <div class="container">
-            <h2>Beneficios</h2>
-            <div class="benefits-cards">
-                <div class="card">
-                    <img src="/assets/icons/Icon-estrella-azul.png" alt="Reducción del Absentismo">
-                    <div>
-                        <h3>Reducción del Ausentismo</h3>
-                        <p>Gracias a nuestros recordatorios podrás reducir el absentismo un 80%.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="/assets/icons/Icon-auriculares-azul.png" alt="Turnos Online 24/7">
-                    <div>
-                        <h3>Turnos Online 24/7</h3>
-                        <p>Sabias que el 60% de los turnos se reserva fuera del horario laboral?<br>Abri tu agenada Online ya!</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="/assets/icons/Icon-bandera-azul.png" alt="Administración">
-                    <div>
-                        <h3>Administración</h3>
-                        <p>Con nuestro sistema de Administracion podras llevar un registro de tus clientes y cantidad de turnos para mejorar tu rendimiento</p>
-                    </div>
-                    
-                </div>
-                <div class="card">
-                    <img src="/assets/icons/Icon-imagen-azul.png" alt="Mejor Rendimiento">
-                    <div>
-                        <h3>Mejor Rendimiento</h3>
-                        <p>Facilita la organización y asignación de turnos de manera automática, reduciendo errores humanos y optimizando el tiempo tanto para los clientes como para los emprendedores</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section id="how-it-works" class="how-it-works-section">
         
@@ -110,20 +110,13 @@
                         <p>Una vez que el cliente selecciona su turno, recibirás una notificación instantánea. El cliente también recibirá una confirmación con los detalles de la reserva.</p>
                     </div>
                 </div>
-                <div >
-                    <img src="/assets/images/rectangle-fondo-2.png" class="background-image2" alt="Fondo">
-                    <img class="img-top-left" src="/assets/images/chicaEnNoteboock-1.png" alt="chicaEnNoteboock-1">
-                    <img class="img-bottom-right" src="/assets/images/smartmockups_m0011h8o 2.png" alt="notebock-con-graficos">
-                </div>
+       
             </div>
             
         </div>
         <div class="container">
             <div class="how-container">
-                <div >
-                    <img src="/assets/images/rectangle-fondo-3 .png" class="background-image3" alt="rectangle-fondo-3">
-                    <img src="/assets/images/grafico-simple-1.png" alt="grafico-simple-1" class="image-computadora" >
-                </div>
+                
                 <div class="steps-2">
                     <div class="step">
                         <h3>4. Recordatorios Automáticos</h3>
@@ -349,5 +342,21 @@
             <p>&copy; 2024 Turnito. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll(".card");
+    
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("card-visible");
+                        observer.unobserve(entry.target); // Deja de observar una vez animada
+                    }
+                });
+            }, { threshold: 0.2 }); // Activa cuando el 20% del elemento es visible
+    
+            cards.forEach(card => observer.observe(card));
+        });
+    </script>
 </body>
 </html>

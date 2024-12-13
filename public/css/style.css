@@ -3,8 +3,18 @@
     font-family: 'FORMULARIOS';
     src: url('/assets/formulario/fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype'),
         url('/assets/formulario/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
-    font-weight: normal;     /* controla el grosor de las letras /
-   font-style: normal;     / controla el grosor de las letras */
+    font-weight: normal;     /* controla el grosor de las letras */
+   font-style: normal;     /* controla el grosor de las letras */
+}
+:root{
+    --main-fondo: #F5F7FA;
+    --btn-color: #E9AA0A;
+    --primary-color: #1C53C9;
+    --login-registro: #7DACF3;
+    --menu-sin-seleccionar: #DFDFDF;
+    --barra-navegacion-filtro: #D9D9D9;
+    --separadores-pagina: #E6EFF5;
+    --fondo-comentario: #1c53c91f;
 }
 
 body {
@@ -21,53 +31,75 @@ section h2{
     font-size: 3rem;
     }
 
-/* ------------------seccion de header------------------ */
-
+/* ------------------- General ------------------- */
 .main-header {
+    margin: 0;
     position: fixed;
     top: 0; 
     left: 0;
     width: 100%; 
     z-index: 1000; 
+    background-color: var(--main-fondo); 
 }
 
+/* ------------------ Navbar ------------------ */
 .navbar {
-    padding: .5rem 3rem;
-    background-color: #fff;
+    
+    background-color: var(--main-fondo);
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 6px 3px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 2;
+    animation: slideDown 1s ease-in-out;
 }
 
-/* ------------------seccion de nav------------------ */
+/* ------------------ Navbar Links ------------------ */
+.container_navbar{
+    width: 100%;
+    position: fixed;
+}
 
-.navbar-links{
+.navbar-links {
     width: 100%;
     display: flex;
     justify-content: center;
 }
-
-.nav-links {
+.navbar-links >ul{
     width: max-content;
+    display: flex;
+    justify-content: center;
+    
+
+}
+.nav-links {
+    width: 100%;
     display: flex;
     list-style: none;
     justify-content: center;
-    background-color: #1C53C9; 
+    background-color: var(--primary-color); 
     border-radius: 0 0 25px 25px; 
     gap: 2em;
     padding: .4em 3rem;
     margin: 0%;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s ease-in-out 0.5s forwards;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #ffffffd3;
+    color: var(--menu-sin-seleccionar); 
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
 
+.nav-links a:hover {
+    color: #fff; 
+}
+
+/* ------------------ Botones ------------------ */
 .header-buttons {
     display: flex;
     gap: 20px;
@@ -80,105 +112,138 @@ section h2{
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.primary-heder{
-    background-color: none;
-    color: #1C53C9;
+.primary-heder {
+    background-color: var(--main-fondo);
+    color: var(--primary-color);
+}
+
+.primary-heder:hover {
+    transform: scale(1.1);
+    color: #fff; 
+    background-color: var(--primary-color); 
 }
 
 .primary-btn {
-    background-color: #fdd835;
+    background-color: var(--btn-color);
     color: #fff;
     border: none;
 }
 
 .secondary-btn {
-    background-color: #1C53C9;
-    color: #ffffff;;
-    border:none
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
 }
 
-#buttonup{
-    position: fixed;
-    bottom: 2rem; 
-    right: 2rem;   
-    width: 4rem;
-    height: 4rem;
-    padding: 1rem;
-    border-radius: 100%;
-    cursor: pointer;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
+.secondary-btn:hover {
+    transform: scale(1.1);
+    background-color: var(--login-registro); 
+}
 
+/* ------------------ Animaciones ------------------ */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* ------------------seccion de hero---------------- */
 
-.background-image {
+#hero {
+    position: relative;
+    height: 100vh; /* Altura completa de la pantalla */
+    overflow: hidden;
+}
+
+
+/* Estilo del video */
+#hero-video {
     position: absolute;
+    top: -1rem;
+    left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    z-index: -2;
 }
-.image-stack {
+
+/* Overlay azul */
+.overlay {
     position: absolute;
-    right: 1rem;
-    bottom:-1.5rem;
-    height: 60vh;
-}
-
-.hero-section {
+    top: -1rem;
+    left: 0;
     width: 100%;
-    margin-top: 2.5rem;
-
-    gap: 20rem; 
+    height: 100%;
+    background: rgba(0, 123, 255, 0.5);
+    z-index: -1;
 }
 
+/* Contenido */
 .hero-content {
+    position: relative;
+    z-index: 1;
+    height: 100%; /* Asegura que el contenido ocupe toda la sección */
     display: flex;
-    align-items: normal;
-    justify-content: space-between;
-    height: 100%;
-    margin-top: 2rem;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    padding-left: 50px; /* Espacio desde el borde izquierdo */
+    color: white;
+
 }
 
+/* Texto */
+.hero-text{
+    margin-top: 30vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.hero-text h1,p{
+    margin-bottom: 2rem;
+}
 .hero-text h1 {
-    font-size: 3rem;
-    color: #ffffffd5;
-    padding-top: 4rem; ;
+    font-size: 3rem; 
+
 }
 
 .hero-text p {
-    color: #f5f5f5;
-    font-size: 1.5rem;
-    margin: 2rem 0;
+    font-size: 1.2rem;
+
+}
+/* Boton Hero*/
+.btn.primary-btn {
+    font-size: 1rem; /* Tamaño del botón */
+    padding: 10px 20px;
+    background-color: var(--btn-color);
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-
-
-
-.image--it {
-    position: relative;
-    z-index: 1;
-    left: 8rem;
-    margin-top: 13rem;
+.btn.primary-btn:hover {
+    background-color: white;
+    color: var(--btn-color);
+    transition: 0.3s;
 }
-
-.image-top {
-    position: absolute;
-    left: 7rem;
-    z-index: 2;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.image-bottom {
-    position: absolute;
-    top: 12rem;
-    left: 19rem;
-    z-index: 1;
-}
-
 /* ------------------seccion de beneficios------------------ */
 
 .benefits-section {
@@ -201,6 +266,23 @@ section h2{
     width: 35%;
     box-shadow: -6px 6px 4px rgba(0,0,0,0.1);
     text-align: center;
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.card-left {
+    transform: translateX(-100px); /* Sale desde la izquierda */
+}
+
+.card-right {
+    transform: translateX(100px); /* Sale desde la derecha */
+}
+
+/* Cuando se vuelven visibles */
+.card-visible {
+    opacity: 1;
+    transform: translateX(0); /* Vuelve a su posición inicial */
 }
 
 .card h3 {
@@ -214,6 +296,18 @@ section h2{
 
 .how-it-works-section {
     background-color: #ffffff;
+}
+/* Estado inicial: sección oculta */
+.section-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Estado visible: sección aparece */
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ------------------seccion de como funciona------------------ */
