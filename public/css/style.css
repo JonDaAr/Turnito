@@ -23,7 +23,6 @@ body {
     padding: 0;
     color: #333;
     background-color: #fff;
-    overflow-x: hidden;
 }
 
 section h2{
@@ -312,46 +311,11 @@ section h2{
 
 /* ------------------seccion de como funciona------------------ */
 
-.how-container{
-    width: 100%;
-    margin: 0 auto;
-    max-width: 1440px;
-    display: flex;
-}
 
 .how-it-works-section h2{
     text-align: start;
     display: inline-block;
-}
-
-.img-top-left{
-    border-radius: 2rem;
-    position: absolute;
-    left: 45%;
-    z-index: 2;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.img-bottom-right{
-    border-radius: 2rem;
-    position: absolute;
-    top: 16rem;
-    left: 27%; 
-    z-index: 1;
-}
-
-.image-computadora{
-    position: absolute;
-    right: 0%;
-}
-
-.background-image2 {
-    position: absolute; 
-    }
-
-.background-image3{
-    position: absolute;
-    right: 0;
+    padding-top: 2rem;
 }
 
 .steps {
@@ -372,21 +336,62 @@ section h2{
     padding-left: 5rem;
     margin-top:1.5rem ;
 }
-
 .step {
     text-align: initial;
 }
-
 .step h3 {
     text-align: start;
     margin: 1.5rem 0;
     font-size: 2rem;
 }
-
 .step p {
     padding-left:2rem ;
     font-size: 16px;
 }
+
+.how-container {
+    padding-left: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.container-img {
+    position: relative;
+    width: 40%;
+    height: 90%;
+}
+
+.fondo_azul_2 {
+    width: 100%; /* Ajusta según el diseño */
+    z-index: 1; /* Coloca esta imagen debajo */
+}
+
+.imagen_combinada{
+    position: absolute;
+    top: 0; /* Ajusta según sea necesario */
+    left: 0; /* Asegura que esté a la izquierda */
+    z-index: 3; /* Coloca esta imagen encima */
+    width: 100%; /* Ajusta según el diseño */
+    height: 70%; 
+}
+.imagen_combinada1{
+    position: absolute;
+    top: 5%; /* Ajusta según sea necesario */
+    left: 40%; /* Asegura que esté a la izquierda */
+    z-index: 3; /* Coloca esta imagen encima */
+    width: 40%; /* Ajusta según el diseño */
+    height: auto; /* Ajusta según el diseño */
+}
+.imagen_combinada2{
+    position: absolute;
+    top: 60%; /* Ajusta según sea necesario */
+    left: 15%; /* Asegura que esté a la izquierda */
+    z-index: 2; /* Coloca esta imagen encima */
+    width: 40%; /* Ajusta según el diseño */
+    height: auto; /* Ajusta según el diseño */
+}
+
 
 /* ------------------seccion de comentarios------------------ */
 
